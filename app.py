@@ -94,6 +94,12 @@ def signout():
     return redirect(url_for("signin"))
 
 
+@app.route("/add_to_do_item")
+def add_to_do_item():
+    return render_template("add_to_do_item.html")
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
