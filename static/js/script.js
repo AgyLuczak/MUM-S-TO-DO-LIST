@@ -1,4 +1,7 @@
+
+
 $(document).ready(function () {
-    $('.sidenav').sidenav();
-    $('.collapsible').collapsible();
+    $(".sidenav").sidenav({ edge: "right" });
+    $(".collapsible").collapsible();
 });
+
