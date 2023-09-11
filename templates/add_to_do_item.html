@@ -1,6 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="light-blue-text text-darken-4 center-align">Add Task</h3>
+<h3 class=" text-darken-4 center-align">Add new list item</h3>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix text-darken-4"></i>
+                <input id="to_do_item" name="to_do_item" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="to_do_item">New list item</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-align-left prefix text-darken-4"></i>
+                <textarea id="item_details" name="item_details" minlength="5" maxlength="200"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="item_details">Details</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-calendar-alt prefix  text-darken-4"></i>
+                <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                <label for="due_date">Due Date</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <div class="switch">
+                    <i class="fa-solid fa-star prefix  text-darken-4"></i>
+                    <label for="is_important">
+                        <input type="checkbox" id="is_important" name="is_important">
+                        <span class="lever"></span>
+                        Is Important!
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
 
 {% endblock %}
