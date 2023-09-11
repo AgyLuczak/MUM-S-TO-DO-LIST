@@ -96,7 +96,8 @@ def signout():
 
 @app.route("/add_to_do_item")
 def add_to_do_item():
-    return render_template("add_to_do_item.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_to_do_item.html", categories=categories)
 
 
 
