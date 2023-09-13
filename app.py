@@ -64,7 +64,9 @@ def signin():
                     request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["user"]))
-        
+            elif len(request.form.get("username")) < 3:
+                flash("must be at least 3 characters")
+                return redirect(url_for("signin"))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
