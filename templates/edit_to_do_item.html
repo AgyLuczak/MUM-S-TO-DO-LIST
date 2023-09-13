@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class=" text-darken-4 center-align">Edit list item</h3>
+
+<div class="row card-panel pink lighten-5 s12 m8 offset-m2 container-add-todo">
+    <form class="col s12 m8 offset-m2" method="POST"
+        action="{{ url_for('edit_to_do_item', to_do_item_id=to_do_item._id) }}">
+
+        <!--category selection-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-regular fa-folder-open prefix text-darken-4"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Select Category</option>
+                    {% for category in categories %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Category</label>
+            </div>
+        </div>
+        <!--New list item-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix text-darken-4"></i>
+                <input id="to_do_item" name="to_do_item" minlength="3" maxlength="60" type="text" class="validate"
+                    required>
+                <label for="to_do_item">New list item</label>
+            </div>
+        </div>
+        <!--New list item details-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix text-darken-4"></i>
+                <textarea id="item_details" name="item_details" minlength="3" maxlength="200"
+                    class="materialize-textarea validate"></textarea>
+                <label for="item_details">Details</label>
+            </div>
+        </div>
+        <!--date picker-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix  text-darken-4"></i>
+                <input id="due_date" name="due_date" type="text" class="datepicker validate">
+                <label for="due_date">Due Date</label>
+            </div>
+        </div>
+        <!--is important-->
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <div class="switch">
+                    <i class="fa-solid fa-star prefix  text-darken-4"></i>
+                    <label for="is_important">
+                        <input type="checkbox" id="is_important" name="is_important">
+                        <span class="lever"></span>
+                        Is Important!
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large pink lighten-1 darken-1 text-shadow">
+                    Edit list item<i class="fa-solid fa-pen-to-square"></i></a>
+                </button>
+            </div>
+    </form>
+</div>
+
+
+{% endblock %}
