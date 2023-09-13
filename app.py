@@ -93,9 +93,23 @@ def signout():
     session.pop("user")
     return redirect(url_for("signin"))
 
-
-@app.route("/add_to_do_item")
+ 
+@app.route("/add_to_do_item", methods=["GET", "POST"])
 def add_to_do_item():
+    if request.method == "POST":
+        is_important = "on" if request.form.get("is_important") else "off"
+        new_item = {
+            "category_name": request.form.get("category_name"),
+            "to_do_item": request.form.get("to_do_item"),
+            "item_details": request.form.get("item_details"),
+            "is_important": is_important,
+            "due_date": request.form.get("due_date"),
+        
+        }
+        mongo.db.to_do_items.insert_one(new_item)
+        flash("Added to the list!")
+        return redirect(url_for("get_to_do_items"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_to_do_item.html", categories=categories)
 
