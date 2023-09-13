@@ -37,6 +37,12 @@ nav .brand-logo {
     -moz-box-shadow: 14px 20px 10px 0px rgba(170, 21, 170, 0.52);
 }
 
+.collapsible-header {
+    align-items: center;
+    margin: 5px;
+    line-height: 45px;
+}
+
 
 .container-add-todo {
     max-width: 70%;
@@ -49,4 +55,9 @@ nav .brand-logo {
 
 .flashes h4 {
     line-height: 2;
+}
+
+.btn-small {
+
+    margin: 5px;
 }
