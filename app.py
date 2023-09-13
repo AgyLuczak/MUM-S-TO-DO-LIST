@@ -116,6 +116,13 @@ def add_to_do_item():
     return render_template("add_to_do_item.html", categories=categories)
 
 
+@app.route("/edit_to_do_item/<to_do_item_id>", methods=["GET", "POST"])
+def edit_to_do_item(to_do_item_id):
+    to_do_item = mongo.db.to_do_items.find_one({"_id": ObjectId(to_do_item_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_to_do_item.html", to_do_item=to_do_item, categories=categories)
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
