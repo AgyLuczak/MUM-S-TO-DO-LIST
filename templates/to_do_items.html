@@ -15,7 +15,8 @@
                 </div>
                 <div class="col s3">
                     <a href="" class="btn-small purple lighten-1"><i class="fa-solid fa-circle-check"></i></a>
-                    <a href="" class="btn-small purple lighten-1"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}"
+                        class="btn-small purple lighten-1"><i class="fa-solid fa-pen-to-square"></i></a>
                 </div>
             </div>
 
