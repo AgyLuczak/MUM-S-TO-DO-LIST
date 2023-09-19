@@ -1,34 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container center-align">
-    <ul class="collapsible col s12 m8 offset-m2 no-padding no-border">
-        {% for item in to_do_items %}
-        <li>
-            {% if session.user|lower == item.created_by|lower %}
-            <div class="collapsible-header white-text pink lighten-2">
-                <div class="col s9">
-                    <i class="fas fa-caret-down"></i>
-                    {{ item.to_do_item }} {{ item.due_date }}
-                    {% if item.is_important == "on" %}
-                    <i class="fa-solid fa-star"></i>
-                    {% endif %}
-                </div>
-                <div class="col s3">
-                    <a href="" class="btn-small purple lighten-1"><i class="fa-solid fa-circle-check"></i></a>
-                    <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}"
-                        class="btn-small purple lighten-1"><i class="fa-solid fa-pen-to-square"></i></a>
-
-                </div>
+<div class="row">
+    {% for item in to_do_items %}
+    <div class="col s12 m6">
+        <div class="card pink lighten-1 darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">{{ item.to_do_item }}</span>
+                <span> {{ item.due_date }} </span>
+                {% if item.is_important == "on" %}
+                <i class="fa-solid fa-star"></i>
+                {% endif %}
             </div>
-
-            <div class="collapsible-body">Category: {{ item.category_name }}
-                <p>Details: {{ item.item_details }}</p>
+            <div class="card-action">
+                <a href="#" class="btn-small purple lighten-1"><i class="fa-solid fa-circle-check"></i></a>
+                <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}" class="btn-small purple lighten-1">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
             </div>
-            {% endif %}
-        </li>
-        {% endfor %}
-    </ul>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
