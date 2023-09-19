@@ -118,6 +118,19 @@ def add_to_do_item():
 
 @app.route("/edit_to_do_item/<to_do_item_id>", methods=["GET", "POST"])
 def edit_to_do_item(to_do_item_id):
+    if request.method == "POST":
+        is_important = "on" if request.form.get("is_important") else "off"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "to_do_item": request.form.get("to_do_item"),
+            "item_details": request.form.get("item_details"),
+            "is_important": is_important,
+            "due_date": request.form.get("due_date"),
+        
+        }
+        mongo.db.to_do_items.update({"_id": ObjectId(to_do_item_id)}, submit)
+        flash("Updated!")
+       
     to_do_item = mongo.db.to_do_items.find_one({"_id": ObjectId(to_do_item_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_to_do_item.html", to_do_item=to_do_item, categories=categories)
