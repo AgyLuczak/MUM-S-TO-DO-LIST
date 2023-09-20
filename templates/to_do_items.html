@@ -2,25 +2,33 @@
 {% block content %}
 
 <div class="row">
+    {% if to_do_items|length > 0 %}
     {% for item in to_do_items %}
-    <div class="col s12 m6">
-        <div class="card pink lighten-1 darken-1">
+    <div class="col s12 m8">
+        <div class="card horizontal pink lighten-1 darken-1">
             <div class="card-content white-text">
-                <span class="card-title">{{ item.to_do_item }}</span>
-                <span> {{ item.due_date }} </span>
+                <span class="card-title activator">{{ item.to_do_item }}</span>
+                <time>{{ item.due_date }}</time>
                 {% if item.is_important == "on" %}
                 <i class="fa-solid fa-star"></i>
                 {% endif %}
-            </div>
-            <div class="card-action">
-                <a href="#" class="btn-small purple lighten-1"><i class="fa-solid fa-circle-check"></i></a>
-                <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}" class="btn-small purple lighten-1">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                </a>
+                <p>{{ item.item_details }}</p>
+                <div class="card-action">
+                    <a href="#" class="btn-small purple lighten-1"><i class="fa-solid fa-circle-check"></i></a>
+                    <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}"
+                        class="btn-small purple lighten-1">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
     {% endfor %}
+    {% else %}
+    <div class="col s12 m8">
+        <p>The list is empty!</p>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}
