@@ -7,19 +7,28 @@
     <div class="col s12 m8">
         <div class="card horizontal pink lighten-1 darken-1">
             <div class="card-content white-text">
-                <span class="card-title activator">{{ item.to_do_item }}</span>
-                <time>{{ item.due_date }}</time>
-                {% if item.is_important == "on" %}
-                <i class="fa-solid fa-star"></i>
-                {% endif %}
-                <p>{{ item.item_details }}</p>
-                <div class="card-action">
-                    <a href="#" class="btn-small purple lighten-1"><i class="fa-solid fa-circle-check"></i></a>
-                    <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}"
-                        class="btn-small purple lighten-1">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
-                </div>
+                <span class="card-title activator">{{ item.to_do_item }}
+                    {% if item.is_important == "on" %}
+                    <i class="fa-solid fa-star"></i>
+                    {% endif %}
+                    <i class="material-icons right">subject</i>
+                </span>
+            </div>
+
+
+            <div class="card-reveal">
+                <span class="card-title">
+                    <i class="material-icons right">close</i>
+                </span>
+                <time>due date: {{ item.due_date }}</time>
+                <p>details: {{ item.item_details }}</p>
+            </div>
+
+            <div class="card-action">
+                <a href="#" class="btn-small purple lighten-1"><i class="fa-solid fa-circle-check"></i></a>
+                <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}" class="btn-small purple lighten-1">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
             </div>
         </div>
     </div>
