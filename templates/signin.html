@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Sign In</h3>
+<section class="heading">
+    <div class="row">
+        <div class="col top-heading s12 m6 center-align offset-m3">
+
+            <h3 class="top-heading text-darken-4 center-align">
+                Sign In </h3>
+        </div>
+    </div>
+</section>
 
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('signin') }}">

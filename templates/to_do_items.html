@@ -1,12 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
+<section class="heading">
+    <div class="row">
+        <div class="col top-heading s12 m6 center-align offset-m3">
+
+            <h3 class="top-heading text-darken-4 center-align">
+                Current List </h3>
+        </div>
+    </div>
+</section>
+
+
+
 <div class="row">
     {% if to_do_items|length > 0 %}
     {% for item in to_do_items %}
-    <div class="col s12 m8">
-        <div class="card horizontal pink lighten-1 darken-1">
-            <div class="card-content white-text">
+    <div class="col s12 m8 offset-m2">
+        <div class="card horizontal pink lighten-1">
+            <div class=" card-content white-text">
                 <span class="card-title activator">{{ item.to_do_item }}
                     {% if item.is_important == "on" %}
                     <i class="fa-solid fa-star"></i>
@@ -16,7 +28,7 @@
             </div>
 
 
-            <div class="card-reveal">
+            <div class="card-reveal pink lighten-5">
                 <span class="card-title">
                     <i class="material-icons right">close</i>
                 </span>
@@ -32,12 +44,14 @@
             </div>
         </div>
     </div>
+
     {% endfor %}
     {% else %}
     <div class="col s12 m8">
         <p>The list is empty!</p>
     </div>
     {% endif %}
+</div>
 </div>
 
 {% endblock %}
