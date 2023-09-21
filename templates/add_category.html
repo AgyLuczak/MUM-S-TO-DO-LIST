@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="heading">
+    <div class="row">
+        <div class="col top-heading s12 m6 center-align offset-m3">
+
+            <h3 class="top-heading text-darken-4 center-align">
+                Add Category</h3>
+        </div>
+    </div>
+</section>
+
+<div class="row card-panel pink lighten-5 s12 m8 offset-m2 container-add-todo">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_category') }}">
+        <!--New category-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-folder-open prefix text-darken-4"></i>
+                <input id="category_name" name="category_name" minlength="3" maxlength="20" type="text" class="validate"
+                    required>
+                <label for="category_name">New Category</label>
+            </div>
+        </div>
+
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large pink lighten-1 darken-1 text-shadow"><i
+                        class="fa-solid fa-circle-plus"></i>
+                </button>
+            </div>
+    </form>
+</div>
+
+
+{% endblock %}
