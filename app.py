@@ -136,6 +136,14 @@ def edit_to_do_item(to_do_item_id):
     return render_template("edit_to_do_item.html", to_do_item=to_do_item, categories=categories)
 
 
+@app.route("/delete_to_do_item/<to_do_item_id>")
+def delete_to_do_item(to_do_item_id):
+    mongo.db.to_do_items.remove({"_id": ObjectId(to_do_item_id)})
+    flash("Deleted!")
+    return redirect(url_for("get_to_do_items"))
+
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
