@@ -27,7 +27,7 @@
                     <li><a href="{{ url_for('get_to_do_items') }}">Home</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
-                    <li><a href=#>Saved Lists</a></li>
+                    <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                     <li><a href="{{ url_for('add_to_do_item') }}">Add</a></li>
                     <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
                     {% else %}
@@ -43,7 +43,7 @@
             <li><a href="{{ url_for('get_to_do_items') }}">Home</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
-            <li><a href=#>Saved Lists</a></li>
+            <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
             <li><a href="{{ url_for('add_to_do_item') }}">Add</a></li>
             <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
             {% else %}
