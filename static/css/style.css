@@ -63,8 +63,14 @@ nav .brand-logo {
     color: purple;
 }
 
+
+
 .flashes h4 {
     line-height: 2;
+}
+
+.select-dropdown {
+    font-family: Shantell Sans;
 }
 
 .btn-small {

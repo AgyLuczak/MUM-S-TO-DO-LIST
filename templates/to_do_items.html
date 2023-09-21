@@ -6,8 +6,8 @@
         <div class="col top-heading s12 m6 center-align offset-m3">
 
             <h3 class="top-heading text-darken-4 center-align">
-                My List <a href="{{ url_for('add_to_do_item') }}" class="btn-large pink lighten-1 darken-1">
-                    <i class="fa-solid fa-circle-plus"></i></a></h3>
+                My List <a href="{{ url_for('add_to_do_item') }}" class="btn-floating btn-large purple lighten-1">
+                    <i class="fa-solid fa-plus"></i></a></h3>
         </div>
     </div>
 </section>
@@ -34,12 +34,12 @@
             </div>
 
             <div class="card-action">
-                <a href="#" class="btn-small purple lighten-1"><i class="fa-solid fa-circle-check"></i></a>
+                <a href="#" class="btn-small purple lighten-1 "><i class="fa-solid fa-circle-check"></i></a>
                 <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}" class="btn-small purple lighten-1">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </a>
                 <a href="{{ url_for('delete_to_do_item', to_do_item_id=item._id) }}" onclick="return confirmDelete();"
-                    class="btn-small purple lighten-1">
+                    class="btn-small purple lighten-1 ">
                     <i class="fa-solid fa-trash"></i>
                 </a>
 
