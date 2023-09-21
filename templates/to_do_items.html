@@ -17,6 +17,7 @@
     {% if to_do_items|length > 0 %}
     {% for item in to_do_items %}
     <div class="col s12 m8 offset-m2">
+        {% if session.user|lower == item.created_by|lower %}
         <div class="card horizontal pink lighten-1">
             <div class=" card-content white-text">
                 <span class="card-title activator">{{ item.to_do_item }}
@@ -41,6 +42,7 @@
                 <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}" class="btn-small purple lighten-1">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </a>
+                {% endif %}
             </div>
         </div>
     </div>
