@@ -42,7 +42,10 @@ function validateMaterializeSelect() {
     });
 }
 
-function confirmDelete() {
+function confirmDeleteItem() {
     return confirm('Are you sure you want to delete this item?');
 }
 
+function confirmDeleteCategory() {
+    return confirm('Are you sure you want to delete this category?');
+}
