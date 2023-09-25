@@ -14,8 +14,6 @@ body {
 
 
 
-
-
 nav .brand-logo {
     font-family: Dancing Script;
     font-weight: 700;
@@ -63,7 +61,17 @@ nav .brand-logo {
     color: purple;
 }
 
+.prefix.active {
+    color: crimson;
+}
 
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: crimson;
+}
+
+.lever:after {
+    color: crimson;
+}
 
 .flashes h4 {
     line-height: 2;
@@ -76,4 +84,9 @@ nav .brand-logo {
 .btn-small {
 
     margin: 5px;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+    opacity: 0.6;
 }
