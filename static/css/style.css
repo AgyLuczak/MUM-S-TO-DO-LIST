@@ -10,6 +10,8 @@ body {
     font-family: Shantell Sans;
     font-weight: 600;
 
+
+
 }
 
 
@@ -29,7 +31,10 @@ nav .brand-logo {
     background: -webkit-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F6C4ED", endColorstr="#E1DAE6", GradientType=1);
     margin-top: 20px;
+    -webkit-box-shadow: 10px 15px 12px -3px #691E76;
+    box-shadow: 10px 15px 12px -3px #691E76;
     border-radius: 30px;
+
 
 }
 
@@ -40,6 +45,7 @@ nav .brand-logo {
 }
 
 .card-panel {
+
     border-radius: 30px;
 }
 
@@ -89,4 +95,12 @@ nav .brand-logo {
 .crossed-out {
     text-decoration: line-through;
     opacity: 0.6;
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav .brand-logo {
+
+        font-size: 2.0rem;
+    }
 }

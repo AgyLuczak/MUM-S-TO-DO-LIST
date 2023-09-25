@@ -88,6 +88,8 @@ def profile(username):
     return render_template("profile.html", username=username)
 
 
+
+
 @app.route("/signout")
 def signout():
     # remove user from session cookie

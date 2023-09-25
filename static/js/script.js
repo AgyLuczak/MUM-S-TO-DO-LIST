@@ -51,13 +51,12 @@ function confirmDeleteCategory() {
 }
 
 function toggleCrossOut(buttonElement) {
-    // Get the parent card of the button
+
     const card = buttonElement.closest(".card");
 
-    // Get the list item element
+
     const listItem = card.querySelector(".card-title");
 
-    // Check if the list item is already crossed out
     if (listItem.style.textDecoration === 'line-through') {
         listItem.style.textDecoration = 'none';
     } else {
