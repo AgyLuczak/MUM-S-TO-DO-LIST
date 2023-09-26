@@ -13,8 +13,9 @@
 
 <div class="row">
     {% for category in categories %}
+    {% if session.user|lower == category.created_by|lower %}
     <div class="col s12 m3">
-        <div class="card horizontal center-align pink lighten-2 ">
+        <div class="card horizontal center-align pink lighten-1 ">
             <div class="card-content white-text">
                 <span class="card-title">{{ category.category_name }}</span>
             </div>
@@ -28,6 +29,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 
