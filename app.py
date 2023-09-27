@@ -80,12 +80,30 @@ def signin():
     return render_template("signin.html")
 
 
+# @app.route("/profile/<username>", methods=["GET", "POST"])
+# def profile(username):
+#     # grab the session user's username from db
+#     username = mongo.db.users.find_one(
+#         {"username": session["user"]})["username"]
+#     return render_template("profile.html", username=username)
+    
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    # Check if the username in the URL matches the signed-in user
+    if username != session["user"]:
+        flash("No access!")
+        return redirect(url_for("get_to_do_items"))
+
     # grab the session user's username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    user = mongo.db.users.find_one({"username": session["user"]})
+    if not user:
+        flash("User not found!")
+        return redirect(url_for("get_to_do_items"))
+
+    return render_template("profile.html", username=user["username"])  
+
+    
 
 
 
@@ -136,6 +154,22 @@ def edit_to_do_item(to_do_item_id):
     to_do_item = mongo.db.to_do_items.find_one({"_id": ObjectId(to_do_item_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_to_do_item.html", to_do_item=to_do_item, categories=categories)
+
+
+@app.route("/toggle_cross_out/<item_id>")
+def toggle_cross_out(item_id):
+    to_do_item = mongo.db.to_do_items.find_one({"_id": ObjectId(item_id)})
+    
+    if not to_do_item:
+        flash("Item not found", "error")
+        return redirect(url_for("get_to_do_items"))
+    
+    # Toggle the state
+    new_state = not to_do_item.get('is_crossed_out', False)
+    mongo.db.to_do_items.update_one({"_id": ObjectId(item_id)}, {"$set": {"is_crossed_out": new_state}})
+    
+    return redirect(url_for("get_to_do_items"))
+
 
 
 @app.route("/delete_to_do_item/<to_do_item_id>")
