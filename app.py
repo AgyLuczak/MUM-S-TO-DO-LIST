@@ -118,6 +118,7 @@ def add_to_do_item():
             "item_details": request.form.get("item_details"),
             "is_important": is_important,
             "due_date": request.form.get("due_date"),
+            "created_by": session["user"].lower(),
         
         }
         mongo.db.to_do_items.insert_one(new_item)
@@ -180,7 +181,8 @@ def get_categories():
 def add_category():
     if request.method == "POST":
         category = {
-            "category_name": request.form.get("category_name")
+            "category_name": request.form.get("category_name"),
+            "created_by": session["user"].lower(),
         }
         mongo.db.categories.insert_one(category)
         flash("Added!")
