@@ -50,18 +50,4 @@ function confirmDeleteCategory() {
     return confirm('Are you sure you want to delete this category?');
 }
 
-function toggleCrossOut(buttonElement) {
-
-    const card = buttonElement.closest(".card");
-
-
-    const listItem = card.querySelector(".card-title");
-
-    if (listItem.style.textDecoration === 'line-through') {
-        listItem.style.textDecoration = 'none';
-    } else {
-        listItem.style.textDecoration = 'line-through';
-    }
-}
-
 
