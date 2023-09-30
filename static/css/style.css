@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oxygen:wght@400;700&family=Shantell+Sans:wght@700&family=Signika:wght@300;400;500;600;700&display=swap');
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-image: url("../images/mum_icons_faded1.png");
     background-repeat: repeat;

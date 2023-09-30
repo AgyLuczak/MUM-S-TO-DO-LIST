@@ -14,7 +14,7 @@
 <div class="row">
     {% if to_do_items|length > 0 %}
     {% for item in to_do_items %}
-    {% if session.user|lower == item.created_by|lower %}
+    <!-- {% if session.user|lower == item.created_by|lower %} -->
     <div class="col s12 m8 offset-m2">
         <div class="card horizontal pink lighten-1">
             <div class=" card-content white-text">
@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    {% endif %}
+    <!-- {% endif %} -->
     {% endfor %}
     {% else %}
     <div class="col s12 m8">
