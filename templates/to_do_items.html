@@ -4,9 +4,9 @@
 <section class="heading">
     <div class="row">
         <div class="col top-heading s12 m6 center-align offset-m3">
-            <h3 class="text-darken-4 center-align">
+            <h4 class="text-darken-4 center-align">
                 My List <a href="{{ url_for('add_to_do_item') }}" class="btn-floating btn-large purple lighten-1">
-                    <i class="fa-solid fa-plus"></i></a></h3>
+                    <i class="fa-solid fa-plus"></i></a></h4>
         </div>
     </div>
 </section>
@@ -14,7 +14,7 @@
 <div class="row">
     {% if to_do_items|length > 0 %}
     {% for item in to_do_items %}
-    <!-- {% if session.user|lower == item.created_by|lower %} -->
+    {% if session.user|lower == item.created_by|lower %}
     <div class="col s12 m8 offset-m2">
         <div class="card horizontal pink lighten-1">
             <div class=" card-content white-text">
@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    <!-- {% endif %} -->
+    {% endif %}
     {% endfor %}
     {% else %}
     <div class="col s12 m8">
