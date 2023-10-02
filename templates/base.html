@@ -39,13 +39,13 @@
 
         <!--mobile sidenav-->
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('get_to_do_items') }}">My List</a></li>
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+            <li><a href="{{ url_for('get_to_do_items') }}">My List</a></li>
             <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
             <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
             {% else %}
-            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>

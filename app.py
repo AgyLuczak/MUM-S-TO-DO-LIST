@@ -19,37 +19,6 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_to_do_items")
-def get_to_do_items():
-    to_do_items = list(mongo.db.to_do_items.find())
-    return render_template("to_do_items.html", to_do_items=to_do_items)
-
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    if request.method == "POST":
-        # check if username already exists in db
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            flash("Username already exists")
-            return redirect(url_for("register"))
-
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        mongo.db.users.insert_one(register)
-
-        # put the new user into 'session' cookie
-        session["user"] = request.form.get("username").lower()
-        flash("Registration Complete!")
-        return redirect(url_for("profile", username=session["user"]))
-
-    return render_template("register.html")
-
-
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
     if request.method == "POST":
@@ -80,6 +49,34 @@ def signin():
     return render_template("signin.html")
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Complete!")
+        return redirect(url_for("profile", username=session["user"]))
+
+    return render_template("register.html")
+
+
+
+
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # Check if the username in the URL matches the signed-in user
@@ -95,7 +92,12 @@ def profile(username):
 
     return render_template("profile.html", username=user["username"])  
 
-    
+
+@app.route("/get_to_do_items")
+def get_to_do_items():
+    to_do_items = list(mongo.db.to_do_items.find())
+    return render_template("to_do_items.html", to_do_items=to_do_items)
+
 
 
 
