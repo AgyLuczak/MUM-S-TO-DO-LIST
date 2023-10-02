@@ -173,10 +173,16 @@ def delete_to_do_item(to_do_item_id):
     flash("Deleted!")
     return redirect(url_for("get_to_do_items"))
 
+
 @app.route("/get_categories")
 def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    categories = list(mongo.db.categories.find({
+        "$or": [
+            {"created_by": session["user"].lower()},
+            {"created_by": "admin"}  
+        ]
+    }).sort("category_name", 1))
+    return render_template("categories.html", categories=categories
 
 
 @app.route("/add_category", methods=["GET", "POST"])
