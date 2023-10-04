@@ -101,6 +101,13 @@ nav .brand-logo {
     opacity: 0.6;
 }
 
+.btn-large {
+    border-radius: 30px;
+
+
+}
+
+
 
 @media only screen and (max-width: 600px) {
     nav .brand-logo {

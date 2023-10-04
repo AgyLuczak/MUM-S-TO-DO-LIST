@@ -215,7 +215,7 @@ def edit_category(category_id):
     "created_by": session["user"].lower(),
 }
 
-        mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
+        mongo.db.categories.update_one({"_id": ObjectId(category_id)}, {"$set": submit})
         flash("Category Updated!")
         return redirect(url_for("get_categories"))
 

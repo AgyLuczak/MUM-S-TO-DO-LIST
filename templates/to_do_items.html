@@ -51,9 +51,9 @@
     {% endfor %}
 </div>
 
-<div class=" delete-checked-button center-align">
-    <a href="{{ url_for('delete_checked_items') }}" class="btn-large red lighten-1">Delete All Checked Items <i
-            class="fa-solid fa-trash"></i></a>
+<div class="delete-checked-button center-align">
+    <a href="{{ url_for('delete_checked_items') }}" onclick="return confirmDeleteAllChecked();"
+        class="btn-large pink lighten-1">Delete All Checked Items <i class="fa-solid fa-trash"></i></a>
 
 </div>
 
