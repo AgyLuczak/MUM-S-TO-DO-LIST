@@ -171,8 +171,14 @@ def delete_to_do_item(to_do_item_id):
 
 @app.route("/delete_checked_items")
 def delete_checked_items():
-    mongo.db.to_do_items.delete_many({"is_crossed_out": True})
-    flash("All checked items deleted!")
+    count_checked = mongo.db.to_do_items.count_documents({"is_crossed_out": True})
+    
+    if count_checked == 0:
+        flash("You haven't checked any items!")
+    else:
+        mongo.db.to_do_items.delete_many({"is_crossed_out": True})
+        flash("All checked items deleted!")
+    
     return redirect(url_for("get_to_do_items"))
 
 
