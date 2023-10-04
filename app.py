@@ -140,6 +140,7 @@ def edit_to_do_item(to_do_item_id):
 
         mongo.db.to_do_items.update({"_id": ObjectId(to_do_item_id)}, submit)
         flash("Updated!")
+        return redirect(url_for("get_to_do_items"))
        
     to_do_item = mongo.db.to_do_items.find_one({"_id": ObjectId(to_do_item_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
