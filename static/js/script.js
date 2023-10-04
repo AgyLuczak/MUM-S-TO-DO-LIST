@@ -46,6 +46,10 @@ function confirmDeleteItem() {
     return confirm('Are you sure you want to delete this item?');
 }
 
+function confirmDeleteAllChecked() {
+    return confirm('Are you sure you want to delete all checked items?');
+}
+
 function confirmDeleteCategory() {
     return confirm('Are you sure you want to delete this category?');
 }
