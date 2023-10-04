@@ -74,9 +74,6 @@ def register():
     return render_template("register.html")
 
 
-
-
-
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # Check if the username in the URL matches the signed-in user
@@ -97,9 +94,6 @@ def profile(username):
 def get_to_do_items():
     to_do_items = list(mongo.db.to_do_items.find())
     return render_template("to_do_items.html", to_do_items=to_do_items)
-
-
-
 
 
 @app.route("/signout")
@@ -136,13 +130,14 @@ def edit_to_do_item(to_do_item_id):
     if request.method == "POST":
         is_important = "on" if request.form.get("is_important") else "off"
         submit = {
-            "category_name": request.form.get("category_name"),
-            "to_do_item": request.form.get("to_do_item"),
-            "item_details": request.form.get("item_details"),
-            "is_important": is_important,
-            "due_date": request.form.get("due_date"),
-        
-        }
+    "category_name": request.form.get("category_name"),
+    "to_do_item": request.form.get("to_do_item"),
+    "item_details": request.form.get("item_details"),
+    "is_important": is_important,
+    "due_date": request.form.get("due_date"),
+    "created_by": session["user"].lower(),
+}
+
         mongo.db.to_do_items.update({"_id": ObjectId(to_do_item_id)}, submit)
         flash("Updated!")
        
@@ -166,7 +161,6 @@ def toggle_cross_out(item_id):
     return redirect(url_for("get_to_do_items"))
 
 
-
 @app.route("/delete_to_do_item/<to_do_item_id>")
 def delete_to_do_item(to_do_item_id):
     mongo.db.to_do_items.remove({"_id": ObjectId(to_do_item_id)})
@@ -179,7 +173,6 @@ def delete_checked_items():
     mongo.db.to_do_items.delete_many({"is_crossed_out": True})
     flash("All checked items deleted!")
     return redirect(url_for("get_to_do_items"))
-
 
 
 @app.route("/get_categories")
@@ -211,14 +204,17 @@ def add_category():
 def edit_category(category_id):
     if request.method == "POST":
         submit = {
-            "category_name": request.form.get("category_name")
-        }
+    "category_name": request.form.get("category_name"),
+    "created_by": session["user"].lower(),
+}
+
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
         flash("Category Updated!")
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
+
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
