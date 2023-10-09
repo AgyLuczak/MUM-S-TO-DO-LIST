@@ -53,6 +53,8 @@ nav .brand-logo {
     border-radius: 30px;
 }
 
+
+
 .container-add-todo {
     max-width: 70%;
     margin: 0 auto;
@@ -101,7 +103,7 @@ nav .brand-logo {
     opacity: 0.6;
 }
 
-.btn-large {
+.delete-all {
     border-radius: 30px;
 
 
