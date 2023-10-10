@@ -11,5 +11,24 @@
     </div>
 </section>
 
+<div class="row card-panel pink lighten-5 s12 m8 offset-m2 container-add-todo">
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                <label for="query">Search in list items, details, categories</label>
+            </div>
+            <div class="search-buttons">
+                <a href="{{ url_for('get_to_do_items') }}" class=" pink lighten-1 btn ">Reset</a>
+                <button type="submit" class="purple lighten-1 btn ">
+                    <i class="fas fa-search left"></i> Search
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
 
 {% endblock %}

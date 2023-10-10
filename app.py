@@ -96,6 +96,13 @@ def get_to_do_items():
     return render_template("to_do_items.html", to_do_items=to_do_items)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    to_do_items = list(mongo.db.to_do_items.find({"$text": {"$search": query}}))
+    return render_template("to_do_items.html", to_do_items=to_do_items)
+
+
 @app.route("/signout")
 def signout():
     # remove user from session cookie
