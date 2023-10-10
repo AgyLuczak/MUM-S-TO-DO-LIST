@@ -111,7 +111,7 @@ nav .brand-logo {
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     nav .brand-logo {
 
         font-size: 2.0rem;
@@ -119,5 +119,14 @@ nav .brand-logo {
 
     .container-add-todo {
         max-width: 90%;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .heading {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
