@@ -17,7 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# sign in
 @app.route("/")
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
@@ -48,7 +48,7 @@ def signin():
 
     return render_template("signin.html")
 
-
+# register
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -73,7 +73,7 @@ def register():
 
     return render_template("register.html")
 
-
+# user's profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # Check if the username in the URL matches the signed-in user
@@ -89,20 +89,20 @@ def profile(username):
 
     return render_template("profile.html", username=user["username"])  
 
-
-@app.route("/get_to_do_items")
-def get_to_do_items():
-    to_do_items = list(mongo.db.to_do_items.find())
-    return render_template("to_do_items.html", to_do_items=to_do_items)
-
-
+# search
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     to_do_items = list(mongo.db.to_do_items.find({"$text": {"$search": query}}))
     return render_template("to_do_items.html", to_do_items=to_do_items)
 
+# display to-do list
+@app.route("/get_to_do_items")
+def get_to_do_items():
+    to_do_items = list(mongo.db.to_do_items.find())
+    return render_template("to_do_items.html", to_do_items=to_do_items)
 
+# sign out
 @app.route("/signout")
 def signout():
     # remove user from session cookie
@@ -110,7 +110,7 @@ def signout():
     session.pop("user")
     return redirect(url_for("signin"))
 
- 
+# adding to the list
 @app.route("/add_to_do_item", methods=["GET", "POST"])
 def add_to_do_item():
     if request.method == "POST":
@@ -131,7 +131,7 @@ def add_to_do_item():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_to_do_item.html", categories=categories)
 
-
+# editing list item
 @app.route("/edit_to_do_item/<to_do_item_id>", methods=["GET", "POST"])
 def edit_to_do_item(to_do_item_id):
     if request.method == "POST":
@@ -153,7 +153,7 @@ def edit_to_do_item(to_do_item_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_to_do_item.html", to_do_item=to_do_item, categories=categories)
 
-
+# mark an item as completed
 @app.route("/toggle_cross_out/<item_id>")
 def toggle_cross_out(item_id):
     to_do_item = mongo.db.to_do_items.find_one({"_id": ObjectId(item_id)})
@@ -162,20 +162,19 @@ def toggle_cross_out(item_id):
         flash("Item not found", "error")
         return redirect(url_for("get_to_do_items"))
     
-    # Toggle the state
     new_state = not to_do_item.get('is_crossed_out', False)
     mongo.db.to_do_items.update_one({"_id": ObjectId(item_id)}, {"$set": {"is_crossed_out": new_state}})
     
     return redirect(url_for("get_to_do_items"))
 
-
+# delete a list item
 @app.route("/delete_to_do_item/<to_do_item_id>")
 def delete_to_do_item(to_do_item_id):
     mongo.db.to_do_items.remove({"_id": ObjectId(to_do_item_id)})
     flash("Deleted!")
     return redirect(url_for("get_to_do_items"))
 
-
+# delete all checked items
 @app.route("/delete_checked_items")
 def delete_checked_items():
     count_checked = mongo.db.to_do_items.count_documents({"is_crossed_out": True})
@@ -188,7 +187,7 @@ def delete_checked_items():
     
     return redirect(url_for("get_to_do_items"))
 
-
+# display categories created by admin or a logged-in user
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find({
@@ -199,7 +198,7 @@ def get_categories():
     }).sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
-
+# add a category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -213,7 +212,7 @@ def add_category():
 
     return render_template("add_category.html")
 
-
+# edit a category 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -229,7 +228,7 @@ def edit_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
-
+# delete a category
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
