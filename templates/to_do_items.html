@@ -18,8 +18,8 @@
     <div class="col s12 m8 offset-m2">
         <div class="card horizontal pink lighten-1">
             <div class=" card-content white-text">
-                <span class="card-title activator {% if item.is_crossed_out %}crossed-out{% endif %}">{{ item.to_do_item
-                    }}
+                <span class="card-title activator {% if item.is_crossed_out %}crossed-out{% endif %}">
+                    {{item.category_name}} : {{ item.to_do_item}}
                     {% if item.is_important == "on" %}
                     <i class="fa-solid fa-star"></i>
                     {% endif %}
