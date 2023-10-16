@@ -5,7 +5,8 @@
     <div class="row">
         <div class="col top-heading s12 m6 center-align offset-m3">
             <h4 class="text-darken-4 center-align">
-                My List <a href="{{ url_for('add_to_do_item') }}" class="btn-floating btn-small purple lighten-1">
+                My List <a href="{{ url_for('add_to_do_item') }}" class="btn-floating btn-small purple lighten-1"
+                    aria-label="add">
                     <i class="fa-solid fa-plus"></i></a></h4>
         </div>
     </div>
@@ -36,14 +37,16 @@
             </div>
 
             <div class="card-action">
-                <a href="{{ url_for('toggle_cross_out', item_id=item._id) }}" class="btn-small purple lighten-1">
+                <a href="{{ url_for('toggle_cross_out', item_id=item._id) }}" class="btn-small purple lighten-1"
+                    aria-label="check">
                     <i class="fa-solid fa-circle-check"></i></a>
 
-                <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}" class="btn-small purple lighten-1">
+                <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}" class="btn-small purple lighten-1"
+                    aria-label="edit">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </a>
                 <a href="{{ url_for('delete_to_do_item', to_do_item_id=item._id) }}"
-                    onclick="return confirmDeleteItem();" class="btn-small purple lighten-1 ">
+                    onclick="return confirmDeleteItem();" class="btn-small purple lighten-1 " aria-label="delete">
                     <i class="fa-solid fa-trash"></i>
                 </a>
             </div>
@@ -55,7 +58,8 @@
 
 <div class="delete-checked-button center-align">
     <a href="{{ url_for('delete_checked_items') }}" onclick="return confirmDeleteAllChecked();"
-        class="btn-large delete-all purple lighten-1">Delete All Checked Items <i class="fa-solid fa-trash"></i></a>
+        class="btn-large buttons delete-all purple lighten-1" aria-label="delete-all-checked">Delete All Checked Items
+        <i class="fa-solid fa-trash"></i></a>
 
 </div>
 

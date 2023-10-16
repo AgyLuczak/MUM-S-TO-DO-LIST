@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oxygen:wght@400;700&family=Signika:wght@300;400;500;600;700&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oxygen:wght@400;700&family=Shantell+Sans:wght@700&family=Signika:wght@300;400;500;600;700&display=swap');
 
 html {
@@ -11,18 +9,17 @@ body {
     background-repeat: repeat;
     background-size: auto;
     background-position: center;
-    font-family: Shantell Sans;
+    font-family: Shantell Sans, sans-serif;
     font-weight: 600;
-
-
-
+    font-display: swap;
 
 }
 
 
 
+
 nav .brand-logo {
-    font-family: Dancing Script;
+    font-family: Dancing Script, sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
     padding-left: 20px;
@@ -96,6 +93,23 @@ nav .brand-logo {
 
 .btn {
     font-family: Shantell Sans;
+
+}
+
+.buttons {
+
+    border-radius: 15px;
+}
+
+.buttons:hover,
+.btn-small:hover {
+    background-color: #5e2056;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 0.4rem 0 rgb(88, 4, 91);
+    transform: scale(1.05);
+    transition: transform 400ms;
+
+
 }
 
 .btn-small {
@@ -103,16 +117,13 @@ nav .brand-logo {
     margin: 5px;
 }
 
+
 .crossed-out {
     text-decoration: line-through;
     opacity: 0.6;
 }
 
-.delete-all {
-    border-radius: 30px;
 
-
-}
 
 
 
