@@ -3,7 +3,7 @@
 
 <section class="heading">
     <div class="row">
-        <div class="col top-heading s12 m6 center-align offset-m3">
+        <div class="col left top-heading s12 m3 offset-m2">
             <h4 class="text-darken-4 center-align">
                 My List <a href="{{ url_for('add_to_do_item') }}" class="btn-floating btn-small purple lighten-1"
                     aria-label="add">
@@ -11,7 +11,6 @@
         </div>
     </div>
 </section>
-
 
 <div class="row">
     {% for item in to_do_items %}
@@ -25,7 +24,6 @@
                     {% if item.is_important == "on" %}
                     <i class="fa-solid fa-star"></i>
                     {% endif %}
-                    <i class="material-icons right">subject</i>
                 </span>
             </div>
             <div class="card-reveal pink lighten-5">
