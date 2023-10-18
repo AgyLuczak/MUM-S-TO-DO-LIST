@@ -89,6 +89,13 @@ def profile(username):
 
     return render_template("profile.html", username=user["username"])  
 
+
+# display to-do list
+@app.route("/get_to_do_items")
+def get_to_do_items():
+    to_do_items = list(mongo.db.to_do_items.find())
+    return render_template("to_do_items.html", to_do_items=to_do_items)
+
 # search
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -98,12 +105,6 @@ def search():
         flash("Sorry, there is nothing here under that name:(",)
     return render_template("to_do_items.html", to_do_items=to_do_items)
 
-
-# display to-do list
-@app.route("/get_to_do_items")
-def get_to_do_items():
-    to_do_items = list(mongo.db.to_do_items.find())
-    return render_template("to_do_items.html", to_do_items=to_do_items)
 
 # sign out
 @app.route("/signout")
@@ -148,7 +149,7 @@ def edit_to_do_item(to_do_item_id):
     "created_by": session["user"].lower(),
 }
 
-        mongo.db.to_do_items.update({"_id": ObjectId(to_do_item_id)}, submit)
+        mongo.db.to_do_items.update_one({"_id": ObjectId(to_do_item_id)}, {"$set": submit})
         flash("Updated!")
         return redirect(url_for("get_to_do_items"))
        
