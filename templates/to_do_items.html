@@ -1,16 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <section class="heading">
     <div class="row">
-        <div class="col left top-heading s12 m3 offset-m2">
+        <!-- My List Heading -->
+        <div class="col s12 m3 offset-m2 top-heading">
             <h4 class="text-darken-4 center-align">
-                My List <a href="{{ url_for('add_to_do_item') }}" class="btn-floating btn-small purple lighten-1"
+                My List
+                <a href="{{ url_for('add_to_do_item') }}" class="btn-floating btn-small purple lighten-1"
                     aria-label="add">
-                    <i class="fa-solid fa-plus"></i></a></h4>
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+            </h4>
+        </div>
+
+        <!-- Search Form -->
+        <div class="col s12 m6 card-panel pink lighten-5 right">
+            <form action="{{ url_for('search') }}" method="post">
+                <div class="row valign-wrapper center-align">
+                    <div class="input-field col s8">
+                        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                        <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                        <label for="query">Search in items and categories</label>
+                    </div>
+                    <div class="search-buttons col s4">
+                        <a href="{{ url_for('get_to_do_items') }}" class=" pink lighten-1 btn buttons ">Reset</a>
+                        <button type="submit" class="purple lighten-1 btn buttons">
+                            <i class="fas fa-search left"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>
+
+
+
+
+
 
 <div class="row">
     {% for item in to_do_items %}
