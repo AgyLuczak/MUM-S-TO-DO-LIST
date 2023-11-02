@@ -94,6 +94,8 @@ def profile(username):
 @app.route("/get_to_do_items")
 def get_to_do_items():
     to_do_items = list(mongo.db.to_do_items.find())
+    if not to_do_items:
+       flash("This list is empty and very sad. Please, add a list item")
     return render_template("to_do_items.html", to_do_items=to_do_items)
 
 # search

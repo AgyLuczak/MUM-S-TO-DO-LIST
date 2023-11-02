@@ -1,38 +1,74 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="heading">
-    <div class="row">
-        <div class="col s12 m6 top-heading center-align offset-m3">
-            <h4 class="text-darken-4 center-align">
-                Categories <a href="{{ url_for('add_category') }}" class="btn-floating btn-small purple lighten-1"
-                    aria-label="add">
-                    <i class="fa-solid fa-plus"></i></a></h4>
+<div class="main-content">
+    <section class="heading">
+        <div class="row">
+            <div class="col s12 m6 top-heading center-align offset-m3">
+                <h4 class="text-darken-4 center-align">
+                    Categories <a href="{{ url_for('add_category') }}" class="btn-floating btn-small purple lighten-1"
+                        aria-label="add">
+                        <i class="fa-solid fa-plus"></i></a></h4>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<div class="row">
-    {% for category in categories %}
-    <div class="col s12 m4">
-        <div class="card horizontal center-align pink lighten-1 ">
-            <div class="card-content white-text">
-                <span class="card-title">{{ category.category_name }}</span>
+    <div class="row">
+        {% for category in categories %}
+        <div class="col s12 m4">
+            <div class="card horizontal center-align pink lighten-1 ">
+                <div class="card-content white-text">
+                    <span class="card-title">{{ category.category_name }}</span>
+                </div>
+                <!--show edit and delete options only for the categories created by a logged-in user-->
+                {% if session.user|lower == category.created_by|lower or session.user|lower == "admin" %}
+                <div class="card-action">
+                    <a href="{{ url_for('edit_category', category_id=category._id) }}"
+                        class="btn-small purple lighten-1">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <a href="{{ url_for('delete_category', category_id=category._id) }}"
+                        onclick="return confirmDeleteCategory();" class="btn-small purple lighten-1"><i
+                            class="fa-solid fa-trash"></i></a>
+                </div>
+                {% endif %}
             </div>
-            <!--show edit and delete options only for the categories created by a logged-in user-->
-            {% if session.user|lower == category.created_by|lower or session.user|lower == "admin" %}
-            <div class="card-action">
-                <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn-small purple lighten-1">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                </a>
-                <a href="{{ url_for('delete_category', category_id=category._id) }}"
-                    onclick="return confirmDeleteCategory();" class="btn-small purple lighten-1"><i
-                        class="fa-solid fa-trash"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+
+<footer class="page-footer pink lighten-5">
+    <div class="container">
+        <div class="row">
+            <!-- Search Form in Footer -->
+            <div class="col s12 m8 offset-m3">
+                <form action="{{ url_for('search') }}" method="post">
+                    <div class="row">
+                        <div class="input-field col s9">
+                            <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                            <input type="text" name="query" id="footer-query" minlength="3" class="validate" required>
+                            <label for="footer-query">Search in items and categories</label>
+                        </div>
+                        <div class="col s3">
+                            <button type="submit" class="btn purple lighten-1">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            {% endif %}
         </div>
     </div>
-    {% endfor %}
-</div>
+
+    <div class="footer-copyright pink darken-1">
+        <div class="container">
+            © copyright Agy Luczak
+        </div>
+    </div>
+</footer>
+
+
 
 {% endblock %}
