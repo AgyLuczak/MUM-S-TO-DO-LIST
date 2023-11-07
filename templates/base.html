@@ -30,7 +30,6 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
                     <ul class="right hide-on-med-and-down">
                         {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                         <li><a href="{{ url_for('get_to_do_items') }}">My List</a></li>
                         <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                         <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
@@ -46,7 +45,6 @@
             <ul class="sidenav" id="mobile-demo">
                 {% if session.user %}
                 <li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                 <li><a href="{{ url_for('get_to_do_items') }}">My List</a></li>
                 <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                 <li><a href="{{ url_for('signout') }}">Sign Out</a></li>

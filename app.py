@@ -18,7 +18,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # sign in
-@app.route("/")
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
     if request.method == "POST":
@@ -29,10 +28,8 @@ def signin():
             # ensure hashed password matches user input
             if check_password_hash(existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Hi, {}".format(
-                    request.form.get("username")))
                 return redirect(url_for(
-                    "profile", username=session["user"]))
+                    "get_to_do_items", username=session["user"]))
             elif len(request.form.get("username")) < 3:
                 flash("must be at least 3 characters")
                 return redirect(url_for("signin"))
@@ -91,12 +88,19 @@ def profile(username):
 
 
 # display to-do list
-@app.route("/get_to_do_items")
+@app.route("/")
 def get_to_do_items():
-    to_do_items = list(mongo.db.to_do_items.find())
+    if 'user' in session:
+        username = session['user']
+    else:
+        username = None
+        flash("Sign in to view your to-do list.")
+        return redirect(url_for('signin'))
+
+    to_do_items = list(mongo.db.to_do_items.find({"created_by": username}))
     if not to_do_items:
-       flash("This list is empty and very sad. Please, add a list item")
-    return render_template("to_do_items.html", to_do_items=to_do_items)
+        flash("This list is empty and very sad. Please, add a list item")
+    return render_template("to_do_items.html", to_do_items=to_do_items, username=username)
 
 # search
 @app.route("/search", methods=["GET", "POST"])
