@@ -55,3 +55,12 @@ function confirmDeleteCategory() {
 }
 
 
+function toggleSearch() {
+    const searchContainer = document.getElementById("search-container");
+    if (searchContainer.style.display === "none") {
+        searchContainer.style.display = "block";
+    } else {
+        searchContainer.style.display = "none";
+    }
+}
+
