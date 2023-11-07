@@ -94,7 +94,6 @@ def get_to_do_items():
         username = session['user']
     else:
         username = None
-        flash("Sign in to view your to-do list.")
         return redirect(url_for('signin'))
 
     to_do_items = list(mongo.db.to_do_items.find({"created_by": username}))
