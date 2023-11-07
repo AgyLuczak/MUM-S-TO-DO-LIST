@@ -105,10 +105,11 @@ def get_to_do_items():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
+    username = session['user'] if 'user' in session else None
     to_do_items = list(mongo.db.to_do_items.find({"$text": {"$search": query}}))
     if not to_do_items:
-        flash("Sorry, there is nothing here under that name:(",)
-    return render_template("to_do_items.html", to_do_items=to_do_items)
+        flash("Sorry, there is nothing here under that name:(")
+    return render_template("to_do_items.html", to_do_items=to_do_items, username=username)
 
 
 # sign out
