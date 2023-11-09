@@ -23,7 +23,7 @@
     <div class="page-content">
 
         <header>
-            <!--top navbar-->
+            <!-- top navbar-->
             <nav class="nav-extended pink darken-3">
                 <div class="nav-wrapper">
                     <a href="#!" class="brand-logo">Mum's to-do list <i class="fa-solid fa-circle-check"></i></a>
@@ -40,20 +40,45 @@
                     </ul>
                 </div>
             </nav>
-
-            <!--mobile sidenav-->
-            <ul class="sidenav" id="mobile-demo">
-                {% if session.user %}
-                <li>
-                <li><a href="{{ url_for('get_to_do_items') }}">My List</a></li>
-                <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
-                <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
-                {% else %}
-                <a href="{{ url_for('signin') }}">Sign In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-                {% endif %}
-            </ul>
         </header>
+
+
+
+
+        <!--mobile sidenav-->
+        <ul class="sidenav" id="mobile-demo">
+            {% if session.user %}
+            <li>
+            <li><a href="{{ url_for('get_to_do_items') }}">My List</a></li>
+            <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
+            <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
+            {% else %}
+            <a href="{{ url_for('signin') }}">Sign In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% endif %}
+        </ul>
+        </header>
+
+        {% if session.user %}
+        <div class="col m2">
+            <button type="submit" class="btn-large purple purple lighten-1 right" onclick="toggleSearch()">
+                <i class="fas fa-search" id="search-icon"></i>
+            </button>
+        </div>
+        <!-- Search Container -->
+        <div class="col m6" id="search-container">
+            <!-- Search Form -->
+            <form action="{{ url_for('search') }}" method="post">
+                <div class="row">
+                    <div class="input-field col s12 m8 right">
+                        <i class="fas fa-search prefix white-text"></i>
+                        <input type="text" name="query" id="footer-query" minlength="3" class="validate" required>
+                        <label for="footer-query">Search in items and categories</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        {% endif %}
 
         <section>
             <!-- flash messages -->

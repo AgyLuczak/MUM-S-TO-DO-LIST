@@ -71,34 +71,17 @@
         <footer class="page-footer grey lighten-4">
             <div class="container">
                 <div class="row">
-                    <!-- Search Icon Button -->
                     <div class="footer-icons">
-                        <div class="col m2">
-                            <button type="submit" class="btn-small purple purple lighten-1" onclick="toggleSearch()">
-                                <i class="fas fa-search" id="search-icon"></i>
-                            </button>
-                        </div>
-                        <!-- Search Container -->
-                        <div class="col m6" id="search-container">
-                            <!-- Search Form -->
-                            <form action="{{ url_for('search') }}" method="post">
-                                <div class="row">
-                                    <div class="input-field col s12 m8">
-                                        <i class="fas fa-search prefix white-text"></i>
-                                        <input type="text" name="query" id="footer-query" minlength="3" class="validate"
-                                            required>
-                                        <label for="footer-query">Search in items and categories</label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Additional Icons -->
                         <div class="col m2">
                             <button type="submit" class="btn-small purple lighten-1 ">
                                 <i class="fa-solid fa-filter" id="filter-icon"></i>
                             </button>
                         </div>
-
+                        <div class="col m2">
+                            <a href="{{ url_for('add_to_do_item') }}" class="btn-small purple lighten-1">
+                                <i class="fa-solid fa-plus" id="add-item-icon"></i>
+                            </a>
+                        </div>
                         <div class="col m2">
                             <a href="{{ url_for('get_categories') }}" class="btn-small purple lighten-1">
                                 <i class="fa-solid fa-folder-open" id="categories-icon"></i>

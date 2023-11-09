@@ -107,9 +107,13 @@ def search():
     query = request.form.get("query")
     username = session['user'] if 'user' in session else None
     to_do_items = list(mongo.db.to_do_items.find({"$text": {"$search": query}}))
+    
     if not to_do_items:
-        flash("Sorry, there is nothing here under that name:(")
+        flash("Sorry, there are no such items or categories:(")
+        to_do_items = list(mongo.db.to_do_items.find({"created_by": username}))
+    
     return render_template("to_do_items.html", to_do_items=to_do_items, username=username)
+
 
 
 # sign out
