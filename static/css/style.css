@@ -137,14 +137,22 @@ nav .brand-logo {
 
 
 .page-footer {
-    flex-shrink: 0;
     position: fixed;
     bottom: 0px;
-    min-height: 100px;
-    padding: 20px;
     width: 100%;
-    box-sizing: border-box;
 }
+
+.footer-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#search-container {
+    display: none;
+
+}
+
 
 
 

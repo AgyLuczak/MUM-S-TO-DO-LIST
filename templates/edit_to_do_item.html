@@ -1,92 +1,144 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="heading">
-    <div class="row">
-        <div class="col top-heading s12 m6 center-align offset-m3">
 
-            <h4 class="text-darken-4 center-align">
-                Edit List Item</h4>
-        </div>
-    </div>
-</section>
-
-<div class="row card-panel pink lighten-5 s12 m8 offset-m2 container-add-todo">
-    <form class="col s12 m8 offset-m2" method="POST"
-        action="{{ url_for('edit_to_do_item', to_do_item_id=to_do_item._id) }}">
-
-        <!--category selection-->
+<div class="main-content">
+    <section class="heading">
         <div class="row">
-            <div class="input-field col s12">
-                <i class="fa-regular fa-folder-open prefix text-darken-4"></i>
-                <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled>Select Category</option>
-                    {% for category in categories %}
-                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                    {% if category.category_name == to_do_item.category_name %}
-                    {% else %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endif %}
-                    {% endfor %}
+            <div class="col top-heading s12 m6 center-align offset-m3">
 
-                </select>
-                <label for="category_name">Category</label>
+                <h4 class="text-darken-4 center-align">
+                    Edit List Item</h4>
             </div>
         </div>
-        <!--New list item-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-pencil-alt prefix text-darken-4"></i>
-                <input id="to_do_item" name="to_do_item" minlength="3" maxlength="60"
-                    value="{{ to_do_item.to_do_item }}" type="text" class="validate" required>
-                <label for="to_do_item">New list item</label>
-            </div>
-        </div>
-        <!--New list item details-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-align-left prefix text-darken-4"></i>
-                <textarea id="item_details" name="item_details" minlength="3" maxlength="200"
-                    class="materialize-textarea validate">{{ to_do_item.item_details }}</textarea>
-                <label for="item_details">Details</label>
-            </div>
-        </div>
-        <!--date picker-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix  text-darken-4"></i>
-                <input id="due_date" name="due_date" type="text" value="{{ to_do_item.due_date}}"
-                    class=" datepicker validate">
-                <label for="due_date">Due Date</label>
-            </div>
-        </div>
-        <!--is important-->
-        <div class="row">
-            <div class="input-field col s12 m8">
-                <div class="switch">
-                    <i class="fa-solid fa-star prefix  text-darken-4"></i>
-                    <label for="is_important">
-                        {% if to_do_item.is_important == "on" %}
-                        <input type="checkbox" id="is_important" name="is_important" checked>
+    </section>
+
+    <div class="row card-panel pink  s12 m8 offset-m2 container-add-todo">
+        <form class="col s12 m8 offset-m2" method="POST"
+            action="{{ url_for('edit_to_do_item', to_do_item_id=to_do_item._id) }}">
+
+            <!--category selection-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-regular fa-folder-open prefix text-darken-4"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled>Select Category</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% if category.category_name == to_do_item.category_name %}
                         {% else %}
-                        <input type="checkbox" id="is_important" name="is_important">
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endif %}
-                        <span class="lever"></span>
-                        Is Important!
-                    </label>
+                        {% endfor %}
+
+                    </select>
+                    <label for="category_name">Category</label>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col s12 center-align">
-                <!--Quit button-->
-                <a href="{{ url_for('get_to_do_items')}}" class="btn-large buttons purple lighten-1"><i
-                        class="fa-solid fa-circle-xmark"></i></a>
-                <!--Save button-->
-                <button type="submit" class="btn-large buttons purple lighten-1"><i class="fa-solid fa-floppy-disk"></i>
-                </button>
+            <!--New list item-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix text-darken-4"></i>
+                    <input id="to_do_item" name="to_do_item" minlength="3" maxlength="60"
+                        value="{{ to_do_item.to_do_item }}" type="text" class="validate" required>
+                    <label for="to_do_item">New list item</label>
+                </div>
             </div>
-    </form>
+            <!--New list item details-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix text-darken-4"></i>
+                    <textarea id="item_details" name="item_details" minlength="3" maxlength="200"
+                        class="materialize-textarea validate">{{ to_do_item.item_details }}</textarea>
+                    <label for="item_details">Details</label>
+                </div>
+            </div>
+            <!--date picker-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix  text-darken-4"></i>
+                    <input id="due_date" name="due_date" type="text" value="{{ to_do_item.due_date}}"
+                        class=" datepicker validate">
+                    <label for="due_date">Due Date</label>
+                </div>
+            </div>
+            <!--is important-->
+            <div class="row">
+                <div class="input-field col s12 m8">
+                    <div class="switch">
+                        <i class="fa-solid fa-star prefix  text-darken-4"></i>
+                        <label for="is_important">
+                            {% if to_do_item.is_important == "on" %}
+                            <input type="checkbox" id="is_important" name="is_important" checked>
+                            {% else %}
+                            <input type="checkbox" id="is_important" name="is_important">
+                            {% endif %}
+                            <span class="lever"></span>
+                            Is Important!
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <!--Quit button-->
+                    <a href="{{ url_for('get_to_do_items')}}" class="btn-large buttons purple lighten-1"><i
+                            class="fa-solid fa-circle-xmark"></i></a>
+                    <!--Save button-->
+                    <button type="submit" class="btn-large buttons purple lighten-1"><i
+                            class="fa-solid fa-floppy-disk"></i>
+                    </button>
+                </div>
+        </form>
+    </div>
 </div>
+
+
+<footer class="page-footer pink accent-2">
+    <div class="container">
+        <div class="row">
+            <!-- Search Icon Button -->
+            <div class="footer-icons">
+                <div class="col m2">
+                    <button type="submit" class="btn-small purple purple lighten-1" onclick="toggleSearch()">
+                        <i class="fas fa-search" id="search-icon"></i>
+                    </button>
+                </div>
+                <!-- Search Container -->
+                <div class="col m6" id="search-container">
+                    <!-- Search Form -->
+                    <form action="{{ url_for('search') }}" method="post">
+                        <div class="row">
+                            <div class="input-field col s12 m8">
+                                <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                                <input type="text" name="query" id="footer-query" minlength="3" class="validate"
+                                    required>
+                                <label for="footer-query">Search in items and categories</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Additional Icons -->
+                <div class="col m2">
+                    <a href="{{ url_for('get_to_do_items') }}" class="btn-small purple lighten-1">
+                        <i class="fa-solid fa-list"></i>
+                    </a>
+                </div>
+
+                <div class="col m2">
+                    <a href="{{ url_for('get_categories') }}" class="btn-small purple lighten-1">
+                        <i class="fa-solid fa-folder-open" id="categories-icon"></i>
+                    </a>
+                </div>
+                <div class="col m2">
+                    <a href="{{ url_for('signout') }}" class="btn-small purple lighten-1">
+                        <i class="fa-solid fa-user" id="signout-icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+</footer>
+
+
 
 
 {% endblock %}

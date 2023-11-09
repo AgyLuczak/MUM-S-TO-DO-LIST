@@ -1,41 +1,90 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="heading">
-    <div class="row">
-        <div class="col top-heading s12 m6 center-align offset-m3">
-
-            <h4 class="text-darken-4 center-align">
-                Add Category</h4>
-        </div>
-    </div>
-</section>
-
-<div class="row card-panel pink lighten-5 s12 m8 offset-m2 container-add-todo">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_category') }}">
-        <!--New category-->
+<div class="main-content">
+    <section class="heading">
         <div class="row">
-            <div class="input-field col s12">
-                <i class="fa-regular fa-folder-open prefix text-darken-4"></i>
-                <input id="category_name" name="category_name" minlength="3" maxlength="20" type="text" class="validate"
-                    required>
-                <label for="category_name">New Category</label>
+            <div class="col top-heading s12 m6 center-align offset-m3">
+
+                <h4 class="text-darken-4 center-align">
+                    Add Category</h4>
             </div>
         </div>
+    </section>
 
-        <!-- submit button -->
-        <div class="row">
-            <div class="col s12 center-align">
-                <div class="card-action">
-                    <a href="{{ url_for('get_categories') }}" class="btn-large buttons purple lighten-1 darken-1">
-                        <i class="fa-solid fa-circle-xmark"></i>
-                    </a>
-                    <button type="submit" class="btn-large buttons purple lighten-1 darken-1"><i
-                            class="fa-solid fa-floppy-disk"></i>
-                    </button>
+    <div class="row card-panel pink lighten-5 s12 m8 offset-m2 container-add-todo">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_category') }}">
+            <!--New category-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-regular fa-folder-open prefix text-darken-4"></i>
+                    <input id="category_name" name="category_name" minlength="3" maxlength="20" type="text"
+                        class="validate" required>
+                    <label for="category_name">New Category</label>
                 </div>
             </div>
-        </div>
+
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <div class="card-action">
+                        <a href="{{ url_for('get_categories') }}" class="btn-large buttons purple lighten-1 darken-1">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </a>
+                        <button type="submit" class="btn-large buttons purple lighten-1 darken-1"><i
+                                class="fa-solid fa-floppy-disk"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer class="page-footer pink accent-2">
+        <div class="container">
+            <div class="row">
+                <!-- Search Icon Button -->
+                <div class="footer-icons">
+                    <div class="col m2">
+                        <button type="submit" class="btn-small purple purple lighten-1" onclick="toggleSearch()">
+                            <i class="fas fa-search" id="search-icon"></i>
+                        </button>
+                    </div>
+                    <!-- Search Container -->
+                    <div class="col m6" id="search-container">
+                        <!-- Search Form -->
+                        <form action="{{ url_for('search') }}" method="post">
+                            <div class="row">
+                                <div class="input-field col s12 m8">
+                                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                                    <input type="text" name="query" id="footer-query" minlength="3" class="validate"
+                                        required>
+                                    <label for="footer-query">Search in items and categories</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Additional Icons -->
+                    <div class="col m2">
+                        <a href="{{ url_for('get_to_do_items') }}" class="btn-small purple lighten-1">
+                            <i class="fa-solid fa-list"></i>
+                        </a>
+                    </div>
+
+                    <div class="col m2">
+                        <a href="{{ url_for('get_categories') }}" class="btn-small purple lighten-1">
+                            <i class="fa-solid fa-folder-open" id="categories-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col m2">
+                        <a href="{{ url_for('signout') }}" class="btn-small purple lighten-1">
+                            <i class="fa-solid fa-user" id="signout-icon"></i>
+                        </a>
+                        </a>
+                    </div>
+                </div>
+                <div>
+    </footer>
 
 
-        {% endblock %}
+    {% endblock %}

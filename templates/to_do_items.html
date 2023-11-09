@@ -17,11 +17,6 @@
 
     </section>
 
-
-
-
-
-
     <div class="row">
         {% for item in to_do_items %}
         <!--display only items created by a logged-in user-->
@@ -73,38 +68,52 @@
     </div>
     <div>
 
-        <footer class="page-footer pink lighten-5">
+        <footer class="page-footer pink accent-2">
             <div class="container">
                 <div class="row">
-                    <!-- Search Form in Footer -->
-                    <div class="col s12 m8 offset-m3">
-                        <form action="{{ url_for('search') }}" method="post">
-                            <div class="row">
-                                <div class="input-field col s9">
-                                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                                    <input type="text" name="query" id="footer-query" minlength="3" class="validate"
-                                        required>
-                                    <label for="footer-query">Search in items and categories</label>
+                    <!-- Search Icon Button -->
+                    <div class="footer-icons">
+                        <div class="col m2">
+                            <button type="submit" class="btn-small purple purple lighten-1" onclick="toggleSearch()">
+                                <i class="fas fa-search" id="search-icon"></i>
+                            </button>
+                        </div>
+                        <!-- Search Container -->
+                        <div class="col m6" id="search-container">
+                            <!-- Search Form -->
+                            <form action="{{ url_for('search') }}" method="post">
+                                <div class="row">
+                                    <div class="input-field col s12 m8">
+                                        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                                        <input type="text" name="query" id="footer-query" minlength="3" class="validate"
+                                            required>
+                                        <label for="footer-query">Search in items and categories</label>
+                                    </div>
                                 </div>
-                                <div class="col s3">
-                                    <button type="submit" class="btn purple lighten-1">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+                        <!-- Additional Icons -->
+                        <div class="col m2">
+                            <button type="submit" class="btn-small purple lighten-1 ">
+                                <i class="fa-solid fa-filter" id="filter-icon"></i>
+                            </button>
+                        </div>
+
+                        <div class="col m2">
+                            <a href="{{ url_for('get_categories') }}" class="btn-small purple lighten-1">
+                                <i class="fa-solid fa-folder-open" id="categories-icon"></i>
+                            </a>
+                        </div>
+                        <div class="col m2">
+                            <a href="{{ url_for('signout') }}" class="btn-small purple lighten-1">
+                                <i class="fa-solid fa-user" id="signout-icon"></i>
+                            </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="footer-copyright pink darken-1">
-                <div class="container">
-                    © copyright Agy Luczak
-                </div>
-            </div>
+                    <div>
         </footer>
-    </div>
 
 
 
-    {% endblock %}
+        {% endblock %}
