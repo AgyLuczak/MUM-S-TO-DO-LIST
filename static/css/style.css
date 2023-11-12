@@ -113,7 +113,8 @@ nav .brand-logo {
 }
 
 .buttons:hover,
-.btn-small:hover {
+.btn-small:hover,
+#search-btn:hover {
     background-color: #5e2056;
     cursor: pointer;
     box-shadow: 0 0.4rem 0.4rem 0 rgb(88, 4, 91);
@@ -145,6 +146,11 @@ nav .brand-logo {
 .footer-icons {
     display: flex;
     justify-content: space-evenly;
+}
+
+.search-section {
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 

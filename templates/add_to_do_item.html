@@ -20,7 +20,7 @@
                 <div class="input-field col s12">
                     <i class="fa-regular fa-folder-open prefix text-darken-4"></i>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Select Category</option>
+                        <option value="disabled selected">Select Category</option>
                         {% for category in categories %}
                         {% if category.created_by|lower == session.user|lower or category.created_by|lower == "admin" %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>

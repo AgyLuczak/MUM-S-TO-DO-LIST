@@ -60,8 +60,8 @@
         </header>
 
         {% if session.user %}
-        <div class="col m2">
-            <button type="submit" class="btn-large purple purple lighten-1 right" onclick="toggleSearch()">
+        <div class="col m2 search-section ">
+            <button type="submit" class="btn-large buttons purple purple lighten-1 right" onclick="toggleSearch()">
                 <i class="fas fa-search" id="search-icon"></i>
             </button>
         </div>
@@ -72,8 +72,8 @@
                 <div class="row">
                     <div class="input-field col s12 m8 right">
                         <i class="fas fa-search prefix white-text"></i>
-                        <input type="text" name="query" id="footer-query" minlength="3" class="validate" required>
-                        <label for="footer-query">Search in items and categories</label>
+                        <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                        <label for="query">Search in items and categories</label>
                     </div>
                 </div>
             </form>
