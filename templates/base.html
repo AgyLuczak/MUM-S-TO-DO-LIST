@@ -61,25 +61,30 @@
         </header>
 
         {% if session.user %}
-        <div class="col m2 search-section ">
+        <div class="col search-section ">
             <button type="submit" class="btn-large buttons purple purple lighten-1 right" onclick="toggleSearch()">
                 <i class="fas fa-search" id="search-icon"></i>
             </button>
         </div>
         <!-- Search Container -->
-        <div class="col m6" id="search-container">
+        <div class="col s12 m8" id="search-container">
             <!-- Search Form -->
             <form action="{{ url_for('search') }}" method="post">
                 <div class="row">
-                    <div class="input-field col s12 m8 right">
-                        <i class="fas fa-search prefix white-text"></i>
+                    <div class="input-field query-input grey lighten-4 s12 m8 right">
+
                         <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                        <label for="query">Search in items and categories</label>
+                        <label for="query" id="query-text">Search in items and categories</label>
+                        <button type="submit" class="btn-small buttons pink lighten-1" id="search-submit">
+                            search
+                        </button>
+
                     </div>
                 </div>
             </form>
         </div>
         {% endif %}
+
 
         <section>
             <!-- flash messages -->
