@@ -3,6 +3,7 @@
 $(document).ready(function () {
     $(".sidenav").sidenav({ edge: "right" });
     $('select').formSelect();
+    $('.collapsible').collapsible();
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
         yearRange: 3,
@@ -13,6 +14,11 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('#filter-icon').click(function () {
+        $('#showCollapsible').toggle();
+    });
+});
 
 validateMaterializeSelect();
 function validateMaterializeSelect() {
@@ -63,7 +69,6 @@ function toggleSearch() {
         searchContainer.style.display = "none";
     }
 }
-
 
 
 
