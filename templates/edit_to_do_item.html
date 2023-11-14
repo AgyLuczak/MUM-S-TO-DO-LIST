@@ -23,10 +23,12 @@
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled>Select Category</option>
                         {% for category in categories %}
-                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% if category.created_by|lower == session.user|lower or category.created_by|lower == "admin" %}
                         {% if category.category_name == to_do_item.category_name %}
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
                         {% else %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                         {% endif %}
                         {% endfor %}
 
