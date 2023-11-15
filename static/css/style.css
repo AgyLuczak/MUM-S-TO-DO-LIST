@@ -95,16 +95,53 @@ nav .brand-logo {
 }
 
 .prefix.active {
-    color: crimson;
+    color: rgb(220, 20, 110) !important;
 }
+
+.dropdown-content li>span {
+
+    color: rgb(220, 20, 110);
+}
+
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: rgb(220, 20, 110);
+}
+
+input.invalid[type=text]:not(.browser-default):focus {
+    border-bottom: 1px solid purple;
+
+    box-shadow: 0 1px 0 0 purple;
+}
+}
+
+.datepicker-date-display {
+    background-color: purple;
+}
+
+.datepicker-cancel,
+.datepicker-done {
+    color: #5e2056;
+}
+
+.datepicker-table td.is-selected {
+    background-color: rgb(220, 20, 110);
+}
+
+.datepicker-table td.is-today {
+    color: rgb(220, 20, 110);
+}
+
 
 .switch label input[type=checkbox]:checked+.lever:after {
-    background-color: crimson;
+    background-color: rgb(220, 20, 110);
 }
 
-.lever:after {
-    color: crimson;
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #c784a9;
 }
+
+
 
 .flashes h4 {
     line-height: 2;
@@ -190,28 +227,29 @@ nav .brand-logo {
 
     #query-text {
         text-align: left;
-
-        .container-add-todo {
-            max-width: 90%;
-        }
-
-
-
-        .heading {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        h4 {
-            font-size: 30px;
-        }
-
-
-        .logo-check {
-            padding-top: 15px;
-        }
-
-        .card .card-title {
-            font-size: 20px;
-        }
     }
+
+    .container-add-todo {
+        max-width: 90%;
+    }
+
+
+
+    .heading {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+
+    .logo-check {
+        padding-top: 15px;
+    }
+
+    .card .card-title {
+        font-size: 20px;
+    }
+}
