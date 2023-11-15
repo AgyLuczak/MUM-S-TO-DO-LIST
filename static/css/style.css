@@ -184,27 +184,34 @@ nav .brand-logo {
         font-size: 1.5rem;
     }
 
-    .container-add-todo {
-        max-width: 90%;
+    .query-input {
+        width: 95%;
     }
 
+    #query-text {
+        text-align: left;
+
+        .container-add-todo {
+            max-width: 90%;
+        }
 
 
-    .heading {
-        padding-left: 10px;
-        padding-right: 10px;
+
+        .heading {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h4 {
+            font-size: 30px;
+        }
+
+
+        .logo-check {
+            padding-top: 15px;
+        }
+
+        .card .card-title {
+            font-size: 20px;
+        }
     }
-
-    h4 {
-        font-size: 30px;
-    }
-
-
-    .logo-check {
-        padding-top: 15px;
-    }
-
-    .card .card-title {
-        font-size: 20px;
-    }
-}
