@@ -97,14 +97,18 @@ def get_to_do_items():
         username = None
         return redirect(url_for('signin'))
 
-    if sort_order == 'alpha':
-        to_do_items = list(mongo.db.to_do_items.find({"created_by": username}).sort("to_do_item", 1))
+    query = {"created_by": username}
+    if sort_order == 'important':
+        to_do_items = list(mongo.db.to_do_items.find(query).sort("is_important", -1))
+    elif sort_order == 'alpha':
+        to_do_items = list(mongo.db.to_do_items.find(query).sort("to_do_item", 1))
     else:
-        to_do_items = list(mongo.db.to_do_items.find({"created_by": username}))
+        to_do_items = list(mongo.db.to_do_items.find(query))
 
     if not to_do_items:
-        flash("This list is empty and very sad. Please, add a list item")
+        flash("This list is empty. Please add a list item")
     return render_template("to_do_items.html", to_do_items=to_do_items, username=username)
+
 
 # search
 @app.route("/search", methods=["GET", "POST"])
