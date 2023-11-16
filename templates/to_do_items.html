@@ -25,7 +25,7 @@
             <div class="card horizontal pink lighten-1">
                 <div class=" card-content white-text">
                     <span class="card-title activator {% if item.is_crossed_out %}crossed-out{% endif %}">
-                        {{item.category_name}} : {{ item.to_do_item}}
+                        {{ item.to_do_item}} ({{item.category_name}})
                         {% if item.is_important == "on" %}
                         <i class="fa-solid fa-star"></i>
                         {% endif %}
@@ -73,19 +73,22 @@
                 <div class="row">
                     <div class="footer-icons">
                         <div class="col m2">
-                            <button type="submit" class="btn-small purple lighten-1 " onclick="showCollapsible()">
+                            <button type="button" class="btn-small purple lighten-1 " onclick="showCollapsible()">
                                 <i class="fa-solid fa-filter" id="filter-icon"></i>
                             </button>
                             <ul id="showCollapsible" class="collapsible" style="display:none;">
                                 <li>
-                                    <div class="collapsible-header grey-text">Filter by:
+                                    <div class="collapsible-header grey-text">Filter by:</div>
+                                    <div class="collapsible-body black-text">
+                                        <a href="#" class="filter-option" id="alpha-order">alphabetical order</a>
                                     </div>
                                     <div class="collapsible-body black-text">
-                                        <span class="text-darken-4">option 1</span>
+                                        <a href="#" class="filter-option" id="imp-order">important
+                                            first
+                                            first</a>
                                     </div>
-                                    <div class="collapsible-body black-text">
-                                        <span class="text-darken-4">option 2</span>
-                                    </div>
+                                </li>
+                            </ul>
                         </div>
                         <div class="col m2">
                             <a href="{{ url_for('add_to_do_item') }}" class="btn-small purple lighten-1">

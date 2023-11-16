@@ -18,6 +18,10 @@ $(document).ready(function () {
     $('#filter-icon').click(function () {
         $('#showCollapsible').toggle();
     });
+    $('#alpha-order').click(function (event) {
+        event.preventDefault();
+        window.location.href = '/get_to_do_items?sort=alpha';
+    });
 });
 
 validateMaterializeSelect();
@@ -69,6 +73,5 @@ function toggleSearch() {
         searchContainer.style.display = "none";
     }
 }
-
 
 

@@ -88,15 +88,20 @@ def profile(username):
 
 
 # display to-do list
-@app.route("/")
+@app.route("/get_to_do_items")
 def get_to_do_items():
+    sort_order = request.args.get('sort')
     if 'user' in session:
         username = session['user']
     else:
         username = None
         return redirect(url_for('signin'))
 
-    to_do_items = list(mongo.db.to_do_items.find({"created_by": username}))
+    if sort_order == 'alpha':
+        to_do_items = list(mongo.db.to_do_items.find({"created_by": username}).sort("to_do_item", 1))
+    else:
+        to_do_items = list(mongo.db.to_do_items.find({"created_by": username}))
+
     if not to_do_items:
         flash("This list is empty and very sad. Please, add a list item")
     return render_template("to_do_items.html", to_do_items=to_do_items, username=username)

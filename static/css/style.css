@@ -105,13 +105,24 @@ nav .brand-logo {
 
 textarea.materialize-textarea:focus:not([readonly])+label {
     color: rgb(220, 20, 110);
+
 }
+
+input.invalid[type=text]:not(.browser-default):focus {
+    color: rgb(220, 20, 110);
+}
+
 
 input.invalid[type=text]:not(.browser-default):focus {
     border-bottom: 1px solid purple;
 
     box-shadow: 0 1px 0 0 purple;
 }
+
+
+
+new-item:focus {
+    color: rgb(220, 20, 110);
 }
 
 .datepicker-date-display {
@@ -124,7 +135,8 @@ input.invalid[type=text]:not(.browser-default):focus {
 }
 
 .datepicker-table td.is-selected {
-    background-color: rgb(220, 20, 110);
+    background-color: rgb(220, 159, 186);
+    color: white;
 }
 
 .datepicker-table td.is-today {
