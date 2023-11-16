@@ -88,7 +88,8 @@ def profile(username):
 
 
 # display to-do list
-@app.route("/get_to_do_items")
+@app.route ("/")
+@app.route ("/get_to_do_items")
 def get_to_do_items():
     sort_order = request.args.get('sort')
     if 'user' in session:
@@ -106,7 +107,7 @@ def get_to_do_items():
         to_do_items = list(mongo.db.to_do_items.find(query))
 
     if not to_do_items:
-        flash("This list is empty. Please add a list item")
+        flash("This list is empty and very sad:( Please add a list item")
     return render_template("to_do_items.html", to_do_items=to_do_items, username=username)
 
 
