@@ -206,6 +206,15 @@ new-item:focus {
 .footer-icons {
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+}
+
+#showCollapsible {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    border-radius: 15px;
+
 }
 
 .search-section {
