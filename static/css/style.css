@@ -70,7 +70,8 @@ nav .brand-logo {
 }
 
 .card-panel {
-
+    -webkit-box-shadow: 10px 15px 12px -3px #691E76;
+    box-shadow: 10px 15px 12px -3px #691E76;
     border-radius: 30px;
 }
 
@@ -103,7 +104,7 @@ nav .brand-logo {
     color: rgb(220, 20, 110);
 }
 
-textarea.materialize-textarea:focus:not([readonly])+label {
+/* textarea.materialize-textarea:focus:not([readonly])+label {
     color: rgb(220, 20, 110);
 
 }
@@ -119,11 +120,9 @@ input.invalid[type=text]:not(.browser-default):focus {
     box-shadow: 0 1px 0 0 purple;
 }
 
-
-
 new-item:focus {
     color: rgb(220, 20, 110);
-}
+} */
 
 .datepicker-date-display {
     background-color: purple;
