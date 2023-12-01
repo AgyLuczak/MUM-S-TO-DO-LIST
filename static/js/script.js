@@ -2,6 +2,7 @@ $(document).ready(function () {
     $(".sidenav").sidenav({ edge: "right" });
     $('select').formSelect();
     $('.collapsible').collapsible();
+    $('.dropdown-trigger').dropdown();
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
         yearRange: 3,
@@ -16,43 +17,25 @@ $(document).ready(function () {
     $('#filter-icon').click(function () {
         $('#showCollapsible').toggle();
     });
+
     $('#alpha-order').click(function (event) {
         event.preventDefault();
         window.location.href = '/get_to_do_items?sort=alpha';
     });
+
+    $('#category-filter').click(function (event) {
+        event.preventDefault();
+        window.location.href = '/get_to_do_items?category=true';
+    });
+
     $('#imp-order').click(function (event) {
         event.preventDefault();
         window.location.href = '/get_to_do_items?sort=important';
     });
 });
 
-// validateMaterializeSelect();
-// function validateMaterializeSelect() {
-//     let classValid = { "border-bottom": "1px solid #da1d8c", "box-shadow": "0 1px 0 0 #da1d8c" };
-//     let classInvalid = { "border-bottom": "1px solid #bc1fa7", "box-shadow": "0 1px 0 0 #bc1fa7" };
-//     if ($("select.validate").prop("required")) {
-//         $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
-//     }
-//     $(".select-wrapper input.select-dropdown").on("focusin", function () {
-//         $(this).parent(".select-wrapper").on("change", function () {
-//             if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
-//                 $(this).children("input").css(classValid);
-//             }
-//         });
-//     }).on("click", function () {
-//         if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(236, 0, 0, 0.18)") {
-//             $(this).parent(".select-wrapper").children("input").css(classValid);
-//         } else {
-//             $(".select-wrapper input.select-dropdown").on("focusout", function () {
-//                 if ($(this).parent(".select-wrapper").children("select").prop("required")) {
-//                     if ($(this).css("border-bottom") != "1px solid rgb(76, 175, 80)") {
-//                         $(this).parent(".select-wrapper").children("input").css(classInvalid);
-//                     }
-//                 }
-//             });
-//         }
-//     });
-// }
+
+
 
 $(document).ready(function () {
     validateMaterializeSelect();

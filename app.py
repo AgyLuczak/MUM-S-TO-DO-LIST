@@ -89,9 +89,12 @@ def profile(username):
 
 # display to-do list
 @app.route ("/")
-@app.route ("/get_to_do_items")
+@app.route("/")
+@app.route("/get_to_do_items")
 def get_to_do_items():
     sort_order = request.args.get('sort')
+    sort_category = request.args.get('category') 
+
     if 'user' in session:
         username = session['user']
     else:
@@ -99,7 +102,10 @@ def get_to_do_items():
         return redirect(url_for('signin'))
 
     query = {"created_by": username}
-    if sort_order == 'important':
+    
+    if sort_category:
+        to_do_items = list(mongo.db.to_do_items.find(query).sort("category_name", 1))
+    elif sort_order == 'important':
         to_do_items = list(mongo.db.to_do_items.find(query).sort("is_important", -1))
     elif sort_order == 'alpha':
         to_do_items = list(mongo.db.to_do_items.find(query).sort("to_do_item", 1))
