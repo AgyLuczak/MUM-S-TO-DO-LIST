@@ -2,7 +2,7 @@
 
 html {
 
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 body {
@@ -24,6 +24,7 @@ body {
 
 .main-content {
     flex: 1 0 auto;
+
 }
 
 
@@ -104,25 +105,6 @@ nav .brand-logo {
     color: rgb(220, 20, 110);
 }
 
-/* textarea.materialize-textarea:focus:not([readonly])+label {
-    color: rgb(220, 20, 110);
-
-}
-
-input.invalid[type=text]:not(.browser-default):focus {
-    color: rgb(220, 20, 110);
-}
-
-
-input.invalid[type=text]:not(.browser-default):focus {
-    border-bottom: 1px solid purple;
-
-    box-shadow: 0 1px 0 0 purple;
-}
-
-new-item:focus {
-    color: rgb(220, 20, 110);
-} */
 
 .datepicker-date-display {
     background-color: purple;
@@ -223,10 +205,20 @@ new-item:focus {
 }
 
 
-#search-container {
-    display: none;
 
+
+#search-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
 }
+
+#search-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 
 #search-submit {
     font-weight: bold;
