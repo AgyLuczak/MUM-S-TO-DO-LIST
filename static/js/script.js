@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
     $(".sidenav").sidenav({ edge: "right" });
     $('select').formSelect();
@@ -30,8 +28,8 @@ $(document).ready(function () {
 
 validateMaterializeSelect();
 function validateMaterializeSelect() {
-    let classValid = { "border-bottom": "1px solid rgb(220, 20, 110)", "box-shadow": "0 1px 0 0 rgb(220, 20, 110)" };
-    let classInvalid = { "border-bottom": "1px solid rgb(220, 20, 110)", "box-shadow": "0 1px 0 0 #ff1493 " };
+    let classValid = { "border-bottom": "1px solid #da1d8c", "box-shadow": "0 1px 0 0 #da1d8c" };
+    let classInvalid = { "border-bottom": "1px solid #bc1fa7", "box-shadow": "0 1px 0 0 #bc1fa7" };
     if ($("select.validate").prop("required")) {
         $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
     }
@@ -42,12 +40,12 @@ function validateMaterializeSelect() {
             }
         });
     }).on("click", function () {
-        if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(0, 0, 0, 0.03)") {
+        if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(236, 0, 0, 0.18)") {
             $(this).parent(".select-wrapper").children("input").css(classValid);
         } else {
             $(".select-wrapper input.select-dropdown").on("focusout", function () {
                 if ($(this).parent(".select-wrapper").children("select").prop("required")) {
-                    if ($(this).css("border-bottom") != "1px solid rgb(220, 20, 110)") {
+                    if ($(this).css("border-bottom") != "1px solid rgb(76, 175, 80)") {
                         $(this).parent(".select-wrapper").children("input").css(classInvalid);
                     }
                 }
@@ -55,6 +53,8 @@ function validateMaterializeSelect() {
         }
     });
 }
+
+
 
 function confirmDeleteItem() {
     return confirm('Are you sure you want to delete this item?');
@@ -71,11 +71,6 @@ function confirmDeleteCategory() {
 
 function toggleSearch() {
     const searchContainer = document.getElementById("search-container");
-    if (searchContainer.style.display === "none") {
-        searchContainer.style.display = "block";
-    } else {
-        searchContainer.style.display = "none";
-    }
+    searchContainer.classList.toggle("show");
 }
-
 
