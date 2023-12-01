@@ -255,6 +255,28 @@ input.valid[type=text]:not(.browser-default) {
 
 }
 
+.collapsible-header {
+
+    background: hsla(311, 74%, 87%, 1);
+    background: linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F6C4ED", endColorstr="#E1DAE6", GradientType=1);
+    ;
+}
+
+.collapsible-body {
+    background: hsla(298, 68%, 90%, 1);
+
+    background: linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F6D5F7", endColorstr="#FBE9D7", GradientType=1);
+}
+
 .search-section {
     padding-top: 10px;
     padding-right: 10px;
