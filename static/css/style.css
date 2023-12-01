@@ -68,6 +68,8 @@ nav .brand-logo {
     -webkit-box-shadow: 10px 15px 12px -3px #691E76;
     box-shadow: 10px 15px 12px -3px #691E76;
     border-radius: 30px;
+    overflow: hidden;
+
 }
 
 .card-panel {
@@ -264,4 +266,14 @@ nav .brand-logo {
     .card .card-title {
         font-size: 20px;
     }
+
+
+    .card.horizontal {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
 }
