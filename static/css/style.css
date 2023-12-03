@@ -23,6 +23,7 @@ body {
 
 .main-content {
     min-height: 100vh;
+    padding-bottom: 100px;
 
 }
 
@@ -349,5 +350,9 @@ input.valid[type=text]:not(.browser-default) {
         flex-direction: column;
     }
 
+    .btn-small {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
 
 }
