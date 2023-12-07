@@ -33,6 +33,11 @@ $(document).ready(function () {
         window.location.href = '/get_to_do_items?category=true';
     });
 
+    $('#user-filter').click(function (event) {
+        event.preventDefault();
+        window.location.href = '/get_categories?user_first=true';
+    });
+
     $('#imp-order').click(function (event) {
         event.preventDefault();
         window.location.href = '/get_to_do_items?sort=important';

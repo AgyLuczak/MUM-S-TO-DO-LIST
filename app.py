@@ -220,12 +220,20 @@ def delete_checked_items():
 # display categories created by admin or a logged-in user
 @app.route("/get_categories")
 def get_categories():
+    username = session["user"].lower()
     categories = list(mongo.db.categories.find({
         "$or": [
-            {"created_by": session["user"].lower()},
+            {"created_by": username},
             {"created_by": "admin"}  
         ]
-    }).sort("category_name", 1))
+    }))
+
+    # sort alphabetically irrestpective of the letter case
+    categories.sort(key=lambda cat: cat['category_name'].strip().lower())
+
+    # show categories created by the logged-in user first
+    categories.sort(key=lambda cat: cat['created_by'] != username)
+
     return render_template("categories.html", categories=categories)
 
 
