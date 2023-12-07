@@ -18,9 +18,14 @@ $(document).ready(function () {
         $('#showCollapsible').toggle();
     });
 
-    $('#alpha-order').click(function (event) {
+    $('#alpha-order-items').click(function (event) {
         event.preventDefault();
         window.location.href = '/get_to_do_items?sort=alpha';
+    });
+
+    $('#alpha-order-categories').click(function (event) {
+        event.preventDefault();
+        window.location.href = '/get_categories?sort=alpha';
     });
 
     $('#category-filter').click(function (event) {

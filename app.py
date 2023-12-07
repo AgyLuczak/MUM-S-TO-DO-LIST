@@ -228,6 +228,8 @@ def get_categories():
     }).sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
+
+
 # add a category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
