@@ -8,6 +8,22 @@ from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
+def sort_by_category_name(item):
+    return item['category_name'].lower()
+
+def sort_by_importance(item):
+    return item.get('is_important', False)
+
+def sort_by_item_name(item):
+    return item['to_do_item'].lower()
+
+def sort_categories_alphabetically(category):
+    return category['category_name'].lower()
+
+def sort_categories_by_creator(category, username):
+    return category['created_by'] == username.lower()
+
+
 
 app = Flask(__name__)
 
@@ -87,9 +103,8 @@ def profile(username):
     return render_template("profile.html", username=user["username"])  
 
 
-# display to-do list
+#display to-do list
 @app.route ("/")
-@app.route("/")
 @app.route("/get_to_do_items")
 def get_to_do_items():
     sort_order = request.args.get('sort')
@@ -114,7 +129,10 @@ def get_to_do_items():
 
     if not to_do_items:
         flash("This list is empty and very sad:( Please add a list item")
+
+         
     return render_template("to_do_items.html", to_do_items=to_do_items, username=username)
+
 
 
 # search
@@ -217,24 +235,36 @@ def delete_checked_items():
     
     return redirect(url_for("get_to_do_items"))
 
-# display categories created by admin or a logged-in user
+#display categories created by admin or a logged-in user
 @app.route("/get_categories")
 def get_categories():
+    if 'user' not in session:
+        return redirect(url_for('signin'))
+
     username = session["user"].lower()
-    categories = list(mongo.db.categories.find({
+    sort_order = request.args.get('sort')
+
+    # Query for categories created by the user or admin
+    categories_query = {
         "$or": [
             {"created_by": username},
             {"created_by": "admin"}  
         ]
-    }))
+    }
 
-    # sort alphabetically irrestpective of the letter case
-    categories.sort(key=lambda cat: cat['category_name'].strip().lower())
+    if sort_order == 'alpha':
+        categories = list(mongo.db.categories.find(categories_query).sort([("category_name", 1)]))
+    elif sort_order == 'created_by':
+        categories = list(mongo.db.categories.find(categories_query).sort([("created_by", 1)]))
+    else:
+      categories = list(mongo.db.categories.find(categories_query).sort([("category_name", 1)]))
 
-    # show categories created by the logged-in user first
-    categories.sort(key=lambda cat: cat['created_by'] != username)
 
     return render_template("categories.html", categories=categories)
+
+
+
+    
 
 
 
