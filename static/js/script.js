@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     $('#user-filter').click(function (event) {
         event.preventDefault();
-        window.location.href = '/get_categories?user_first=true';
+        window.location.href = '/get_categories?sort=created_by';
     });
 
     $('#imp-order').click(function (event) {
