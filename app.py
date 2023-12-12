@@ -103,34 +103,45 @@ def profile(username):
     return render_template("profile.html", username=user["username"])  
 
 
+# sign out
+@app.route("/signout")
+def signout():
+    # remove user from session cookie
+    flash("You have been signed out")
+    session.pop("user")
+    return redirect(url_for("signin"))
+
+
+
 #display to-do list
-@app.route ("/")
+@app.route("/")
 @app.route("/get_to_do_items")
 def get_to_do_items():
     sort_order = request.args.get('sort')
     sort_category = request.args.get('category') 
 
-    if 'user' in session:
-        username = session['user']
-    else:
-        username = None
+    if 'user' not in session:
         return redirect(url_for('signin'))
 
+    username = session['user']
     query = {"created_by": username}
-    
+
+    to_do_items = list(mongo.db.to_do_items.find(query))
+
     if sort_category:
-        to_do_items = list(mongo.db.to_do_items.find(query).sort("category_name", 1))
+        to_do_items.sort(key=lambda x: x['category_name'].lower())
     elif sort_order == 'important':
-        to_do_items = list(mongo.db.to_do_items.find(query).sort("is_important", -1))
+        to_do_items.sort(key=lambda x: x.get('is_important', False), reverse=True)
     elif sort_order == 'alpha':
-        to_do_items = list(mongo.db.to_do_items.find(query).sort("to_do_item", 1))
+        # Alphabetical sorting 
+        to_do_items.sort(key=lambda x: x['to_do_item'].lower())
     else:
-        to_do_items = list(mongo.db.to_do_items.find(query))
+        # Default sorting 
+        to_do_items.sort(key=lambda x: x['category_name'].lower())
 
     if not to_do_items:
         flash("This list is empty and very sad:( Please add a list item")
 
-         
     return render_template("to_do_items.html", to_do_items=to_do_items, username=username)
 
 
@@ -150,13 +161,6 @@ def search():
 
 
 
-# sign out
-@app.route("/signout")
-def signout():
-    # remove user from session cookie
-    flash("You have been signed out")
-    session.pop("user")
-    return redirect(url_for("signin"))
 
 # adding to the list
 @app.route("/add_to_do_item", methods=["GET", "POST"])
@@ -252,19 +256,23 @@ def get_categories():
         ]
     }
 
-    if sort_order == 'alpha':
-        categories = list(mongo.db.categories.find(categories_query).sort([("category_name", 1)]))
-    elif sort_order == 'created_by':
-        categories = list(mongo.db.categories.find(categories_query).sort([("created_by", 1)]))
-    else:
-      categories = list(mongo.db.categories.find(categories_query).sort([("category_name", 1)]))
+    categories = list(mongo.db.categories.find(categories_query))
 
+    if  sort_order == 'alpha':
+        # Alphabetical sorting
+        categories.sort(key=lambda x: x['category_name'].lower())
+    elif sort_order == 'created_by':
+        #  user's categories come first
+        categories.sort(key=lambda x: (x['created_by'] != username, x['category_name'].lower()))
+
+    else:
+        # Default sort 
+        categories.sort(key=lambda x: x['category_name'].lower())
 
     return render_template("categories.html", categories=categories)
 
 
 
-    
 
 
 
