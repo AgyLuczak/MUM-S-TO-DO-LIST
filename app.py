@@ -33,6 +33,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+@app.route("/landing")
+def landing():
+    return render_template("landing.html")
+
 # sign in
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
