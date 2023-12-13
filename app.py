@@ -216,6 +216,11 @@ def toggle_cross_out(item_id):
     
     new_state = not to_do_item.get('is_crossed_out', False)
     mongo.db.to_do_items.update_one({"_id": ObjectId(item_id)}, {"$set": {"is_crossed_out": new_state}})
+
+    if new_state:
+        flash("One less thing to worry about!")
+    else:
+        flash("That's fine, take your time:)")
     
     return redirect(url_for("get_to_do_items"))
 
@@ -235,7 +240,7 @@ def delete_checked_items():
         flash("You haven't checked any items!")
     else:
         mongo.db.to_do_items.delete_many({"is_crossed_out": True})
-        flash("All checked items deleted!")
+        flash("Done and dusted! You're a star")
     
     return redirect(url_for("get_to_do_items"))
 
