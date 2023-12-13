@@ -33,7 +33,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-@app.route("/landing")
+@app.route("/")
 def landing():
     return render_template("landing.html")
 
@@ -118,7 +118,7 @@ def signout():
 
 
 #display to-do list
-@app.route("/")
+
 @app.route("/get_to_do_items")
 def get_to_do_items():
     sort_order = request.args.get('sort')
