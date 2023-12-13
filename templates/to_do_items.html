@@ -40,16 +40,17 @@
                 </div>
 
                 <div class="card-action">
-                    <a href="{{ url_for('toggle_cross_out', item_id=item._id) }}" class="btn-small purple lighten-1"
-                        aria-label="check">
+                    <a href="{{ url_for('toggle_cross_out', item_id=item._id) }}"
+                        class="btn-small action-btn purple lighten-1" aria-label="check">
                         <i class="fa-solid fa-circle-check"></i></a>
 
                     <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}"
-                        class="btn-small purple lighten-1" aria-label="edit">
+                        class="btn-small action-btn purple lighten-1" aria-label="edit">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
                     <a href="{{ url_for('delete_to_do_item', to_do_item_id=item._id) }}"
-                        onclick="return confirmDeleteItem();" class="btn-small purple lighten-1 " aria-label="delete">
+                        onclick="return confirmDeleteItem();" class="btn-small action-btn purple lighten-1 "
+                        aria-label="delete">
                         <i class="fa-solid fa-trash"></i>
                     </a>
                 </div>

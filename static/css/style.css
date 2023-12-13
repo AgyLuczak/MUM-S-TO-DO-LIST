@@ -87,6 +87,11 @@ input.valid[type=password]:not(.browser-default):focus+label {
 
 }
 
+.card.horizontal {
+    display: flex;
+    justify-content: space-between;
+}
+
 .card-panel {
     -webkit-box-shadow: 10px 15px 12px -3px #691E76;
     box-shadow: 10px 15px 12px -3px #691E76;
@@ -350,7 +355,7 @@ input.valid[type=text]:not(.browser-default) {
         flex-direction: column;
     }
 
-    .btn-small {
+    .action-btn {
         display: inline-block;
         margin-bottom: 10px;
     }
