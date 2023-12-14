@@ -27,7 +27,10 @@ body {
 
 }
 
-
+#mum_logo {
+    max-height: 50vh;
+    border-radius: 60%;
+}
 
 
 nav .brand-logo {

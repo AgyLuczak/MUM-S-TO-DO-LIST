@@ -3,27 +3,41 @@
 
 <section class="heading">
     <div class="row">
-        <!-- My List Heading -->
         <div class="col s12 m6 top-heading center-align offset-m3">
-            <h4>Hi there, busy mum!</h4>
+            <h4>Welcome to Mum's To-Do List!</h4>
         </div>
     </div>
 </section>
 
-<div class="logo">
-    <img src="{{ url_for('static', filename='mum_logo.png') }}" alt="Mum's To-Do List Logo">
-
-</div>
 
 <div class="row">
     <div class="col s12 m8 offset-m2">
         <div class="card-panel pink lighten-1">
-            <span class="white-text">
-                Welcome to Mum's To-Do List! Manage your daily tasks efficiently and never miss a beat.
-                <!-- Add more content or modify as needed -->
-            </span>
+            <div class="row valign-wrapper">
+                <div class="col s12 m6">
+                    <div class="logo">
+                        <img id="mum_logo" src="{{ url_for('static', filename='images/mum_logo.png') }}"
+                            alt="Mum's To-Do List Logo">
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <h4 class="white-text">
+                        Manage your daily tasks efficiently and never miss a beat.
+                    </h4>
+
+                    <br>
+
+                    <div class="start-btn center-align">
+                        <a href="{{ url_for('signin') }}" class="btn-large buttons delete-all purple lighten-1"
+                            aria-label="get-started">
+                            Get Started </a>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 {% endblock %}
