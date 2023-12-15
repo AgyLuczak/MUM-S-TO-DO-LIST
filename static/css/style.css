@@ -27,9 +27,21 @@ body {
 
 }
 
-#mum_logo {
+/* #mum_logo {
     max-height: 50vh;
     border-radius: 60%;
+} */
+
+.col s12 m6 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50vh;
+    border-radius: 60%;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -364,6 +376,26 @@ input.valid[type=text]:not(.browser-default) {
     }
 
 
+    .col s12 m6 {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .logo img {
+        display: none;
+    }
 
+    h4 {
+        font-size: 1.5em;
+    }
+
+    .card-title.activator {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
 }
