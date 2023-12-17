@@ -55,13 +55,17 @@ nav .brand-logo {
 .menu-item:hover {
 
     background-color: #c784a9;
-    color: purple;
     text-decoration: none;
     border-radius: 10px;
     transform: scale(1.05);
     transition: .5s ease-in-out;
 
 
+}
+
+.menu-item.active {
+    background-color: #c784a9;
+    border-radius: 10px;
 }
 
 
