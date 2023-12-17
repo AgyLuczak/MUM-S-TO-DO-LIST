@@ -52,6 +52,20 @@ nav .brand-logo {
     padding-left: 20px;
 }
 
+.menu-item:hover {
+
+    background-color: #c784a9;
+    color: purple;
+    text-decoration: none;
+    border-radius: 10px;
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+
+
+}
+
+
+
 input.valid[type=password]:not(.browser-default) {
     border-bottom: 1px solid purple;
     box-shadow: 0 1px 0 0 purple;
