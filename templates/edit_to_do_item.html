@@ -1,4 +1,5 @@
-href="{% url 'landing' %}"
+{% extends "base.html" %}
+{% block content %}
 
 <div class="main-content">
     <section class="heading">
@@ -94,18 +95,38 @@ href="{% url 'landing' %}"
 </div>
 
 
-<footer class="page-footer grey lighten-4">
-    <div class="container">
-        <div class="row">
-            <div class="footer-icons">
-                <div class="col m2">
-                    <button type="submit" class="btn-small purple lighten-1 ">
-                        <i class="fa-solid fa-filter" id="filter-icon"></i>
-                    </button>
-
+<!--footer-->
+<div>
+    <footer class="page-footer grey lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="footer-icons">
                     <div class="col m2">
-                        <a href="{{ url_for('get_to_do_items') }}" class="btn-small purple lighten-1">
-                            <i class="fa-solid fa-list" id="list-icon"></i></i>
+                        <button type="button" class="btn-small purple lighten-1 " onclick="showCollapsible()">
+                            <i class="fa-solid fa-filter" id="filter-icon"></i>
+                        </button>
+                        <ul id="showCollapsible" class="collapsible" style="display:none;">
+                            <li>
+                                <div class="collapsible-header purple-text center-align">Sort my list:</div>
+                                <div class="collapsible-body black-text">
+                                    <a href="#" class="filter-option" id="alpha-order-items">alphabetically
+                                    </a>
+                                </div>
+                                <div class="collapsible-body black-text">
+                                    <a href="#" class="filter-option" id="category-filter"> by categories</a>
+                                </div>
+
+                                <div class="collapsible-body black-text">
+                                    <a href="#" class="filter-option" id="imp-order">important
+                                        first
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col m2">
+                        <a href="{{ url_for('add_to_do_item') }}" class="btn-small purple lighten-1">
+                            <i class="fa-solid fa-plus" id="add-item-icon"></i>
                         </a>
                     </div>
                     <div class="col m2">
@@ -121,9 +142,9 @@ href="{% url 'landing' %}"
                     </div>
                 </div>
                 <div>
-</footer>
+    </footer>
 
 
 
 
-{% endblock %}
+    {% endblock %}

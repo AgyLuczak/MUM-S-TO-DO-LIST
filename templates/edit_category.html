@@ -42,18 +42,34 @@
 </div>
 </div>
 
+<!--footer-->
 <footer class="page-footer grey lighten-4">
     <div class="container">
         <div class="row">
             <div class="footer-icons">
                 <div class="col m2">
-                    <button type="submit" class="btn-small purple lighten-1 ">
+                    <button type="button" class="btn-small purple lighten-1 " onclick="showCollapsible()">
                         <i class="fa-solid fa-filter" id="filter-icon"></i>
                     </button>
+                    <ul id="showCollapsible" class="collapsible" style="display:none;">
+                        <li>
+                            <div class="collapsible-header purple-text center-align">Sort categories:</div>
+                            <div class="collapsible-body black-text">
+                                <a href="{{ url_for('get_categories', sort='alphabetical') }}" class="filter-option"
+                                    id="alpha-order-categories">alphabetically
+                                </a>
+                            </div>
+                            <div class="collapsible-body black-text">
+                                <a href="{{ url_for('get_categories', sort='created_by') }}" class="filter-option"
+                                    id="user-filter">created by me first</a>
+                            </div>
+
+                        </li>
+                    </ul>
                 </div>
                 <div class="col m2">
-                    <a href="{{ url_for('get_to_do_items') }}" class="btn-small purple lighten-1">
-                        <i class="fa-solid fa-list" id="list-icon"></i></i>
+                    <a href="{{ url_for('add_to_do_item') }}" class="btn-small purple lighten-1">
+                        <i class="fa-solid fa-plus" id="add-item-icon"></i>
                     </a>
                 </div>
                 <div class="col m2">
