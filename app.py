@@ -322,6 +322,18 @@ def delete_category(category_id):
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
 
+# '404' page
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html")
+
+
+# '500' page
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('500.html')
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

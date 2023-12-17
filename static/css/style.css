@@ -381,9 +381,7 @@ input.valid[type=text]:not(.browser-default) {
         align-items: center;
     }
 
-    /* .logo img {
-        display: none;
-    } */
+
 
     h4 {
         font-size: 1.5em;
