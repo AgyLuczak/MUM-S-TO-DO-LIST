@@ -264,6 +264,7 @@ input.valid[type=text]:not(.browser-default) {
 .btn-small {
 
     margin: 5px;
+    border-radius: 5px;
 }
 
 
