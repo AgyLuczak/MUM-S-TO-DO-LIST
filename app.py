@@ -1,4 +1,5 @@
 import os
+from datetime import timedelta
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -31,6 +32,10 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+# Set the permanent session lifetime
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
+
+
 mongo = PyMongo(app)
 
 @app.route("/")
@@ -48,6 +53,7 @@ def signin():
             # ensure hashed password matches user input
             if check_password_hash(existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
+                session.permanent = True
                 return redirect(url_for(
                     "get_to_do_items", username=session["user"]))
             elif len(request.form.get("username")) < 3:
@@ -62,6 +68,7 @@ def signin():
             # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("signin"))
+
 
     return render_template("signin.html")
 
