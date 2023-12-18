@@ -38,9 +38,13 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
 
 mongo = PyMongo(app)
 
+
+#landing page
 @app.route("/")
 def landing():
     return render_template("landing.html")
+
+
 
 # sign in
 @app.route("/signin", methods=["GET", "POST"])
@@ -150,9 +154,7 @@ def get_to_do_items():
         # Default sorting 
         to_do_items.sort(key=lambda x: x['category_name'].lower())
 
-    if not to_do_items:
-        flash("This list is empty and very sad:( Please add a list item")
-
+   
     return render_template("to_do_items.html", to_do_items=to_do_items, username=username)
 
 
@@ -251,7 +253,7 @@ def delete_checked_items():
         flash("You haven't checked any items!")
     else:
         mongo.db.to_do_items.delete_many({"is_crossed_out": True})
-        flash("Done and dusted! You're a star")
+        flash("Done and dusted! You're a star!")
     
     return redirect(url_for("get_to_do_items"))
 
@@ -286,10 +288,6 @@ def get_categories():
         categories.sort(key=lambda x: x['category_name'].lower())
 
     return render_template("categories.html", categories=categories)
-
-
-
-
 
 
 # add a category
@@ -329,6 +327,8 @@ def delete_category(category_id):
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
 
+
+#error pages
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
