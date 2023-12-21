@@ -44,6 +44,20 @@ body {
     height: auto;
 }
 
+.welcome-message-large {
+    display: block;
+}
+
+.welcome-message-small {
+    display: none;
+}
+
+.app-name {
+    font-family: Dancing Script, sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+
+}
 
 nav .brand-logo {
     font-family: Dancing Script, sans-serif;
@@ -68,7 +82,14 @@ nav .brand-logo {
     border-radius: 10px;
 }
 
+.sidenav {
+    background: hsla(311, 74%, 87%, 1);
+    background: linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F6C4ED", endColorstr="#E1DAE6", GradientType=1);
 
+}
 
 input.valid[type=password]:not(.browser-default) {
     border-bottom: 1px solid purple;
@@ -346,6 +367,15 @@ input.valid[type=text]:not(.browser-default) {
 
 
 @media only screen and (max-width: 768px) {
+
+    .welcome-message-large {
+        display: none;
+    }
+
+    .welcome-message-small {
+        display: block;
+    }
+
     nav .brand-logo {
 
         font-size: 1.5rem;

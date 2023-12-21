@@ -25,7 +25,7 @@
         <!-- top navbar -->
         <nav class="nav-extended pink darken-3">
             <div class="nav-wrapper">
-                <a href="{{ url_for('landing') }}" class="brand-logo">Mum's to-do list <i
+                <a href="{{ url_for('landing') }}" class="brand-logo">Mum's To-Do List <i
                         class="fa-solid fa-circle-check logo-check"></i></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
@@ -66,7 +66,7 @@
             <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
             <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
             {% else %}
-            <a href="{{ url_for('signin') }}">Sign In</a></li>
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>

@@ -20,9 +20,10 @@
                 <div class="input-field col s12">
                     <i class="fa-regular fa-folder-open prefix text-darken-4"></i>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="disabled selected">Select Category</option>
+                        <!-- <option value="disabled selected">Select Category</option> -->
+                        <option value="" disabled selected>Select Category</option>
                         {% for category in categories %}
-                        {% if category.created_by|lower == session.user|lower or category.created_by|lower == "admin" %}
+                        {% if category.created_by|lower==session.user|lower or category.created_by|lower=="admin" %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endif %}
                         {% endfor %}
@@ -32,13 +33,16 @@
                     <label for="category_name">Category</label>
                 </div>
             </div>
+
+
+
             <!--New list item-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix text-darken-4"></i>
                     <input id="to_do_item" name="to_do_item" minlength="3" maxlength="60" type="text" class="validate"
                         required>
-                    <label for="to_do_item text-darken-4" class="new-item">New list item</label>
+                    <label for="to_do_item" class="new-item">New list item</label>
                 </div>
             </div>
             <!--New list item details-->
