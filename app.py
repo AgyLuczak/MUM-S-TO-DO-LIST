@@ -97,25 +97,10 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Complete!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("get_to_do_items", username=session["user"]))
 
     return render_template("register.html")
 
-# user's profile
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    # Check if the username in the URL matches the signed-in user
-    if username != session["user"]:
-        flash("No access!")
-        return redirect(url_for("get_to_do_items"))
-
-    # grab the session user's username from db
-    user = mongo.db.users.find_one({"username": session["user"]})
-    if not user:
-        flash("User not found!")
-        return redirect(url_for("get_to_do_items"))
-
-    return render_template("profile.html", username=user["username"])  
 
 
 # sign out
@@ -127,9 +112,7 @@ def signout():
     return redirect(url_for("signin"))
 
 
-
 #display to-do list
-
 @app.route("/get_to_do_items")
 def get_to_do_items():
     sort_order = request.args.get('sort')
