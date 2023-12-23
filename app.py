@@ -42,8 +42,10 @@ mongo = PyMongo(app)
 #landing page
 @app.route("/")
 def landing():
-    return render_template("landing.html")
-
+    if 'user' in session:
+        return redirect(url_for("get_to_do_items"))
+    else:
+        return render_template("landing.html")
 
 
 # sign in
