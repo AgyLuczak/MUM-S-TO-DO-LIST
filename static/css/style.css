@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oxygen:wght@400;700&family=Shantell+Sans:wght@700&family=Signika:wght@300;400;500;600;700&display=swap');
 
-html {
-
-    /* height: 100vh; */
-}
 
 body {
     display: flex;
@@ -254,7 +250,10 @@ input.valid[type=text]:not(.browser-default) {
 
 .flashes h4 {
     line-height: 2;
+
 }
+
+
 
 .select-dropdown {
     font-family: Shantell Sans;
