@@ -101,20 +101,22 @@
                             <li>
                                 <div class="collapsible-header purple-text center-align">Sort my list:</div>
                                 <div class="collapsible-body black-text">
-                                    <a href="#" class="filter-option" id="alpha-order-items">alphabetically
-                                    </a>
+                                    <a href="{{ url_for('get_to_do_items', sort='alpha') }}" class="filter-option"
+                                        id="alpha-order-items">alphabetically</a>
                                 </div>
                                 <div class="collapsible-body black-text">
-                                    <a href="#" class="filter-option" id="category-filter"> by categories</a>
+                                    <a href="{{ url_for('get_to_do_items', sort='category') }}" class="filter-option"
+                                        id="category-filter">by
+                                        categories</a>
                                 </div>
-
                                 <div class="collapsible-body black-text">
-                                    <a href="#" class="filter-option" id="imp-order">important
-                                        first
-                                    </a>
+                                    <a href="{{ url_for('get_to_do_items', sort='important') }}" class="filter-option"
+                                        id="imp-order">important
+                                        first</a>
                                 </div>
                             </li>
                         </ul>
+
                     </div>
                     <div class="col m2">
                         <a href="{{ url_for('add_to_do_item') }}" class="btn-small purple lighten-1"
