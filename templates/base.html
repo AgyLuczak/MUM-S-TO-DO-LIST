@@ -75,11 +75,14 @@
         </header>
 
         {% if session.user %}
-        <div class="col search-section ">
-            <button type="submit" class="btn-large buttons purple purple lighten-1 right" onclick="toggleSearch()">
+        <div class="col search-section">
+            <button type="submit" class="btn-large buttons purple purple lighten-1 right" aria-label="Search button"
+                onclick="toggleSearch()">
                 <i class="fas fa-search" id="search-icon"></i>
+                <span class="visually-hidden">Search</span>
             </button>
         </div>
+
         <!-- Search Container -->
         <div class="col s12 m8" id="search-container">
             <!-- Search Form -->

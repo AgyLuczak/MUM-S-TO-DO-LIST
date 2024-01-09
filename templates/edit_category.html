@@ -23,16 +23,19 @@
                 </div>
             </div>
 
-            <!-- submit button -->
+            <!-- action buttons -->
             <div class="row">
                 <div class="col s12 center-align">
                     <div class="card-action">
-                        <a href="{{ url_for('get_categories') }}" class="btn-large buttons cancel-btn purple lighten-1"
-                            aria-label="cancel">
+                        <a href="{{ url_for('get_categories') }}" class="btn-large buttons purple lighten-1 darken-1"
+                            aria-label="Cancel and return to categories">
                             <i class="fa-solid fa-circle-xmark"></i>
+                            <span class="visually-hidden">Cancel and return to categories</span>
                         </a>
-                        <button type="submit" class="btn-large buttons save-btn purple lighten-1" aria-label="save">
+                        <button type="submit" class="btn-large buttons purple lighten-1 darken-1"
+                            aria-label="Save changes">
                             <i class="fa-solid fa-floppy-disk"></i>
+                            <span class="visually-hidden">Save changes</span>
                         </button>
                     </div>
                 </div>
@@ -48,44 +51,53 @@
         <div class="row">
             <div class="footer-icons">
                 <div class="col m2">
-                    <button type="button" class="btn-small purple lighten-1 " onclick="showCollapsible()">
+                    <button type="button" class="btn-small purple lighten-1" onclick="showCollapsible()"
+                        aria-label="Filter categories">
                         <i class="fa-solid fa-filter" id="filter-icon"></i>
+                        <span class="visually-hidden">Filter categories</span>
                     </button>
                     <ul id="showCollapsible" class="collapsible" style="display:none;">
                         <li>
                             <div class="collapsible-header purple-text center-align">Sort categories:</div>
                             <div class="collapsible-body black-text">
                                 <a href="{{ url_for('get_categories', sort='alphabetical') }}" class="filter-option"
-                                    id="alpha-order-categories">alphabetically
+                                    id="alpha-order-categories"
+                                    aria-label="Sort categories alphabetically">alphabetically
                                 </a>
                             </div>
                             <div class="collapsible-body black-text">
                                 <a href="{{ url_for('get_categories', sort='created_by') }}" class="filter-option"
-                                    id="user-filter">created by me first</a>
+                                    id="user-filter" aria-label="Sort categories created by me first">created by me
+                                    first</a>
                             </div>
-
                         </li>
                     </ul>
                 </div>
                 <div class="col m2">
-                    <a href="{{ url_for('add_to_do_item') }}" class="btn-small purple lighten-1">
-                        <i class="fa-solid fa-plus" id="add-item-icon"></i>
-                    </a>
-                </div>
-                <div class="col m2">
-                    <a href="{{ url_for('get_to_do_items') }}" class="btn-small purple lighten-1">
+                    <a href="{{ url_for('get_to_do_items') }}" class="btn-small purple lighten-1"
+                        aria-label="View to-do list">
                         <i class="fa-solid fa-list-ul" id="list-icon"></i>
+                        <span class="visually-hidden">View to-do list</span>
                     </a>
                 </div>
                 <div class="col m2">
-                    <a href="{{ url_for('signout') }}" class="btn-small purple lighten-1">
-                        <i class="fa-solid fa-right-from-bracket" id="signout-icon"></i>
+                    <a href="{{ url_for('get_categories') }}" class="btn-small purple lighten-1"
+                        aria-label="Manage categories">
+                        <i class="fa-solid fa-folder-open" id="categories-icon"></i>
+                        <span class="visually-hidden">Manage categories</span>
                     </a>
+
+                </div>
+                <div class="col m2">
+                    <a href="{{ url_for('signout') }}" class="btn-small purple lighten-1" aria-label="Sign out">
+                        <i class="fa-solid fa-right-from-bracket" id="signout-icon"></i>
+                        <span class="visually-hidden">Sign out</span>
                     </a>
                 </div>
             </div>
             <div>
 </footer>
+
 
 
 {% endblock %}
