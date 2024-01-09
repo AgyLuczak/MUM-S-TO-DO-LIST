@@ -119,16 +119,18 @@
                                 <div class="collapsible-header purple-text center-align">Sort my list:</div>
                                 <div class="collapsible-body black-text">
                                     <a href="{{ url_for('get_to_do_items', sort='alpha') }}" class="filter-option"
-                                        id="alpha-order-items">alphabetically</a>
+                                        id="alpha-order-items"
+                                        aria-label="Sort to-do items alphabetically">alphabetically</a>
+
                                 </div>
                                 <div class="collapsible-body black-text">
                                     <a href="{{ url_for('get_to_do_items', sort='category') }}" class="filter-option"
-                                        id="category-filter">by
+                                        id="category-filter" aria-label="Sort to-do items by categories">by
                                         categories</a>
                                 </div>
                                 <div class="collapsible-body black-text">
                                     <a href="{{ url_for('get_to_do_items', sort='important') }}" class="filter-option"
-                                        id="imp-order">important
+                                        id="imp-order" aria-label="Sort to-do-items by important first">important
                                         first</a>
                                 </div>
                             </li>

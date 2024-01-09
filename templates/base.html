@@ -38,7 +38,7 @@
 
                 <ul class="right hide-on-med-and-down">
                     <li class="menu-item {% if request.endpoint == 'landing' %}active{% endif %}">
-                        <a href="{{ url_for('landing') }}"></a>
+                        <a href="{{ url_for('landing') }}" aria-label="landing page"></a>
                     </li>
                     {% if session.user %}
                     <li class="menu-item {% if request.endpoint == 'get_to_do_items' %}active{% endif %}">
