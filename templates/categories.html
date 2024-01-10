@@ -24,12 +24,15 @@
                 {% if session.user|lower == category.created_by|lower or session.user|lower == "admin" %}
                 <div class="card-action">
                     <a href="{{ url_for('edit_category', category_id=category._id) }}"
-                        class="btn-small purple lighten-1">
+                        class="btn-small purple lighten-1" aria-label="Edit category">
                         <i class="fa-solid fa-pen-to-square"></i>
+                        <span class="visually-hidden">Edit category</span>
                     </a>
                     <a href="{{ url_for('delete_category', category_id=category._id) }}"
-                        onclick="return confirmDeleteCategory();" class="btn-small purple lighten-1"><i
-                            class="fa-solid fa-trash"></i></a>
+                        onclick="return confirmDeleteCategory();" class="btn-small purple lighten-1"
+                        aria-label="Delete category"><i class="fa-solid fa-trash"></i>
+                        <span class="visually-hidden">Delete category</span>
+                    </a>
                 </div>
                 {% endif %}
             </div>
