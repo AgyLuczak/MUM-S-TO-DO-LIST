@@ -34,11 +34,6 @@ body {
 
 }
 
-/* #mum_logo {
-    max-height: 50vh;
-    border-radius: 60%;
-} */
-
 .col s12 m6 {
     flex-direction: column;
     align-items: center;
@@ -62,7 +57,7 @@ body {
 .app-name {
     font-family: Dancing Script, sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
 
 }
 
