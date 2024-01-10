@@ -19,7 +19,7 @@
             <!--category selection-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fa-regular fa-folder-open prefix text-darken-4"></i>
+                    <i class="fa-regular fa-folder-open prefix text-darken-4" aria-hidden="true"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled>Select Category</option>
                         {% for category in categories %}
@@ -39,7 +39,7 @@
             <!--New list item-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix text-darken-4"></i>
+                    <i class="fas fa-pencil-alt prefix text-darken-4" aria-hidden="true"></i>
                     <input id="to_do_item" name="to_do_item" minlength="3" maxlength="60"
                         value="{{ to_do_item.to_do_item }}" type="text" class="validate" required>
                     <label for="to_do_item">Edit list item</label>
@@ -48,7 +48,7 @@
             <!--New list item details-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix text-darken-4"></i>
+                    <i class="fas fa-align-left prefix text-darken-4" aria-hidden="true"></i>
                     <textarea id="item_details" name="item_details" minlength="3" maxlength="200"
                         class="materialize-textarea validate">{{ to_do_item.item_details }}</textarea>
                     <label for="item_details">Details</label>
@@ -57,7 +57,7 @@
             <!--date picker-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-calendar-alt prefix  text-darken-4"></i>
+                    <i class="fas fa-calendar-alt prefix  text-darken-4" aria-hidden="true"></i>
                     <input id="due_date" name="due_date" type="text" value="{{ to_do_item.due_date}}"
                         class=" datepicker validate">
                     <label for="due_date">Due Date</label>
@@ -67,7 +67,7 @@
             <div class="row">
                 <div class="input-field col s12 m8">
                     <div class="switch">
-                        <i class="fa-solid fa-star prefix  text-darken-4"></i>
+                        <i class="fa-solid fa-star prefix  text-darken-4" aria-hidden="true"></i>
                         <label for="is_important">
                             {% if to_do_item.is_important == "on" %}
                             <input type="checkbox" id="is_important" name="is_important" checked>
