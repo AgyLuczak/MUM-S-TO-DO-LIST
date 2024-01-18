@@ -1,4 +1,4 @@
-# **INFORMAL ENGLISH QUIZ - 2nd milestone project**
+# **MUM'S TO-DO-LIST - 3rd git milestone project**
 
 ## **Introduction**
 
