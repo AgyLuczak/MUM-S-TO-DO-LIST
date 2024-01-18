@@ -450,4 +450,12 @@ input.valid[type=text]:not(.browser-default) {
     .row {
         flex-direction: column;
     }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+
 }
