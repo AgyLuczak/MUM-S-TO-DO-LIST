@@ -2,6 +2,7 @@
 
 
 body {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     background-image: url("../images/mum_icons_faded1.png");
