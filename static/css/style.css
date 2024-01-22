@@ -58,7 +58,7 @@ body {
 .app-name {
     font-family: Dancing Script, sans-serif;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
 
 }
 
@@ -369,7 +369,15 @@ input.valid[type=text]:not(.browser-default) {
     font-weight: bold;
 }
 
+@media only screen and (min-width: 992px) {
 
+    nav .brand-logo {
+
+        font-size: 2.5rem;
+
+    }
+
+}
 
 
 @media only screen and (max-width: 768px) {
