@@ -1,4 +1,8 @@
+![](./docs/responsive.png)
+
+
 # **MUM'S TO-DO-LIST - 3rd milestone project**
+
 
 ## **Introduction**
 
@@ -40,7 +44,7 @@ Welcome to my third milestone project: Mum's To-Do List, This is a comprehensive
 5. As a first-time and returning visitor, I want to be able to add,edit and delete tasks and categories.
 6. As a first-time and returning visitor, I want to be able to be able to prioritise tasks.
 7. As a first-time and returning visitor, I want to be able to cross-out list items that are done and remove them from the list.
-8. As a first-time and returning visitor, I want to be able to sort items on my list and also categories.
+8. As a first-time and returning visitor, I want to be able to sort items on my list and categories as well.
 9. As a first-time and returning visitor, I want to be able to use the app easily on different devices.
 10. As a first-time and returning visitor, I want to receive immediate and clear feedback through notifications or messages within the app for various interactions, such as successfully adding, editing, or deleting tasks, errors, or confirmation prompts. 
 11. As an administrator, I want to be able to add and delete categories.
