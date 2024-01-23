@@ -42,11 +42,33 @@ Welcome to my third milestone project: Mum's To-Do List, This is a comprehensive
 3. As a first-time and returning visitor, I want to stay signed-in to avoid frequent log-ins , but with a clear and accessible sign-out option for when I need to securely exit my profile.
 4. As a first-time and returning visitor, I want to be able to easily navigate the app. I can access all the pages easily and go back to the my list quickly. 
 5. As a first-time and returning visitor, I want to be able to add,edit and delete tasks and categories.
-6. As a first-time and returning visitor, I want to be able to be able to prioritise tasks.
-7. As a first-time and returning visitor, I want to be able to cross-out list items that are done and remove them from the list.
-8. As a first-time and returning visitor, I want to be able to sort items on my list and categories as well.
-9. As a first-time and returning visitor, I want to be able to use the app easily on different devices.
-10. As a first-time and returning visitor, I want to receive immediate and clear feedback through notifications or messages within the app for various interactions, such as successfully adding, editing, or deleting tasks, errors, or confirmation prompts. 
-11. As an administrator, I want to be able to add and delete categories.
+6. As a first-time and returning visitor, I want to be able to add details and due date to my tasks.
+7. As a first-time and returning visitor, I want to be able to be able to prioritise tasks.
+8. As a first-time and returning visitor, I want to be able to cross-out list items that are done and remove them from the list.
+9. As a first-time and returning visitor, I want to be able to sort items on my list and categories as well.
+10. As a first-time and returning visitor, I want to be able to use the app easily on different devices.
+11. As a first-time and returning visitor, I want to receive immediate and clear feedback through notifications or messages within the app for various interactions, such as successfully adding, editing, or deleting tasks, errors, or confirmation prompts. 
+12. As an administrator, I want to be able to add and delete categories.
+
+</br>
+
+## **Scope Plane**
+
+</br>
+
+In order to achieve the strategy goals, the following features are included on the website:
+
+- A  landing page with a welcome message at the top of the Home Page stating clearly stating the purpose of the app.
+- A register and sign in page. Once users are signed it they are directed to their to-do list.
+- A user stays signed it for 7 days to avoid frequent log-ins. There is a sign-out option which is easily accessible on each page.
+- Navbar and footer links to navigate easily between the pages. 
+- Adding, editing, and deleting options for to-do items and categories. Items on the list can be crossed out when done.
+- Option to add details and the due date for each task
+- An option to mark list items as important to allow prioritarization
+- Sorting options both for to-do items and categories.
+- Materialise.css classes and media queries were used to ensure responiveness on different devices
+- Flash messages informing the user items and categories were successfully added, edited or deleted. Also users see a message when an item is crossed out as done.
+- 404 and 500 pages with an option to go back to the list if there is an unexpected error.
+- Administrator account with where categories can be added or deleted.
 
 </br>
