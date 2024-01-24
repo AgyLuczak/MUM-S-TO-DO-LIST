@@ -47,8 +47,9 @@ Welcome to my third milestone project: Mum's To-Do List, This is a comprehensive
 8. As a first-time and returning visitor, I want to be able to cross-out list items that are done and remove them from the list.
 9. As a first-time and returning visitor, I want to be able to sort items on my list and categories as well.
 10. As a first-time and returning visitor, I want to be able to use the app easily on different devices.
-11. As a first-time and returning visitor, I want to receive immediate and clear feedback through notifications or messages within the app for various interactions, such as successfully adding, editing, or deleting tasks, errors, or confirmation prompts. 
-12. As an administrator, I want to be able to add and delete categories.
+11. As a first-time and returning visitor, I want to receive immediate and clear feedback through notifications or messages within the app for various interactions, such as successfully adding, editing, or deleting tasks, errors, or confirmation prompts.
+12.  As a first-time and returning visitor, I want to be able to search through to-do items and categories.
+13. As an administrator, I want to be able to add and delete categories.
 
 </br>
 
@@ -69,6 +70,7 @@ In order to achieve the strategy goals, the following features are included on t
 - Materialise.css classes and media queries were used to ensure responiveness on different devices
 - Flash messages informing the user items and categories were successfully added, edited or deleted. Also users see a message when an item is crossed out as done.
 - 404 and 500 pages with an option to go back to the list if there is an unexpected error.
+- Search Box for searching items and categories.
 - Administrator account with where categories can be added or deleted.
 
 </br>
@@ -93,7 +95,7 @@ I used a  favicon with a check icon in the address bar for every page to make it
 
 </br>
 
-[Wireframes](./docs/)
+[Wireframes](./docs/Mums_to_do_list_wireframes.pdf)
 
 The website looks slightly different from what I initially had in mind when creating the wireframes. 
 
