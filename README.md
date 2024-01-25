@@ -79,12 +79,16 @@ In order to achieve the strategy goals, the following features are included on t
 
 </br>
 
-The website consists of four pages:
+The website consists of nine pages:
 - **Landing Page**
 - **Register Page**
 - **Sign In Page**
 - **My List Page**
+- **Add New Item Page**
+- **Edit Item Page**
 - **Categories Page**
+- **Add New Category Page**
+- **Edit Category Page**
 
 
 The navbar recurring on each page allows users to easily move between the pages. Once signed in the user has access to the links in the footer to additionally help navigate the site. 
@@ -97,7 +101,41 @@ I used a  favicon with a check icon in the address bar for every page to make it
 
 [Wireframes](./docs/Mums_to_do_list_wireframes.pdf)
 
-The website looks slightly different from what I initially had in mind when creating the wireframes. 
+The website looks slightly different from what I initially had in mind when creating the wireframes. The landing page now has an image of a mum as a superhero. 'My List' items have an additional check button which can be used to cross out a item that has been done. Additionally, there is a 'delete all checked items' button which allows the users delete all items that have been crossed out. I used icons for all the buttons rather that words like 'save' or 'cancel' as shown in the wireframes. Categories section now includes 'edit' and 'delete' buttons only for categories created by a logged-in users. The four basic categories that are displayed to every user can only be managed by the adoministrator.
+
+</br>
+
+## **Database Design**
+
+I used a non-relational MongoDB database. The name of the database is **mums_to_do_list** and it consists of three collections:
+
+- **categories**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | category_name | String | |
+    | created_by | String | selected from **users** collection |
+
+
+- **to_do_items**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | category_name | String | selected from **categories** collection |
+    | to_do_item | String | |
+    | item_details | String | |
+    | is_important | String | |
+    | due_date | String | |
+    | created_by | String | |
+    | is_crossed_out| Boolean | |
+    
+
+- **users**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | username | String | |
+    | password | String | uses Secure Hash Algorithm (SHA) |
 
 
 
@@ -132,3 +170,4 @@ and *Shantell Sans* for the rest of the body
 *Dancing Script* was selected for the app's name because of its elegant and handwritten style. This font gives a sense of personal touch and warmth. On the other hand, *Shantell Sans* was chosen for the app's body text due to its clean and modern appearance. This sans-serif font ensures optimal readability and a straightforward user interface, making it easy for users to manage their to-do lists efficiently. The combination of *Dancing Script* and *Shantell Sans* strikes a balance between a friendly, inviting app name and a practical, user-centric body text.
 
 </br>
+
