@@ -105,6 +105,26 @@ The website looks slightly different from what I initially had in mind when crea
 
 </br>
 
+
+## **Feautures**
+
+- **Landing Page**
+
+The landing page serves as the first point of interaction for users, aimed at providing them with a clear understanding of what the app offers and how it can benefit them in their daily lives. The page starts with a welcoming and personalized heading, "Hi there, Super Mum!", immediately resonating with the target audience. Under the heading the page contains a card with a hero iage and a welcome message,
+The image shows a mum portrayed as a superhero holding a to-do-list. It recognizes and celebrates the multifaceted roles and strengths of mothers. There are two versions of the welcome message – one for large screens and another for smaller displays.
+
+![welcome-large](./docs/landing_page_lg.png)
+
+![welcome-small](./docs/landing_page_sm.png)
+
+ 'Get Started' button encourage users to sign up and try the app.
+
+
+
+
+
+
+
 ## **Database Design**
 
 I used a non-relational MongoDB database. The name of the database is **mums_to_do_list** and it consists of three collections:
