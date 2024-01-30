@@ -156,7 +156,6 @@ The image shows a mum portrayed as a superhero holding a to-do-list. It recogniz
 - **Registration Page**
 
 
-
 The registration page is simple and intuitive, ensuring a straightforward process for users. It features a clean and organized layout with clearly labeled input fields, reducing any potential confusion during the sign-up process.
 Users are required to create a unique username, which must be 3-15 characters long. The input field is validated for length and character type (alphanumeric), enhancing both usability and security.
 
@@ -172,6 +171,22 @@ The form data is submitted using a POST method to the server, ensuring that user
 
 For users who already have an account, the page provides a direct link to the sign-in page. This thoughtful addition enhances user experience by facilitating easy navigation.
 
+
+- **Sign-In Page**
+
+![sign in](./docs/sign_in_page.png)
+
+The sign-in page features a clear and concise layout, making it easy for users to understand and use.
+The heading "Sign in to see your list" is straightforward and indicates the purpose of the page directly.
+ Users enter their username in a field with a minimum and maximum length requirement, ensuring consistency with the registration process.
+ A separate field for the password enhances security. The password is also subject to length and character type restrictions.
+The form uses the POST method to submit data, which helps in keeping user credentials secure. If the username or password are icorrect the users get feedback immediately.
+
+![icorrect user or password](./docs/incorrect_user_password.png)
+
+If the username and the password are correct the user is taken to their To-Do-List Page.
+
+For new users, the page provides a direct link to the registration page. This addition enhances user experience by facilitating easy navigation between signing in and registering.
 
 
 
