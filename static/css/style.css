@@ -122,6 +122,10 @@ input.valid[type=password]:not(.browser-default):focus+label {
 
 }
 
+.heading-section {
+    padding-top: 50px;
+}
+
 .top-heading {
     background: hsla(311, 74%, 87%, 1);
     background: linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
