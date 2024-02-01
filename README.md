@@ -158,6 +158,30 @@ A side navigation is provided for mobile users, ensuring that navigation links r
 The navigation bar dynamically adjusts its links based on the user's authentication state. For logged-in users, links to "My List" and "Categories" are displayed, along with an option to "Sign Out". The current page or section is highlighted with an active class, providing users with visual feedback on their current location within the app.
 
 
+- **Footer**
+
+The footer is designed to offer logged in  users additional navigation options and functionalities related to the app. It's responsive design enhances the user's experience on various devices.
+
+![footer_lg](./docs/footer_lg.png)
+
+![footer_sm](./docs/footer_sm.png)
+
+It consists of:
+
+- Filter and Sort Button:
+
+A button is provided to trigger a collapsible element, allowing users to filter and sort their to-do list items (or categories on categories pages). This feature enhances user engagement by providing a dynamic way to view their tasks.
+
+- Collapsible Sort Options:
+
+Upon clicking the filter button, users are presented with a collapsible list that offers sorting options ( e.g. alphabetically, or by importance). This allows for a customized viewing experience. (For more details on searching functionality read this section...)
+Each option is a link that modifies the display of the to-do list according to the selected sort method.
+
+![footer_functionality](./docs/footer_functionality.png)
+
+- Quick Access Icons:
+
+Additional icons provide quick access to common tasks: adding new to-do items, managing categories, and signing out. Each action is represented by a distinct icon and is accompanied by visually hidden text for accessibility, ensuring users can navigate the app efficiently.
 
 
 - **Landing Page**
