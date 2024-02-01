@@ -184,6 +184,13 @@ Each option is a link that modifies the display of the to-do list according to t
 Additional icons provide quick access to common tasks: adding new to-do items, managing categories, and signing out. Each action is represented by a distinct icon and is accompanied by visually hidden text for accessibility, ensuring users can navigate the app efficiently.
 
 
+- **Favicon**
+
+![favicon](./docs/favicon.png)
+
+The favicon features a stylized check mark centered within a vibrant pink circle. I chose the check mark as it fits in the purpose of the app. The colour choice aligns with the app's branding.
+
+
 - **Landing Page**
 
 The landing page serves as the first point of interaction for users, aimed at providing them with a clear understanding of what the app offers and how it can benefit them in their daily lives. The page starts with a welcoming and personalized heading, "Hi there, Super Mum!", immediately resonating with the target audience. Under the heading the page contains a card with a hero iage and a welcome message,
