@@ -140,6 +140,26 @@ The website looks slightly different from what I initially had in mind when crea
 
 ## **Feautures**
 
+- **Navigation Bar**
+
+The navigation bar provides users with an intuitive and seamless navigation experience. It features a responsive design that adapts to both desktop and mobile devices, ensuring accessibility and ease of use for all users. Created with the Materialize CSS framework, the navigation bar highlights essential links and functionalities, including access to the user's to-do list, categories, and account management options such as signing in, registering, or signing out. 
+
+![navbar lg](./docs/navbar_lg.png)
+
+
+The navigation bar displays the app's logo and name, "Mum's To-Do List", anchored on the left side. This provides users with a consistent visual reference across the application. An icon (fa-solid fa-circle-check) next to the brand name enhances the visual appeal and is hidden on medium and smaller screens to maintain a clean look.
+
+![navbar sm](./docs/navbar_sm.png)
+
+A side navigation is provided for mobile users, ensuring that navigation links remain accessible on smaller devices. This mobile navigation is triggered by a hamburger menu icon.
+
+![sidenav](./docs/sidenav.png)
+
+The navigation bar dynamically adjusts its links based on the user's authentication state. For logged-in users, links to "My List" and "Categories" are displayed, along with an option to "Sign Out". The current page or section is highlighted with an active class, providing users with visual feedback on their current location within the app.
+
+
+
+
 - **Landing Page**
 
 The landing page serves as the first point of interaction for users, aimed at providing them with a clear understanding of what the app offers and how it can benefit them in their daily lives. The page starts with a welcoming and personalized heading, "Hi there, Super Mum!", immediately resonating with the target audience. Under the heading the page contains a card with a hero iage and a welcome message,
