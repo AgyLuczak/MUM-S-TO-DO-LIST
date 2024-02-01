@@ -180,13 +180,14 @@ The sign-in page features a clear and concise layout, making it easy for users t
 The heading "Sign in to see your list" is straightforward and indicates the purpose of the page directly.
  Users enter their username in a field with a minimum and maximum length requirement, ensuring consistency with the registration process.
  A separate field for the password enhances security. The password is also subject to length and character type restrictions.
-The form uses the POST method to submit data, which helps in keeping user credentials secure. If the username or password are icorrect the users get feedback immediately.
+The form uses the POST method to submit data, which helps in keeping user credentials secure. If the username or password are incorrect the users get feedback immediately.
 
 ![icorrect user or password](./docs/incorrect_user_password.png)
 
-If the username and the password are correct the user is taken to their To-Do-List Page.
+If the username and the password are correct the user is taken to their To-Do-List Page. The user's username is stored in the session. Setting session.permanent = True makes the session persistent across browser sessions until explicitly logged out or session expires (session set for 7 days).
 
 For new users, the page provides a direct link to the registration page. This addition enhances user experience by facilitating easy navigation between signing in and registering.
+
 
 
 
