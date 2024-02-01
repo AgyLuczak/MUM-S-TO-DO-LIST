@@ -1,4 +1,4 @@
-![](./docs/responsive.png)
+![](./docs/responsive_pic.png)
 
 
 # **MUM'S TO-DO-LIST - 3rd milestone project**
