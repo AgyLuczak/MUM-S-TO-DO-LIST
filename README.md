@@ -222,6 +222,8 @@ The form data is submitted using a POST method to the server, ensuring that user
 
 For users who already have an account, the page provides a direct link to the sign-in page. This thoughtful addition enhances user experience by facilitating easy navigation.
 
+</br>
+
 
 - **Sign-In Page**
 
@@ -238,6 +240,46 @@ The form uses the POST method to submit data, which helps in keeping user creden
 If the username and the password are correct the user is taken to their To-Do-List Page. The user's username is stored in the session. Setting session.permanent = True makes the session persistent across browser sessions until explicitly logged out or session expires (session set for 7 days).
 
 For new users, the page provides a direct link to the registration page. This addition enhances user experience by facilitating easy navigation between signing in and registering.
+
+</br>
+
+- **My List Page**
+
+The My List page serves as the primary interface for users to interact with their tasks. It is designed to offer a personalized and intuitive user experience where users can view, manage, and organize their to-do list efficiently.
+
+The page greets users with a custom message, "{{ username }}'s list", creating a personalized space. A floating action button, styled distinctly, is provided for users to quickly add new tasks to their list.
+
+![my item btn](./docs/add_item_btn.png)
+
+
+Users can interact with their to-do items, which are displayed in an attractive card layout. Each card provides a visual summary of a task, including its name, associated category, and importance status marked by a star icon.
+
+![my list page](./docs/my_list_page.png)
+
+
+A card reveal feature is incorporated, which allows users to view additional details of each task, such as the due date and specific notes, by clicking on the task name.
+
+![card reveal](./docs/card_reveal.png)
+
+
+Tasks can be marked as completed, edited, or deleted directly from the card, offering users full control over their to-do list.
+
+![cardbuttons](./docs/card_buttons.png)
+
+![checked item](./docs/checked_item.png)
+
+
+Users can perform bulk actions, such as deleting all completed tasks, with a single click. This feature simplifies list management and improves the user experience.
+
+![delete all items](./docs/delete_all_checked.png)
+
+
+The footer contains an interactive button to  sort tasks, enabling users to customize how they view their list. Sorting options include alphabetical, by category, or by importance, allowing users to prioritize their tasks as needed.
+
+![sorting items](./docs/sorting_items.png)
+
+
+
 
 
 
