@@ -302,6 +302,23 @@ A switch is provided for users to mark tasks as important, visually represented 
 
 Two large, easy-to-identify buttons offer users the option to either save the new task or cancel the operation. The save button submits the form, while the cancel button redirects users back to their list without adding the new task.
 
+</br>
+
+- **Edit Item Page**
+
+The Edit Item page allows users to make changes to existing tasks. All fields in the edit form are pre-filled with the existing details of the selected task. Users can see the current information and make necessary adjustments easily.
+
+A dropdown menu populated with available categories allows users to re-categorize tasks if needed. Categories created by the user or an admin are included.
+
+Users can edit the name and detailed description of the task and change the due date of the task.
+
+A switch is available to mark the task as important, which can be toggled during the edit process. 
+
+The form provides clear options to either save changes or cancel and return to the list. This ensures users have full control over the editing process and can opt-out at any moment.
+
+![edit_item](./docs/edit_item.png)
+
+
 
 
 
