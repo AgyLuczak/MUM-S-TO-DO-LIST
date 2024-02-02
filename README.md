@@ -186,7 +186,7 @@ Additional icons provide quick access to common tasks: adding new to-do items, m
 
 - **Favicon**
 
-![favicon](./docs/favicon.png)
+![favicon](./static/images/favicon-32x32.png)
 
 The favicon features a stylized check mark centered within a vibrant pink circle. I chose the check mark as it fits in the purpose of the app. The colour choice aligns with the app's branding.
 
@@ -278,8 +278,29 @@ The footer contains an interactive button to  sort tasks, enabling users to cust
 
 ![sorting items](./docs/sorting_items.png)
 
+</br>
 
+- **Add New Item Page**
 
+The "Add New Item" allows users to insert new tasks into their to-do list. The page features a straightforward form wrapped within a Materialize CSS card panel, guiding users through the task creation process with clear input fields for task details.
+
+![add item page](./docs/add_item.png)
+
+A dropdown menu is provided for users to categorize their new task, helping to keep the to-do list organized. Users can choose from a list that includes categories created by them or provided in the app.
+
+![add item page](./docs/categories_dropdown.png)
+
+Users can enter the name of the new task, with validation rules ensuring that the input is within the specified character limits for optimal display and management. An additional text area is available for users to add more details to their tasks if they wish to do so.
+
+The form includes a date picker for users to optionally set a due date for the task, integrating a calendar UI for easy date selection.
+
+![calendar](./docs/calendar.png)
+
+A switch is provided for users to mark tasks as important, visually represented by a star icon. This feature helps users prioritize their tasks.
+
+![important](./docs/important.png)
+
+Two large, easy-to-identify buttons offer users the option to either save the new task or cancel the operation. The save button submits the form, while the cancel button redirects users back to their list without adding the new task.
 
 
 
