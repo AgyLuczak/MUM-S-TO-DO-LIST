@@ -338,6 +338,23 @@ A collapsible filter button allows users to sort categories alphabetically or by
 ![ sort categories](./docs/sort_categories.png)
 
 
+</br>
+
+- **Add Category Page**
+
+
+The "Add Category" feature enables users to create customized categories for their tasks. This functionality is designed to help users organize their tasks into meaningful groups, making task management more efficient and personalized. 
+
+![ add category](./docs/add_category.png)
+
+
+Users can easily add a new category through a simple form. This form includes an input field for the category name, ensuring a straightforward way to introduce new categories into their to-do list. The form validates user input to ensure that category names meet specific criteria (e.g., length between 3 to 20 characters).
+
+Action buttons are provided to navigate away from the page without adding a new category or to submit the new category. 
+
+
+
+
 ## **Database Design**
 
 I used a non-relational MongoDB database. The name of the database is **mums_to_do_list** and it consists of three collections:
