@@ -319,7 +319,23 @@ The form provides clear options to either save changes or cancel and return to t
 ![edit_item](./docs/edit_item.png)
 
 
+</br>
 
+- **Categories Page**
+
+This feature allows users to view, add, edit, and delete categories, providing a comprehensive toolset for category organization.
+ A floating action button (+) is prominently displayed, enabling users to add new categories effortlessly. This button takes users to a dedicated form where they can enter the name of the new category.
+
+ ![categories](./docs/categories_page.png)
+
+There are four categories provided in the app, but users can add their own. They can also edit and delete categories they created themselves. Editing and deletion capabilities are conditionally rendered based on the user's session information, ensuring that only authorized users can modify or remove categories. Editing and deleting the original categories is resrticted to the admin account.
+
+![ own categories](./docs/categories_own.png)
+
+
+A collapsible filter button allows users to sort categories alphabetically or by those created by them first, offering enhanced navigation and personalization of the category viewing experience.
+
+![ sort categories](./docs/sort_categories.png)
 
 
 ## **Database Design**
