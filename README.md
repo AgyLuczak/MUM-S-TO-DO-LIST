@@ -353,7 +353,17 @@ Users can easily add a new category through a simple form. This form includes an
 Action buttons are provided to navigate away from the page without adding a new category or to submit the new category. 
 
 
+</br>
 
+- **Edit Category Page**
+
+The "Edit Category" feature provides users with the flexibility to update the names of existing categories within the To-Do List application. The feature is accessed through an intuitive form that pre-populates the current category name, allowing users to easily see and modify the category's name.  To ensure data integrity, the form includes validation rules requiring category names to be within a specified length range. This validation prevents errors and promotes consistency in category naming conventions across the application.
+
+![ edit category](./docs/edit_category.png)
+
+Alongside the form, action buttons enable users to either cancel the edit and return to the category overview or to save their changes. 
+
+</br>
 
 ## **Database Design**
 
