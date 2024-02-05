@@ -365,6 +365,18 @@ Alongside the form, action buttons enable users to either cancel the edit and re
 
 </br>
 
+- **Search Box**
+
+The search box  enables users to quickly locate specific items or categories within their to-do list. This feature is designed to provide an efficient and seamless user experience, allowing for immediate access to relevant tasks without the need to manually sift through the list. The search box is prominently placed within the application's interface, making it easily accessible for immediate use.
+
+![ search_box](./docs/search_box.png)
+
+
+The search functionality is accessible to authenticated users. It ensures that users can only search within their own lists, maintaining privacy and security. Users can enter keywords related to the items or categories they are searching for. The system performs a comprehensive search across all to-do items, matching the entered keywords.
+Upon submitting a search query, the application promptly displays the matched items. If no matches are found, the user is notified with a friendly message indicating the absence of matching items or categories.
+
+</br>
+
 ## **Database Design**
 
 I used a non-relational MongoDB database. The name of the database is **mums_to_do_list** and it consists of three collections:
