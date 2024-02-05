@@ -273,6 +273,9 @@ Users can perform bulk actions, such as deleting all completed tasks, with a sin
 
 ![delete all items](./docs/delete_all_checked.png)
 
+When all to-do items are deleted, users get a friendly, motivational message
+
+![done_and_dusted](./docs/done_and_dusted.png)
 
 The footer contains an interactive button to  sort tasks, enabling users to customize how they view their list. Sorting options include alphabetical, by category, or by importance, allowing users to prioritize their tasks as needed.
 
@@ -376,6 +379,15 @@ The search functionality is accessible to authenticated users. It ensures that u
 Upon submitting a search query, the application promptly displays the matched items. If no matches are found, the user is notified with a friendly message indicating the absence of matching items or categories.
 
 </br>
+
+- **Flash messages**
+
+Flash messages are a crucial user feedback mechanism incorporated into the application. These messages provide immediate, contextual feedback to users following their actions within the app, such as adding, editing, or deleting to-do items and categories, signing in or out, and registering an account. 
+
+![ sign out flash](./docs/sign_out_flash.png)
+
+![ updated flash](./docs/updated_flash.png)
+
 
 ## **Database Design**
 
