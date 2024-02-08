@@ -447,6 +447,11 @@ Right now the administrator role is limited to managing the predefined categorie
 * [AmIResponsive](http://ami.responsivedesign.is/) used to generate responsive images of the website
 * [Balsamiq](https://balsamiq.com/wireframes) used to design the wireframes
 * [Chat GPT4](https://https://chat.openai.com/) used to generate the image for the landing page and the colour palette. Also used along StackOverflow to look for possible causes of issues I came across while doing the project
+* [Readme.so](https://readme.so) - Used to edit the readme file.
+* [Tables generator](https://www.tablesgenerator.com/) - Used to create a table in readme file.
+* [Befunky Photo Editor](https://befunky.com) - Used to resize and crop the images.
+* [Style generator](https://html-css-js.com/) - Used for colour gradient, text-shadow and box-shadow.
+* [Favicon generator](https://www.favicon-generator.org/) - Used to generate the website's favicon.
 
 
 ## **Database Design**
@@ -484,4 +489,103 @@ I used a non-relational MongoDB database. The name of the database is **mums_to_
 
 
 </br>
+
+## Deployment
+
+The live deployed application can be found deployed on [Heroku](https://mums-to-do-list-64ef2a4f0d01.herokuapp.com/).
+
+### MongoDB Non-Relational Database
+
+This project uses [MongoDB](https://www.mongodb.com) for the Non-Relational Database.
+
+To obtain your own MongoDB Database URI, sign up on their site, then follow these steps:
+
+* The name of the database on MongoDB should be called **insert-your-database-name-here**
+* The collection(s) needed for this database should be **insert-your-collection-names-here**
+* Click on the **Cluster** name created for the project
+* Click on the **Connect** button
+* Click **Connect Your Application**
+* Copy the connection string, and replace `password` with your own password (also remove the angle brackets)
+
+## Heroku Deployment
+
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+After setting up an account, follow these steps for deployment:
+
+* Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu
+* Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**
+* From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables
+
+| Key | Value |
+| --- | --- |
+| `DATABASE_URL` | user's own value |
+| `IP` | 0.0.0.0 |
+| `MONGO_DBNAME` | user's own value |
+| `MONGO_URI` | user's own value |
+| `PORT` | 5000 |
+| `SECRET_KEY` | user's own value |
+
+Heroku needs two additional files to deploy properly:
+
+* requirements.txt
+* Procfile
+
+You can install this project's **requirements** (where applicable) using:
+
+* `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+* `pip3 freeze --local > requirements.txt`
+
+The **Procfile** can be created with the following command:
+
+* `echo web: python app.py > Procfile`
+* *replace **app.py** with the name of your primary Flask app name; the one at the root-level*
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+You can select **Automatic Deployment** from the Heroku app
+
+Or:
+
+* In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+* Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+* After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+  * `git push heroku main`
+
+The project should now be deployed to Heroku.
+
+### Local Deployment
+
+This project can be cloned or forked to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file:
+
+* `pip3 install -r requirements.txt`
+
+#### Cloning
+
+You can clone the repository by following these steps:
+
+1. Go to the [GitHub repository](https://github.com/AgyLuczak/MUM-S-TO-DO-LIST)
+2. Find the 'Code' button above the list of files and click it
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git shell or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+	* `git clone https://github.com/AgyLuczak/MUM-S-TO-DO-LIST.git`
+7. Press Enter to create your local clone
+
+
+#### Forking
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/AgyLuczak/MUM-S-TO-DO-LIST)
+2. Find the 'Fork' button at the top of the repository and click it.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account.
+
 
