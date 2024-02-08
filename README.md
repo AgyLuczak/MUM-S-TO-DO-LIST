@@ -389,6 +389,43 @@ Flash messages are a crucial user feedback mechanism incorporated into the appli
 ![ updated flash](./docs/updated_flash.png)
 
 
+## **Feautures to be icorporated in the future**
+
+- **Navigation Bar**
+
+1. **Drag and drop** 
+Improve Task Prioritization and Custom Sorting
+by including drag-and-drop functionality for reordering tasks based on urgency, deadline, or personal preference, enabling users to manage their tasks more efficiently.
+
+2. **Calendar Integration**
+Incorporate a calendar view to allow users to visualize their tasks over a daily, weekly, or monthly calendar. This feature would help users plan their schedules more effectively by seeing at a glance when tasks are due or scheduled to be worked on.
+
+3. **Recurring Tasks**
+Allow users to set tasks as recurring, specifying the frequency (daily, weekly, monthly, etc.). This feature is particularly useful for tasks that need to be completed regularly, eliminating the need to manually create the same task multiple times.
+
+4. **Sharing options**
+Enable users to share lists or specific tasks with others.
+
+5. **Notifications and Reminders**
+Implement notifications and reminders that alert users of upcoming deadlines or when a task is due. These could be customizable and sent via email, SMS, or in-app notifications, helping users stay on top of their tasks without having to constantly check the app.
+
+6. Customizable Themes and Layouts
+Offer users the ability to customize the appearance of the app with themes and layout options. This personalization feature could enhance user engagement by allowing users to tailor the app’s look to their preferences.
+
+8. **Archive Page**
+Allow users to archive items instead of deleting them to help them keep a record of all done items.
+
+9. **Analytics and Progress Tracking**
+Provide users with analytics and progress tracking features to monitor their productivity over time. This could include statistics on completed tasks, time spent on tasks, and trends in productivity, offering insights into how users can improve their time management.
+
+10. **Expanded admin role**
+Right now the administrator role is limited to managing the predefined categories. I'd like to extend it to tasks that users can select or be guided by. I lso would like the administrator to be able to access the data base and be able to cancel deletion of any items or categories if requested by the user.
+
+
+
+
+
+
 ## **Database Design**
 
 I used a non-relational MongoDB database. The name of the database is **mums_to_do_list** and it consists of three collections:
