@@ -6,7 +6,7 @@
 
 ## **Introduction**
 
-</br>
+<br>
 
 Welcome to my third milestone project: Mum's To-Do List, This is a comprehensive Flask application for managing to-do items and categories aimed at busy mums. The application uses MongoDB as its database and includes a variety of features such as user authentication, adding, editing, and deleting to-do items and categories, as well as sorting and searching functionalities.
 
@@ -14,15 +14,15 @@ Welcome to my third milestone project: Mum's To-Do List, This is a comprehensive
 [Visit the website here](https://mums-to-do-list-64ef2a4f0d01.herokuapp.com/)
 
 
-</br>
+<br>
 
 ## **UX-User Experience Design**
 
-</br>
+<br>
 
 ## **Strategy Plane**
 
-</br>
+<br>
 
 **The business goals for the website:**
 
@@ -33,7 +33,7 @@ Welcome to my third milestone project: Mum's To-Do List, This is a comprehensive
 5. Encourage regural use by ensuring the app is easy and convenient to use.
 6. Provide seamless cross-device experience by ensuring the website is responive and accessible on different devices.
 
-</br>
+<br>
 
 **User stories:**
 
@@ -51,11 +51,11 @@ Welcome to my third milestone project: Mum's To-Do List, This is a comprehensive
 12.  As a first-time and returning visitor, I want to be able to search through to-do items and categories.
 13. As an administrator, I want to be able to add and delete categories.
 
-</br>
+<br>
 
 ## **Scope Plane**
 
-</br>
+<br>
 
 In order to achieve the strategy goals, the following features are included on the website:
 
@@ -73,11 +73,11 @@ In order to achieve the strategy goals, the following features are included on t
 - Search Box for searching items and categories.
 - Administrator account with where categories can be added or deleted.
 
-</br>
+<br>
 
 ## **Structure Plane** 
 
-</br>
+<br>
 
 The website consists of nine pages:
 - **Landing Page**
@@ -96,7 +96,7 @@ I used a  favicon with a check icon in the address bar for every page to make it
 
 ## **Surface Plane**
 
-</br>
+<br>
 
 **Colour Scheme**
 
@@ -122,7 +122,7 @@ and *Shantell Sans* for the rest of the body
 
 *Dancing Script* was selected for the app's name because of its elegant and handwritten style. This font gives a sense of personal touch and warmth. On the other hand, *Shantell Sans* was chosen for the app's body text due to its clean and modern appearance. This sans-serif font ensures optimal readability and a straightforward user interface, making it easy for users to manage their to-do lists efficiently. The combination of *Dancing Script* and *Shantell Sans* strikes a balance between a friendly, inviting app name and a practical, user-centric body text.
 
-</br>
+<br>
 
 
 
@@ -333,7 +333,7 @@ This feature allows users to view, add, edit, and delete categories, providing a
 
 There are four categories provided in the app, but users can add their own. They can also edit and delete categories they created themselves. Editing and deletion capabilities are conditionally rendered based on the user's session information, ensuring that only authorized users can modify or remove categories. Editing and deleting the original categories is resrticted to the admin account.
 
-![ own categories](./docs/categories_own.png)
+![own categories](./docs/categories_own.png)
 
 
 A collapsible filter button allows users to sort categories alphabetically or by those created by them first, offering enhanced navigation and personalization of the category viewing experience.
@@ -356,7 +356,7 @@ Users can easily add a new category through a simple form. This form includes an
 Action buttons are provided to navigate away from the page without adding a new category or to submit the new category. 
 
 
-</br>
+<br>
 
 - **Edit Category Page**
 
@@ -366,7 +366,7 @@ The "Edit Category" feature provides users with the flexibility to update the na
 
 Alongside the form, action buttons enable users to either cancel the edit and return to the category overview or to save their changes. 
 
-</br>
+<br>
 
 - **Search Box**
 
@@ -378,7 +378,7 @@ The search box  enables users to quickly locate specific items or categories wit
 The search functionality is accessible to authenticated users. It ensures that users can only search within their own lists, maintaining privacy and security. Users can enter keywords related to the items or categories they are searching for. The system performs a comprehensive search across all to-do items, matching the entered keywords.
 Upon submitting a search query, the application promptly displays the matched items. If no matches are found, the user is notified with a friendly message indicating the absence of matching items or categories.
 
-</br>
+<br>
 
 - **Flash messages**
 
@@ -388,7 +388,7 @@ Flash messages are a crucial user feedback mechanism incorporated into the appli
 
 ![ updated flash](./docs/updated_flash.png)
 
-</br>
+<br>
 
 - **Admin account**
 
@@ -412,7 +412,6 @@ I'd like to expand the admin role in the future. More on that in the following s
 
 ## **Feautures to be icorporated in the future**
 
-- **Navigation Bar**
 
 1. **Drag and drop** 
 Improve Task Prioritization and Custom Sorting
@@ -506,7 +505,14 @@ I used a non-relational MongoDB database. The name of the database is **mums_to_
 
 
 
-</br>
+<br>
+
+Go to [TESTING.mf](TESTING.md) file.
+
+
+Go back to the [README.md](README.md) file.
+
+<br>
 
 ## Deployment
 
