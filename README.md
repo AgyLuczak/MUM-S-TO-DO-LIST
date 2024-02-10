@@ -388,6 +388,27 @@ Flash messages are a crucial user feedback mechanism incorporated into the appli
 
 ![ updated flash](./docs/updated_flash.png)
 
+</br>
+
+- **Admin account**
+
+Right now the only additional privilage of the admin account is that it allows to create categories which will be seen by all users and delete any categories available. 
+
+![ admin categories](./docs/admin_categories.png)
+
+
+I'd like to expand the admin role in the future. More on that in the following section.
+
+
+<br>
+
+- **404 and 500 pages**
+
+404 Error Page is designed to handle situations where a user attempts to access a page that cannot be found on the server. The page informs users in a friendly and clear manner that the page they are looking for does not exist. It also includes a "Go Back" button, directing users back to the main to-do list page.
+
+![ 404 page](./docs/404_mum.png)
+
+500 Error Page: Similarly, the 500 error page is set up to manage server-side errors effectively. Should there be an unexpected issue on our end, this page communicates to users that something went wrong on our side. Again a "Go Back" button, directs users back to the to-do list page.
 
 ## **Feautures to be icorporated in the future**
 
@@ -409,16 +430,13 @@ Enable users to share lists or specific tasks with others.
 5. **Notifications and Reminders**
 Implement notifications and reminders that alert users of upcoming deadlines or when a task is due. These could be customizable and sent via email, SMS, or in-app notifications, helping users stay on top of their tasks without having to constantly check the app.
 
-6. Customizable Themes and Layouts
-Offer users the ability to customize the appearance of the app with themes and layout options. This personalization feature could enhance user engagement by allowing users to tailor the app’s look to their preferences.
-
-8. **Archive Page**
+6. **Archive Page**
 Allow users to archive items instead of deleting them to help them keep a record of all done items.
 
-9. **Analytics and Progress Tracking**
+7. **Analytics and Progress Tracking**
 Provide users with analytics and progress tracking features to monitor their productivity over time. This could include statistics on completed tasks, time spent on tasks, and trends in productivity, offering insights into how users can improve their time management.
 
-10. **Expanded admin role**
+8. **Expanded admin role**
 Right now the administrator role is limited to managing the predefined categories. I'd like to extend it to tasks that users can select or be guided by. I lso would like the administrator to be able to access the data base and be able to cancel deletion of any items or categories if requested by the user.
 
 <br>
