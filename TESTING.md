@@ -27,9 +27,25 @@ Go back to the [README.md](README.md) file
 
 ### CRUD Testing
 
-|Action   | Details  |  Result |
+|CRUD   | ACTION  |  RESULT |
 |---|---|---|
 | **CREATE** |<li>**Adding New To-Do Items**: Users can add new to-do items through a form. Each item can include details such as the item name, category, importance, due date, and additional details</li><li>**Adding New Categories**: Users have the ability to create categories</li> | PASS  |
 | **READ**  | <li>**Displaying To-Do Items**: The application lists all to-do items created by the logged-in user. Users can view their tasks, along with relevant details such as category, importance, and due date</li><li>**Viewing Categories**: Users can view all categories, including those created by them and default categories provided by the application |  PASS |
 | **UPDATE**  | <li> **Editing To-Do Items**: Users can edit their to-do items to update any details, including the item name, category, importance, due date, and additional details</li><li>**Modifying Categories**: Users can also edit categories to update their names |  PASS |
 | **DELETE**  |<li> **Deleting To-Do Items**: Users can delete individual to-do items. Before deletion, a confirmation prompt ensures that the user does not accidentally remove an item </li><li> **Removing Categories**: Categories can be deleted. The application asks for confirmation to prevent unintentional deletion of categories</li><li>**Bulk Deletion**: Users can mark multiple to-do items as completed (or crossed out) and then opt to delete all checked items in one action</li>| PASS  |
+
+<br>
+
+### Database Testing
+
+| ACTION  |   RESULT |
+|---|---|
+|Create a new user account and verify its presence in the user collection in MongoDB  | PASS  |
+|Create a new list item to check its presence in the to_do_items collection in MongoDB  | PASS  |
+|Edit a to-do list item and confirm the accurate changes in the to_do_items collection of MongoDB | PASS  |
+|Mark an item as done by pressing the check button and confirm the change in  to_do_items collection (is_crossed_out: true)  | PASS  |
+|Delete a list item and verify the successful removal from the to_do_items collection in MongoDB  | PASS  |
+|Delete all checked items and verify their successful removal from the to_do_items collection in MongoDB   | PASS  |
+|Create a new category tand check its presence in the categories collection in MongoDB   | PASS  |
+|Edit a category and confirm the accurate changes in the categories collection of MongoDB  | PASS  |
+|Delete a category and verify the successful removal from the categories collection in MongoDB   | PASS  |
