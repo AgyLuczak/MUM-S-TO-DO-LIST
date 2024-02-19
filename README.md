@@ -243,6 +243,11 @@ For new users, the page provides a direct link to the registration page. This ad
 
 </br>
 
+- **CRUD Functionality**
+
+The application offers comprehensive CRUD (Create, Read, Update, Delete) functionality, enabling users to manage their to-do items and categories effectively. Users can create, view, edit and delete list items and categories.
+
+
 - **My List Page**
 
 The My List page serves as the primary interface for users to interact with their tasks. It is designed to offer a personalized and intuitive user experience where users can view, manage, and organize their to-do list efficiently.
@@ -390,6 +395,13 @@ Flash messages are a crucial user feedback mechanism incorporated into the appli
 
 <br>
 
+- **Confirmation dialogs**
+
+JavaScript confirmation dialogs have been implemented to prevent accidental deletions. Before deleting any items or categories, users see a confirmation prompt asking them if they are sure they want to perform that action
+
+![ confirmation dialog](./docs/confirmation_dialog.png)
+
+
 - **Admin account**
 
 Right now the only additional privilage of the admin account is that it allows to create categories which will be seen by all users and delete any categories available. 
@@ -401,6 +413,14 @@ I'd like to expand the admin role in the future. More on that in the following s
 
 
 <br>
+
+- **Sign-Out Funcionality**
+
+The sign-out functionality enhances security and user control by allowing users to end their session. This feature is designed to ensure that once a user decides to log out, their session data is securely removed, preventing unauthorized access to their account, especially when using shared or public devices. Users can sign out whenever the want by clicking the link in the navbar or the footer.
+
+![ sign out navbar](./docs/sign_out_nav.png)
+
+![ sign out footer](./docs/sign_out_icon.png)
 
 - **404 and 500 pages**
 
