@@ -456,7 +456,32 @@ Allow users to archive items instead of deleting them to help them keep a record
 Provide users with analytics and progress tracking features to monitor their productivity over time. This could include statistics on completed tasks, time spent on tasks, and trends in productivity, offering insights into how users can improve their time management.
 
 8. **Expanded admin role**
-Right now the administrator role is limited to managing the predefined categories. I'd like to extend it to tasks that users can select or be guided by. I lso would like the administrator to be able to access the data base and be able to cancel deletion of any items or categories if requested by the user.
+Right now the administrator role is limited to managing the predefined categories. I want to extend it to tasks that users can select or be guided by. I also would like the administrator to be able to access the database and cancel deletion of any items or categories if requested by the user.
+
+<br>
+
+## Defensive mechanism
+
+The application includes several defensive mechanisms to ensure security, data integrity, and proper user management. 
+
+- **Environment Variables for Sensitive Information**
+The app uses environment variables (os.environ.get("...")) for sensitive information like the MongoDB database name, URI, and the secret key. This practice keeps critical information out of the source code, reducing the risk of exposing sensitive data.
+
+- **Password Hashing**
+Passwords are not stored in plain text in the database. The app uses Werkzeug's generate_password_hash to hash passwords before storing them and check_password_hash to verify passwords during sign-in
+
+- **User Session Management**
+The app manages user sessions, allowing for persistent user sessions across web pages. It uses Flask's session object to store the username of the logged-in user.
+Permanent Sessions with Expiry: By setting session.permanent = True and configuring PERMANENT_SESSION_LIFETIME, sessions are made permanent but with a controlled lifetime, enhancing both usability and security by automatically logging users out after a set period.
+
+- **Input Validation and Sanitization**
+Although not explicitly shown in the code snippets, the use of forms (e.g., request.form.get("username").lower()) implies that there's a degree of input validation, ensuring that data entered by users conforms to expected formats. Proper input validation and sanitization are crucial for preventing injection attacks and ensuring data integrity.
+
+- **Authorization Checks**
+The application performs checks to ensure that users are logged in before allowing access to certain pages or actions, such as adding or editing to-do items and categories. This is achieved through checks like if 'user' in session: before executing actions, ensuring that only authenticated users can perform sensitive operations.
+
+- **Error Handling**
+ Custom error handlers for common HTTP errors (404 and 500) enhance the user experience by providing friendly error pages. 
 
 <br>
 
@@ -527,10 +552,10 @@ I used a non-relational MongoDB database. The name of the database is **mums_to_
 
 <br>
 
-Go to [TESTING.mf](TESTING.md) file.
+# Testing
 
+Please go to [TESTING.md](TESTING.md) file to see the tesing section.
 
-Go back to the [README.md](README.md) file.
 
 <br>
 
