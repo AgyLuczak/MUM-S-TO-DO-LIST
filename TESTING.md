@@ -49,3 +49,26 @@ Go back to the [README.md](README.md) file
 |Create a new category tand check its presence in the categories collection in MongoDB   | PASS  |
 |Edit a category and confirm the accurate changes in the categories collection of MongoDB  | PASS  |
 |Delete a category and verify the successful removal from the categories collection in MongoDB   | PASS  |
+
+<br>
+
+### Code Validation
+
+- [W3C Markup Validator](https://validator.w3.org/)
+
+I used W3C Validator to test all HTML pages. Initially, the validator showed a few unclosed or stray tags and a nesting issue with a paragraph under <h5> tag on a landing page. The remaining errors are a result of using a Jinja template.
+
+
+| PAGE  | SCREENSHOTS  |
+|---|---|
+| Landing Page  | ![landing page validation](./docs/landing_page_validation.png)  |
+| Register  | ![registration page validation](./docs/registration_page_validation.png)   |
+| Sign In  | ![sign in page validation](./docs/sign_in_page_validation.png)   |
+| My List  | ![my list page validation 1](./docs/to_do_items_page_validation1.png) ![my list page validation 2](./docs/to_do_items_page_validation2.png) ![my list page validation 3](./docs/to_do_items_page_validation3.png) |
+| Add New Item  |![add new item page validation 1](./docs/add_new_item_page_validation1.png) ![add new item page validation 2](./docs/add_new_item_page_validation2.png) ![add new item page validation 3](./docs/add_new_item_page_validation3.png)  |
+| Edit Item  | ![edit item page validation 1](./docs/edit_item_page_validation1.png)![edit item page validation 2](./docs/edit_item_page_validation2.png)![edit item page validation 3](./docs/edit_item_page_validation3.png) ![edit item page validation 3](./docs/edit_item_page_validation3.png) ![edit item page validation 4](./docs/edit_item_page_validation4.png)|
+| Categories  | ![categories page validation 1](./docs/categories_page_validation1.png) ![categories page validation 2](./docs/categories_page_validation2.png)  |
+| Add Category  | ![add category page validation 1](./docs/add_category_page_validation1.png) ![add category page validation 2](./docs/add_category_page_validation2.png)  |
+| Edit Category  |![edit category page validation 1](./docs/edit_category_page_validation1.png)![edit category page validation 2](./docs/edit_category_page_validation2.png)   |
+| 404  | ![404 page validation 1](./docs/404_page_validation.png)  |
+| 500  |![500 page validation 1](./docs/500_page_validation.png)   |
