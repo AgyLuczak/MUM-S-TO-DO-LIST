@@ -34,8 +34,6 @@
                 </div>
             </div>
 
-
-
             <!--New list item-->
             <div class="row">
                 <div class="input-field col s12">
@@ -93,71 +91,73 @@
             </div>
         </form>
     </div>
+</div>
 
+<!--footer-->
+<div>
+    <footer class="page-footer grey lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="footer-icons">
+                    <div class="col m2">
+                        <button type="button" class="btn-small purple lighten-1 " onclick="showCollapsible()"
+                            aria-label="Filter and sort list">
+                            <i class="fa-solid fa-filter" id="filter-icon"></i>
+                            <span class="visually-hidden">Filter and sort list</span>
+                        </button>
 
-    <!--footer-->
-    <div>
-        <footer class="page-footer grey lighten-4">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-icons">
-                        <div class="col m2">
-                            <button type="button" class="btn-small purple lighten-1 " onclick="showCollapsible()"
-                                aria-label="Filter and sort list">
-                                <i class="fa-solid fa-filter" id="filter-icon"></i>
-                                <span class="visually-hidden">Filter and sort list</span>
-                            </button>
+                        <ul id="showCollapsible" class="collapsible" style="display:none;">
+                            <li>
+                                <div class="collapsible-header purple-text center-align">Sort my list:</div>
+                                <div class="collapsible-body black-text">
+                                    <a href="{{ url_for('get_to_do_items', sort='alpha') }}" class="filter-option"
+                                        id="alpha-order-items"
+                                        aria-label="Sort to-do items alphabetically">alphabetically</a>
 
-                            <ul id="showCollapsible" class="collapsible" style="display:none;">
-                                <li>
-                                    <div class="collapsible-header purple-text center-align">Sort my list:</div>
-                                    <div class="collapsible-body black-text">
-                                        <a href="{{ url_for('get_to_do_items', sort='alpha') }}" class="filter-option"
-                                            id="alpha-order-items"
-                                            aria-label="Sort to-do items alphabetically">alphabetically</a>
-
-                                    </div>
-                                    <div class="collapsible-body black-text">
-                                        <a href="{{ url_for('get_to_do_items', sort='category') }}"
-                                            class="filter-option" id="category-filter"
-                                            aria-label="Sort to-do items by categories">by
-                                            categories</a>
-                                    </div>
-                                    <div class="collapsible-body black-text">
-                                        <a href="{{ url_for('get_to_do_items', sort='important') }}"
-                                            class="filter-option" id="imp-order"
-                                            aria-label="Sort to-do-items by important first">important
-                                            first</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col m2">
-                            <a href="{{ url_for('get_to_do_items') }}" class="btn-small purple lighten-1"
-                                aria-label="View to-do list">
-                                <i class="fa-solid fa-list-ul" id="list-icon"></i>
-                                <span class="visually-hidden">View to-do list</span>
-                            </a>
-                        </div>
-                        <div class="col m2">
-                            <a href="{{ url_for('get_categories') }}" class="btn-small purple lighten-1"
-                                aria-label="Manage categories">
-                                <i class="fa-solid fa-folder-open" id="categories-icon"></i>
-                                <span class="visually-hidden">Manage categories</span>
-                            </a>
-
-                        </div>
-                        <div class="col m2">
-                            <a href="{{ url_for('signout') }}" class="btn-small purple lighten-1" aria-label="Sign out">
-                                <i class="fa-solid fa-right-from-bracket" id="signout-icon"></i>
-                                <span class="visually-hidden">Sign out</span>
-                            </a>
-                        </div>
+                                </div>
+                                <div class="collapsible-body black-text">
+                                    <a href="{{ url_for('get_to_do_items', sort='category') }}" class="filter-option"
+                                        id="category-filter" aria-label="Sort to-do items by categories">by
+                                        categories</a>
+                                </div>
+                                <div class="collapsible-body black-text">
+                                    <a href="{{ url_for('get_to_do_items', sort='important') }}" class="filter-option"
+                                        id="imp-order" aria-label="Sort to-do-items by important first">important
+                                        first</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-        </footer>
+                    <div class="col m2">
+                        <a href="{{ url_for('get_to_do_items') }}" class="btn-small purple lighten-1"
+                            aria-label="View to-do list">
+                            <i class="fa-solid fa-list-ul" id="list-icon"></i>
+                            <span class="visually-hidden">View to-do list</span>
+                        </a>
+                    </div>
+                    <div class="col m2">
+                        <a href="{{ url_for('get_categories') }}" class="btn-small purple lighten-1"
+                            aria-label="Manage categories">
+                            <i class="fa-solid fa-folder-open" id="categories-icon"></i>
+                            <span class="visually-hidden">Manage categories</span>
+                        </a>
+
+                    </div>
+                    <div class="col m2">
+                        <a href="{{ url_for('signout') }}" class="btn-small purple lighten-1" aria-label="Sign out">
+                            <i class="fa-solid fa-right-from-bracket" id="signout-icon"></i>
+                            <span class="visually-hidden">Sign out</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 
 
 
 
-        {% endblock %}
+{% endblock %}

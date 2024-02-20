@@ -13,11 +13,9 @@
                         <i class="fa-solid fa-plus"></i>
                         <span class="visually-hidden">Add new item</span>
                     </a>
-
-
                 </h4>
             </div>
-
+        </div>
     </section>
 
     <div class="row">
@@ -49,13 +47,11 @@
                         <span class="visually-hidden">Mark as completed</span>
                     </a>
 
-
                     <a href="{{ url_for('edit_to_do_item', to_do_item_id=item._id) }}"
                         class="btn-small action-btn purple lighten-1" aria-label="Edit item">
                         <i class="fa-solid fa-pen-to-square"></i>
                         <span class="visually-hidden">Edit item</span>
                     </a>
-
 
                     <a href="{{ url_for('delete_to_do_item', to_do_item_id=item._id) }}"
                         onclick="return confirmDeleteItem();" class="btn-small action-btn purple lighten-1"
@@ -64,26 +60,23 @@
                         <span class="visually-hidden">Delete item</span>
                     </a>
 
-
                 </div>
             </div>
         </div>
         {% endif %}
         {% endfor %}
     </div>
-
-
-
-    <div class="delete-checked-button center-align">
-        <a href="{{ url_for('delete_checked_items') }}" onclick="return confirmDeleteAllChecked();"
-            class="btn-large buttons delete-all purple lighten-1" aria-label="Delete all checked items">Delete All
-            Checked
-            Items
-            <i class="fa-solid fa-trash"></i></a>
-
-    </div>
-
 </div>
+
+<div class="delete-checked-button center-align">
+    <a href="{{ url_for('delete_checked_items') }}" onclick="return confirmDeleteAllChecked();"
+        class="btn-large buttons delete-all purple lighten-1" aria-label="Delete all checked items">Delete All
+        Checked
+        Items
+        <i class="fa-solid fa-trash"></i></a>
+</div>
+
+
 <!--footer-->
 <div>
     <footer class="page-footer grey lighten-4">
@@ -104,7 +97,6 @@
                                     <a href="{{ url_for('get_to_do_items', sort='alpha') }}" class="filter-option"
                                         id="alpha-order-items"
                                         aria-label="Sort to-do items alphabetically">alphabetically</a>
-
                                 </div>
                                 <div class="collapsible-body black-text">
                                     <a href="{{ url_for('get_to_do_items', sort='category') }}" class="filter-option"
@@ -118,7 +110,6 @@
                                 </div>
                             </li>
                         </ul>
-
                     </div>
                     <div class="col m2">
                         <a href="{{ url_for('add_to_do_item') }}" class="btn-small purple lighten-1"
@@ -126,7 +117,6 @@
                             <i class="fa-solid fa-plus" id="add-item-icon"></i>
                             <span class="visually-hidden">Add new item</span>
                         </a>
-
                     </div>
                     <div class="col m2">
                         <a href="{{ url_for('get_categories') }}" class="btn-small purple lighten-1"
@@ -134,7 +124,6 @@
                             <i class="fa-solid fa-folder-open" id="categories-icon"></i>
                             <span class="visually-hidden">Manage categories</span>
                         </a>
-
                     </div>
                     <div class="col m2">
                         <a href="{{ url_for('signout') }}" class="btn-small purple lighten-1" aria-label="Sign out">
@@ -143,12 +132,11 @@
                         </a>
                     </div>
                 </div>
-                <div>
+            </div>
+        </div>
     </footer>
+</div>
 
 
 
-
-
-
-    {% endblock %}
+{% endblock %}
