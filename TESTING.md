@@ -72,3 +72,13 @@ I used W3C Validator to test all HTML pages. Initially, the validator showed a f
 | Edit Category  |![edit category page validation 1](./docs/edit_category_page_validation1.png)![edit category page validation 2](./docs/edit_category_page_validation2.png)   |
 | 404  | ![404 page validation 1](./docs/404_page_validation.png)  |
 | 500  |![500 page validation 1](./docs/500_page_validation.png)   |
+
+<br>
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+I used W3C CSS Validator for the CSS. Initial results showed errors around the 'progid' property. This one is a part of the code pasted from the gradient generator. After removing that property, the only error flagged by the validator is that the property 'font-display' does not exist. It is however a valid property, which either indicates that the validation tool is outdated or does not recognise this value in the particular context it's been used in.
+
+|  INITIAL RESULT | FINAL RESULT  |
+|---|---|
+|![css_validation_initial1.png](./docs/css_validation_initial1.png) ![css_validation_initial2.png](./docs/css_validation_initial2.png)  | ![css_validation_final.png](./docs/css_validation_final.png)  |
