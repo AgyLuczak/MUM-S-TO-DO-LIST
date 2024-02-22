@@ -94,3 +94,19 @@ I have used the PEP8 CI Python Linter application to test my Python and Jinja sy
 |  INITIAL RESULT | FINAL RESULT  |
 |---|---|
 |![python_validation_initial.png](./docs/python_validation_initial.png)  | ![python_validation_final.png](./docs/python_validation_final.png)  |
+
+<br>
+
+### Lighthouse
+
+|  PAGE | DESKTOP  | MOBILE  |
+|---|---|---|
+|  Landing Page | ![lighthouse landing desktop](./docs/landing_desktop.png)  | ![lighthouse landing mobile](./docs/landing_mobile.png)   |
+| Register  | ![lighthouse register desktop](./docs/register_desktop.png)   | ![lighthouse register mobile](./docs/register_mobile.png)   |
+| Sign In  | ![lighthouse signin desktop](./docs/sign_in_desktop.png)   | ![lighthouse signin mobile](./docs/sign_in_mobile.png)   |
+| My List  |![lighthouse mylist desktop](./docs/my_list_desktop.png)   | ![lighthouse mylist mobile](./docs/my_list_mobile.png)  |
+| Add New Item  | ![lighthouse add item desktop](./docs/add_item_desktop.png)  | ![lighthouse add item mobile](./docs/add_item_mobile.png)  |
+| Edit Item  | ![lighthouse edit item desktop](./docs/edit_item_desktop.png)  |  ![lighthouse edit item mobile](./docs/edit_item_mobile.png)  |
+| Categories  | ![lighthouse categories desktop](./docs/categories_desktop.png)  | ![lighthouse categories mobile](./docs/categories_mobile.png)  |
+| Add Category  |![lighthouse add category desktop](./docs/add_category_desktop.png) |  ![lighthouse add category mobile](./docs/add_category_mobile.png) |
+| Edit Category  |![lighthouse edit category desktop](./docs/edit_category_desktop.png)  | ![lighthouse edit category mobile](./docs/edit_category_mobile.png)  |
