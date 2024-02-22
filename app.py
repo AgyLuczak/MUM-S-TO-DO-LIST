@@ -214,7 +214,7 @@ def toggle_cross_out(item_id):
 # delete a list item
 @app.route("/delete_to_do_item/<to_do_item_id>")
 def delete_to_do_item(to_do_item_id):
-    mongo.db.to_do_items.remove({"_id": ObjectId(to_do_item_id)})
+    mongo.db.to_do_items.delete_one({"_id": ObjectId(to_do_item_id)})
     flash("Deleted!")
     return redirect(url_for("get_to_do_items"))
 
