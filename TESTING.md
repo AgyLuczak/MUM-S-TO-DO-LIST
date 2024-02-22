@@ -82,3 +82,15 @@ I used W3C CSS Validator for the CSS. Initial results showed errors around the '
 |  INITIAL RESULT | FINAL RESULT  |
 |---|---|
 |![css_validation_initial1.png](./docs/css_validation_initial1.png) ![css_validation_initial2.png](./docs/css_validation_initial2.png)  | ![css_validation_final.png](./docs/css_validation_final.png)  |
+
+<br>
+
+### Python and Jinja Syntax
+
+- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
+
+I have used the PEP8 CI Python Linter application to test my Python and Jinja syntax. The initial results showed a lot of white space and lines of code that were too long. After formatting the code, the validation still flagged some lines as too long. I decided to leave them in their original format as breaking them down could harm the clarity of the code.
+
+|  INITIAL RESULT | FINAL RESULT  |
+|---|---|
+|![python_validation_initial.png](./docs/python_validation_initial.png)  | ![python_validation_final.png](./docs/python_validation_final.png)  |
