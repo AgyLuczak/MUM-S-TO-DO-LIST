@@ -79,6 +79,16 @@ I have used the PEP8 CI Python Linter application to test my Python and Jinja sy
 
 <br>
 
+### Java Script
+
+- [JS hint Validator](https://https://jshint.com/)
+
+I have used the JS Hint validator for the Java Script syntax. The results showed unused Variables (confirmDeleteItem, confirmDeleteAllChecked, confirmDeleteCategory, toggleSearch).  These variables are  not called within the JavaScript file, however they are referenced in the HTML files.
+
+![js_validation_initial.png](./docs/JS_validation.png)
+
+
+
 ### Lighthouse
 
 |  PAGE | DESKTOP  | MOBILE  |
