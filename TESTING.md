@@ -21,8 +21,85 @@ Go back to the [README.md](README.md) file
 | As a first-time and returning visitor, I want to be able to sort items on my list and categories as well.           |<li>On the My List Page the footer contains an interactive button to sort list items. Sorting options include alphabetical, by category or by importance<li>On the Categories Page the footer also contains a button for sorting. Here the sorting options include alphabetical and 'created by me first'.    |
 | As a first-time and returning visitor, I want to be able to use the app easily on different devices.            | <li>Materialize CSS framework was used to create this app. It uses a flexible grid system, making layout responsive by default. This system ensures that your website’s content  maintains its integrity across devices</li><li>Additionally, CSS media queries have been used to ensure responsiveness on different screen sizes |
 |  As a first-time and returning visitor, I want to receive immediate and clear feedback through notifications or messages within the app for various interactions, such as successfully adding, editing, or deleting tasks, errors, or confirmation prompts.           |<li> Flash messages provide immediate feedback to users following their actions within the app</li><li> JavaScript confirmation dialogs have been implemented to prevent accidental deletions. Before deleting any items or categories, users see a confirmation prompt asking them if they are sure they want to perform that action</li>|
-|  As a first-time and returning visitor, I want to be able to search through to-do items and categories           | <li> The search box ,prominently placed within the application's interface, enables users find specific items or categories within their to-do list</li>  |
+|  As a first-time and returning visitor, I want to be able to search through to-do items and categories           | <li> The search box, prominently placed within the application's interface, enables users to find specific items or categories within their to-do list</li>  |
 | As an administrator, I want to be able to add and delete categories.            | <li> The categories displayed to all users can only be added and deleted by the admin account</li> |
+
+
+### Full Testing
+
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| `Navbar` |
+|  |  |  |  |  |
+| Mum's To-Do List Logo & Title | When clicked the user will be redirected to the landing page when not logged-in and My List Page when logged-in. | Clicked Logo and title when not logged in. Repeated the same action when logged in | When not logged in, I was redirected to the Landing Page, whereas when logged in I was redirected to My List. | Pass |
+| Sign In Link | When clicked the user will be redirected to the Sign In Page.| Clicked the link | Redirected to the Sign In Page. | Pass |
+| Register Link | When clicked the user will be redirected to the Register Page. | Clicked the link | Redirected to the Register Page. | Pass |
+| My List Link (Logged in users only) | When clicked the user will be redirected to My List Page. | Clicked the link | Redirected to My List Page | Pass |
+| Categories Page (Logged in users only) | When clicked the user will be redirected to the Categories Page. | Clicked the link | Redirected to the Categories Page | Pass |
+| Sign Out Link (Logged in users only) | When clicked the user is signed out and is redirected to Sign In Page. On top of the Page the user sees a flash message 'You have been signed out' | Clicked the link | Got signed out and redirected to the Sign In Page. 'You've been signed out' message appeared| Pass |
+| `Footer` |
+|  |  |  |  |  |
+| Bookworm Title | When clicked the user will be redirected to the home page. | Clicked Logo and title | Redirected to the home page. | Pass |
+| Copyright year | The copyright should display the correct year - this is a javascript function that checks what the current year is and injects it into the footer | Checked the year | Displaying the correct year | Pass |
+
+| `Sign in Page` |
+| Username input - empty | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required | Pass |
+| Password input empty | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required |  Pass |
+| Sign In button | Saves the user to session and redirects to the My List Page with a user's name in the heading of a list.  | Submitted form | Redirected to the My List Page and my name shows in the list's heading | Pass |
+| Incorrect username or password used | A flash message should display saying username/password incorrect - this is defensive programming - not letting user know which input is incorrect | Incorrect username/password entered |A message flashed to let the user know they have entered an incorrect username/password | Pass |
+| Register Link | When clicked the user will be redirected to the Register Page. | Clicked the link | Redirected to the Register Page. | Pass |
+| `Register Page` |
+| | | | | | |
+| Username input | The username should be between 3-15 characters  | Entered username less than 3 characters long | tooltip lets the user know they have not matched the requested format | Pass |
+| Username input - empty | The username is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+| Username input | If username already exists, message should flash to user | entered an in use username | Message flashed to say username already exists | Pass|
+| Password input | This field should be between 3-15 characters long | Entered password less than 3 characters long | Tooltip tells user to match the requested format | Pass |
+| Password input - empty | The password is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+| Register button | Should redirect the user to the My List Page and a registration complete message will flash. The list's heading should display the user's name | Created new user and submitted form | Redirected to My List Page and the message registration complete flashed. User's name was diplayed in the list's heading | Pass |
+| Sign In Link | When clicked the user will be redirected to the Sign In Page.| Clicked the link | Redirected to the Sign In Page. | Pass |
+| `Search Box` |
+|   |   |   |   |  |
+| Search feature | A search is performed when the user enters an item or category they are looking for  | 1.Searched for an item on my list 2. Searched for a category| 1.The search returned a list item I was looking for 2. The search returned all the items in that category | Pass |
+| Search feature - nothing to show | If an item or a category does not exist, a flash message 'Sorry, there are no such items or categories' is displayed and directs them to the My List Page. | Searched for an item and then a category that hadn't been created | Both searches returned a 'Sorry....' message and I was redirected to My List Page | Pass |
+| `My List` |
+|   |   |   |   |  |
+| Add '+' button in the heading | When the user clicks this button they should be taken to the Add New Item Page| Clicked button | Redirected to the Add New Item Page | Pass |
+| List item card reveal | When the user clicks on the list item, the card reaveals item details | Clicked the item | Card revealed the details | Pass |
+| Check button on the list item card| 1. When the user clicks the check button, the item should be  crossed out and a flash message 'One less thing to worry about!' should appear 2. If the user clicks that button again the crossing should disappear and the message 'That's fine, take your time' should appear.| 1.Clicked the check button 2. Clicked the check button again | 1. The item was crossed out and the right flash message appeared 2. The crossing disappeared and the right message appeared| Pass |
+| Edit  button on the list item card | When the user clicks the edit button they should be directed to the Edit Item Page | Clicked the edit button | Redirected to Edit Item Page | Pass |
+| Delete button on the list item card| When the user clicks the delete button a confirmation dialog should appear asking the user if they want to delete the item with options to confirm and cancel. If confirmed the item should be removed from the list and a flash message should appear | Clicked the delete button | The confirmation dialog appeared. After clicking ok to confirm, the item was removed from the list and a 'Deleted' flash message appeared | Pass |
+| Delete all checked items button | When the user clicks the delete all checked buttons, a confirmation dialog will appear asking the user if they are sure they want to delete all the checked items. Once that's confirmed all the checked items should be removed from the list and a flash message 'Done and dusted! You're a star! should appear | Clicked the button | Confirmation dialog appeared, clicked ok - all checked items were removed | Pass |
+| `Footer` |
+|  Filter button| When clicked the user should see a collapsible head with 'sort by' headin. Upon clicking on it the full collapsClickdy should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically, by category or importance | Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The items were sorted accordingly. |  |
+| '+' button | When clicked the user will be redirected to the Add New Item Page. | Clicked the button | Redirected to the Add New Item Page. | Pass |
+| Folder button| When clicked the user will be redirected to the Categories Page | Clicked the button | Redirected to the Categories Page | Pass |
+| Sign Out button| When clicked the user will be signed out and redirected to Sign In Page. The flash message 'You've been signed out' should appear | Clicked the button | Redirected to the Categories Page | Pass |
+| `Add New Item Page` |
+| Select Category  | Select a category from a dropdown. This should be pre-populated with categories provided and categories created by the user. This is a required field.  |Clicked on the dropdown. The dropdown was populated with categories    | Selected category  |Pass  |
+| Select Category - no category selected  | The form requires a category. When trying to save changes the user should be prompted with a tooltip to select a category.|Didn't select any category. Prompted by tooltip to select a category when tried to save changes.  |  |Pass  |
+| New List Item Input Field  | This is a required field. The new list item should have at least 3 characters. After putting the valid item name and pressing the save button the item will show on the list. The user will be redirected to My List Page and the flash message 'Added to the list' should appear. |Added New Item to the list. Directed to the My List Page. A flash message appeared | Added New Item |Pass  |
+| New List Item Input Field - input not valid | If the input is not at least 3 characters long, the user will be prompted by a tooltip to use more characters when trying to save the form |Used only 2 characters in a new item input| Tooltip said to lengthen the text to at least 3 characters when I was trying to save the changes |Pass  |
+| New List Item Input Field - input not valid | If the input is not at least 3-characters long, the user will be prompted by a tooltip to use more characters when trying to save the form |Used only 2 characters in a new item input| Tooltip said to lengthen the text to at least 3 characters when I was trying to save the changes |Pass  |
+| New List Item Input Field - no input | If the field is left blank, the user will be prompted by a tooltip to fill in the required field when trying to save the form |Left the field blank| Tooltip said to fill in the field when I was trying to save the changes |Pass  |
+| Details input field (optional) | This field is optional. If the user adds details when filling out the form, they will be added to the card reveal on My List Page. |Filled the details field| Details can be seen when the to-do item card is revealed|Pass  |
+| Details input field - invalid input | This field is optional.If the user adds details when filling out thoptional they will be added to the card optional My List Page. Used only 2 characters in a new item input| Tooltip said to fill in the field when I was trying to save the changes |Pass  |
+| Details input field - no input | This field is optional so the user should be able to save the changes without filling it|Left the field blank| Added New Item without details|Pass  |
+| Date picker (optional) | Once user selects a due date and saves the changes, the due date will appear on a list item card reveal. When the list item is clicked the date should be seen|Picked up the date and saved changes| Due date can be seen when clicked on the list item|Pass  |
+| Date picker - date not selected | This field is optional so the user should be able to save the changes without filling it|Didn't select the date| Added New Item without due date|Pass  |
+| Important switch | When the user clicks on the switch next to "Is Important" a list item will get a star icon next to it| Clicked on the switch. The added item was starred. |Pass  |
+|Cancel and Save buttons| If the user clicks the cancel button, they will be redirected to My List Page without making any changes. After pressing the save button, the new item will be added to the list.| Clicked cancel button - redirected to My List Page with no changes. Clicked save after filling in the form - new item added to the list.|Pass  |
+| `Footer` |
+|  Filter button| When clicked the user should see a collapsible head with 'sort by' headin. Upon clicking on it the full collapsClickdy should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically, by category or importance | Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The items were sorted accordingly. |  |
+| List button | When clicked the user will be redirected to the My List Page. | Clicked the button | Redirected to My List Page| Pass |
+| Folder button| When clicked the user will be redirected to the Categories Page | Clicked the button | Redirected to the Categories Page | Pass |
+| Sign Out button| When clicked the user will be signed out and redirected to Sign In Page. The flash message 'You've been signed out' should appear | Clicked the button | Redirected to the Categories Page | Pass |
+
+
+
+| `Error Page` |
+|   |   |   |   |   |
+| Home page link | Redirects the user to the home page | Clicked link | Redirected to home page | Pass |
 
 
 ### CRUD Testing
@@ -74,6 +151,8 @@ I used W3C Validator to test all HTML pages. Initially, the validator showed a f
 | 500  |![500 page validation 1](./docs/500_page_validation.png)   |
 
 <br>
+
+### CSS
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
