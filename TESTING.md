@@ -87,7 +87,28 @@ I have used the JS Hint validator for the Java Script syntax. The results showed
 
 ![js_validation_initial.png](./docs/JS_validation.png)
 
+<br>
 
+### RESPONSIVENESS
+
+**I used Chrome Developer tools to simulate the following devices:**
+- iphone SE
+- iphone XR
+- iphone 12 Pro
+- Pixel 5
+- Samsung Galaxy S8+
+- Samsung Galaxy S20 Ultra
+- iPad Air 
+- iPad Mini
+- Surface Pro7
+- Galaxy Fold 
+- Samsung Galaxy A51/71
+- Nest Hub 
+- Nest Hub Max
+
+The website was responsive on all these devices.
+
+<br>
 
 ### Lighthouse
 
@@ -103,6 +124,8 @@ I have used the JS Hint validator for the Java Script syntax. The results showed
 | Add Category  |![lighthouse add category desktop](./docs/add_category_desktop.png) |  ![lighthouse add category mobile](./docs/add_category_mobile.png) |
 | Edit Category  |![lighthouse edit category desktop](./docs/edit_category_desktop.png)  | ![lighthouse edit category mobile](./docs/edit_category_mobile.png)  |
 
+
+## Manual Testing
 
 ### User Stories
 
@@ -126,6 +149,20 @@ I have used the JS Hint validator for the Java Script syntax. The results showed
 
 
 ### Full Testing
+
+I have performed full manual testing on these devices:
+
+- DELL Inspiron 16 laptop
+- DELL 
+- Iphone 
+- Samsung Galaxy
+
+The app has been tested on the following browsers:
+
+- Google Chrome 
+- Microsoft Edge
+- Safari
+- Mozilla Firefox 
 
 
 | FEAUTURE | EXPECTED OUTCOME | TESTING PERFORMED | RESULT | PASS/ FAIL|
