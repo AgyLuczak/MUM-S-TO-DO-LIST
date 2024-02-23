@@ -32,7 +32,7 @@ Go back to the [README.md](README.md) file
 | --- | --- | --- | --- | --- |
 | `Navbar` |
 |  |  |  |  |  |
-| **Mum's To-Do List Logo**| When clicked the user will be redirected to the landing page when not logged in and My List Page when logged in. | 1. Clicked the Logo when not logged in 2.Repeated the same action when logged in | 1. When not logged in, I was redirected to the Landing Page, whereas when logged in I was redirected to My List. | Pass |
+| **Mum's To-Do List Logo**| When clicked the user will be redirected to the landing page when not logged in and My List Page when logged in. | <ol><li>Clicked the Logo when not logged in</li><li>Repeated the same action when logged in</li></ol> |<ol><li>  When not logged in, I was redirected to the Landing Page</li><li> When logged in I was redirected to My List </li></ol>| Pass |
 | **Sign In Link**| When clicked the user will be redirected to the Sign In Page| Clicked the link | Redirected to the Sign In Page | Pass |
 | **Register Link** | When clicked the user will be redirected to the Register Page. | Clicked the link | Redirected to the Register Page. | Pass |
 | **My List Link**(Logged in users only) | When clicked the user will be redirected to My List Page. | Clicked the link | Redirected to My List Page | Pass |
@@ -46,6 +46,7 @@ Go back to the [README.md](README.md) file
 | **Password input empty**| This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required |  Pass |
 | **Sign In button** | Saves the user to session and redirects to the My List Page with a user's name in the heading of a list.  | Submitted form | Redirected to the My List Page and my name shows in the list's heading | Pass |
 | **Incorrect username or password used** | A flash message should display saying username/password incorrect - this is defensive programming - not letting user know which input is incorrect | Incorrect username/password entered |A message flashed to let the user know they have entered an incorrect username/password | Pass |
+| **User stays signed in** | Once signed in the user should remain in session for 7 days unless they sign out | Closed and opened the browser. Repeat the action after a few days | Was still signed it when opened a browser after a few days  | Pass |
 | **Register Link** | When clicked the user will be redirected to the Register Page. | Clicked the link | Redirected to the Register Page. | Pass |
 | `Register Page` |
 |  |  |  |  |  |
@@ -64,8 +65,8 @@ Go back to the [README.md](README.md) file
 |   |   |   |   |  |
 | **Add '+' button** in the heading | When the user clicks this button they should be taken to the Add New Item Page| Clicked button | Redirected to the Add New Item Page | Pass |
 | **List item card reveal** | When the user clicks on the list item, the card reaveals item details | Clicked the item | Card revealed the details | Pass |
-| **Check button on the list item card**| 1. When the user clicks the check button, the item should be  crossed out and a flash message 'One less thing to worry about!' should appear 2. If the user clicks that button again the crossing should disappear and the message 'That's fine, take your time' should appear.| 1.Clicked the check button 2. Clicked the check button again | 1. The item was crossed out and the right flash message appeared 2. The crossing disappeared and the right message appeared| Pass |
-|**Edit  button on the list item card**| When the user clicks the edit button they should be directed to the Edit Item Page | Clicked the edit button | Redirected to Edit Item Page | Pass |
+| **Check button on the list item card**| 1. When the user clicks the check button, the item should be  crossed out and a flash message 'One less thing to worry about!' should appear 2. If the user clicks that button again the crossing should disappear and the message 'That's fine, take your time' should appear.| <ol><li>Clicked the check button</li> <li>Clicked the check button again</li></ol> | <ol><li>The item was crossed out and the right flash message appeared</li><li> The crossing disappeared and the right message appeared</li></ol>| PASS |
+|**Edit  button on the list item card**| When the user clicks the edit button they should be directed to the Edit Item Page | Clicked the edit button | Redirected to Edit Item Page | PASS |
 | **Delete button on the list item card**| When the user clicks the delete button a confirmation dialog should appear asking the user if they want to delete the item with options to confirm and cancel. If confirmed the item should be removed from the list and a flash message should appear | Clicked the delete button | The confirmation dialog appeared. After clicking ok to confirm, the item was removed from the list and a 'Deleted' flash message appeared | Pass |
 | **Delete all checked items button** | When the user clicks the delete all checked buttons, a confirmation dialog will appear asking the user if they are sure they want to delete all the checked items. Once that's confirmed all the checked items should be removed from the list and a flash message 'Done and dusted! You're a star! should appear | Clicked the button | Confirmation dialog appeared, clicked ok - all checked items were removed | Pass |
 | `Footer` |
@@ -143,10 +144,10 @@ Go back to the [README.md](README.md) file
 | The same features as in Add Category Page | follow the same steps for testing | Followed the same steps | All functionality worked | Pass |
 | `404 Page` |
 |   |   |   |   |   |
-| **Redirection link link**| 1. Redirects the user to the My List Page(if signed in) 2. Redirects the user to Sign In Page (if the user is not signed in) | 1. Clicked link when signed it 2. Clicked the link when signed out | 1. Redirected to My List Page 2. Redirected to Sign In Page | Pass |
+| **Redirection link link**| <ol><li>Redirects the user to the My List Page(if signed in)</li><li> Redirects the user to Sign In Page (if the user is not signed in)</li></ol> | <ol><li> Clicked link when signed it </li><li> Clicked the link when signed out </li></ol>| <ol><li> Redirected to My List Page </li><li> Redirected to Sign In Page</li></ol> | Pass |
 
 
-### CRUD Testing Focus (For methods please see ### Full Testing section)
+### CRUD Testing Focus (For methods please see Full Testing section above)
 
 |CRUD   | ACTION  |  RESULT |
 |---|---|---|
@@ -159,17 +160,26 @@ Go back to the [README.md](README.md) file
 
 ### Database Testing
 
-| ACTION  |   RESULT |
-|---|---|
-|Create a new user account and verify its presence in the user collection in MongoDB  | PASS  |
-|Create a new list item to check its presence in the to_do_items collection in MongoDB  | PASS  |
-|Edit a to-do list item and confirm the accurate changes in the to_do_items collection of MongoDB | PASS  |
-|Mark an item as done by pressing the check button and confirm the change in  to_do_items collection (is_crossed_out: true)  | PASS  |
-|Delete a list item and verify the successful removal from the to_do_items collection in MongoDB  | PASS  |
-|Delete all checked items and verify their successful removal from the to_do_items collection in MongoDB   | PASS  |
-|Create a new category tand check its presence in the categories collection in MongoDB   | PASS  |
-|Edit a category and confirm the accurate changes in the categories collection of MongoDB  | PASS  |
-|Delete a category and verify the successful removal from the categories collection in MongoDB   | PASS  |
+To ensure the Flask application functions correctly with MongoDB, I performed database testing. This section explains how to manually test database operations, such as creating, editing, and deleting users, to-do items, and categories. These tests verify that the application correctly interacts with MongoDB, a document-based database. Each test involves an action in the application and checking the corresponding effect in the MongoDB collections.
+
+Pre-requisites
+- Access to MongoDB: Ensure you have access to the MongoDB database. This can be through a GUI like MongoDB Compass, through the MongoDB Atlas cloud service, or using the MongoDB shell (mongo).
+- Understanding Collections: MongoDB stores data in collections, which are comparable to tables in relational databases. For this application, relevant collections include users, to_do_items, and categories.
+
+For each action taken in the application, corresponding changes should be observable in the MongoDB database. This manual testing process ensures that the application's backend functionality works as intended.
+
+| TESTING SCENARIO | ACTION | STEPS TO VERIFY |RESULT|
+|---------------|--------|---------------|------|
+| **User Creation** | CreateD a new user account using the application's registration form. | 1. Accessed the MongoDB database (using MongoDB Atlas).<br>2. NavigateD to the `users` collection.<br>3. Looked for a new document that matched the user account details I created, ensuring that the username and a hashed password were present. |PASS|
+| **To-Do Item Creation** | Created a new to-do list item through the application. | 1. Went to the `to_do_items` collection in MongoDB.<br>2. Searched for a new document corresponding to the item I added, checking for details like the item's name and any flags such as `is_important`. |PASS|
+| **To-Do Item Editing** | Edited an existing to-do list item in the application. | 1. Found the edited item in the `to_do_items` collection.<br>2. Confirmed that the changes (e.g., item name, details) were accurately reflected in the document. |PASS|
+| **Marking an Item as Done** | Marked an item as done using the check button. | 1. Located the item in the `to_do_items` collection.<br>2. Verified the `is_crossed_out` field is set to `true`, indicating the item is marked as done. |PASS|
+| **Item Deletion** | Deleted a list item through the application. | 1. Ensured the item is no longer present in the `to_do_items` collection, confirming it was successfully deleted. |PASS|
+| **Deletion of All Checked Items** | Used the bulk deletion button to delete all checked (completed) items. | 1. Confirmed no documents with `is_crossed_out` set to `true` are left in the `to_do_items` collection. |PASS|
+| **Category Creation** | Created a new category in the application. | 1. Accessed the `categories` collection.<br>2. Looked for a new document representing the added category, confirming its presence. |PASS|
+| **Category Editing** | Edited an existing category's name. | 1. In the `categories` collection, found the edited category and ensured the name change is accurately documented. |PASS|
+| **Category Deletion** | Deleted a category through the application. | 1. Verified the corresponding document was removed from the `categories` collection. |PASS|
+
 
 <br>
 
