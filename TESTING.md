@@ -38,19 +38,15 @@ Go back to the [README.md](README.md) file
 | My List Link (Logged in users only) | When clicked the user will be redirected to My List Page. | Clicked the link | Redirected to My List Page | Pass |
 | Categories Page (Logged in users only) | When clicked the user will be redirected to the Categories Page. | Clicked the link | Redirected to the Categories Page | Pass |
 | Sign Out Link (Logged in users only) | When clicked the user is signed out and is redirected to Sign In Page. On top of the Page the user sees a flash message 'You have been signed out' | Clicked the link | Got signed out and redirected to the Sign In Page. 'You've been signed out' message appeared| Pass |
-| `Footer` |
-|  |  |  |  |  |
-| Bookworm Title | When clicked the user will be redirected to the home page. | Clicked Logo and title | Redirected to the home page. | Pass |
-| Copyright year | The copyright should display the correct year - this is a javascript function that checks what the current year is and injects it into the footer | Checked the year | Displaying the correct year | Pass |
-
 | `Sign in Page` |
+|  |  |  |  |  |
 | Username input - empty | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required | Pass |
 | Password input empty | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required |  Pass |
 | Sign In button | Saves the user to session and redirects to the My List Page with a user's name in the heading of a list.  | Submitted form | Redirected to the My List Page and my name shows in the list's heading | Pass |
 | Incorrect username or password used | A flash message should display saying username/password incorrect - this is defensive programming - not letting user know which input is incorrect | Incorrect username/password entered |A message flashed to let the user know they have entered an incorrect username/password | Pass |
 | Register Link | When clicked the user will be redirected to the Register Page. | Clicked the link | Redirected to the Register Page. | Pass |
 | `Register Page` |
-| | | | | | |
+|  |  |  |  |  |
 | Username input | The username should be between 3-15 characters  | Entered username less than 3 characters long | tooltip lets the user know they have not matched the requested format | Pass |
 | Username input - empty | The username is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
 | Username input | If username already exists, message should flash to user | entered an in use username | Message flashed to say username already exists | Pass|
@@ -71,11 +67,13 @@ Go back to the [README.md](README.md) file
 | Delete button on the list item card| When the user clicks the delete button a confirmation dialog should appear asking the user if they want to delete the item with options to confirm and cancel. If confirmed the item should be removed from the list and a flash message should appear | Clicked the delete button | The confirmation dialog appeared. After clicking ok to confirm, the item was removed from the list and a 'Deleted' flash message appeared | Pass |
 | Delete all checked items button | When the user clicks the delete all checked buttons, a confirmation dialog will appear asking the user if they are sure they want to delete all the checked items. Once that's confirmed all the checked items should be removed from the list and a flash message 'Done and dusted! You're a star! should appear | Clicked the button | Confirmation dialog appeared, clicked ok - all checked items were removed | Pass |
 | `Footer` |
+|  |  |  |  |  |
 |  Filter button| When clicked the user should see a collapsible head with 'sort by' headin. Upon clicking on it the full collapsClickdy should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically, by category or importance | Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The items were sorted accordingly. |  |
 | '+' button | When clicked the user will be redirected to the Add New Item Page. | Clicked the button | Redirected to the Add New Item Page. | Pass |
 | Folder button| When clicked the user will be redirected to the Categories Page | Clicked the button | Redirected to the Categories Page | Pass |
 | Sign Out button| When clicked the user will be signed out and redirected to Sign In Page. The flash message 'You've been signed out' should appear | Clicked the button | Redirected to the Categories Page | Pass |
 | `Add New Item Page` |
+|  |  |  |  |  |
 | Select Category  | Select a category from a dropdown. This should be pre-populated with categories provided and categories created by the user. This is a required field.  |Clicked on the dropdown. The dropdown was populated with categories    | Selected category  |Pass  |
 | Select Category - no category selected  | The form requires a category. When trying to save changes the user should be prompted with a tooltip to select a category.|Didn't select any category. Prompted by tooltip to select a category when tried to save changes.  |  |Pass  |
 | New List Item Input Field  | This is a required field. The new list item should have at least 3 characters. After putting the valid item name and pressing the save button the item will show on the list. The user will be redirected to My List Page and the flash message 'Added to the list' should appear. |Added New Item to the list. Directed to the My List Page. A flash message appeared | Added New Item |Pass  |
@@ -90,6 +88,7 @@ Go back to the [README.md](README.md) file
 | Important switch | When the user clicks on the switch next to "Is Important" a list item will get a star icon next to it| Clicked on the switch. The added item was starred. |Pass  |
 |Cancel and Save buttons| If the user clicks the cancel button, they will be redirected to My List Page without making any changes. After pressing the save button, the new item will be added to the list.| Clicked cancel button - redirected to My List Page with no changes. Clicked save after filling in the form - new item added to the list.|Pass  |
 | `Footer` |
+|  |  |  |  |  |
 |  Filter button| When clicked the user should see a collapsible head with 'sort by' headin. Upon clicking on it the full collapsClickdy should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically, by category or importance | Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The items were sorted accordingly. |  |
 | List button | When clicked the user will be redirected to the My List Page. | Clicked the button | Redirected to My List Page| Pass |
 | Folder button| When clicked the user will be redirected to the Categories Page | Clicked the button | Redirected to the Categories Page | Pass |
