@@ -1,7 +1,97 @@
 Go back to the [README.md](README.md) file
 
 
-## **Testing**
+# **Testing**
+
+A key focus of our testing methodology was to cover various aspects of the application, including code validation, functionality, usability, responsiveness, database integrity, performance, and accessibility. This approach ensured that the application was tested from multiple angles.
+
+### Methods Used
+
+**Code Validation:**
+
+HTML and CSS: Utilizing tools like the W3C Markup and CSS Validators ensured that the application's frontend code adhered to web standards, thus enhancing compatibility and performance across different web browsers.
+Python and Jinja Syntax: The PEP8 CI Python Linter was instrumental in enforcing coding standards for the backend, ensuring the codebase remained clean, readable, and maintainable.
+
+**Manual Testing:**
+
+A detailed manual testing process was undertaken, covering functional testing to validate the application's operations, usability testing based on user stories to ensure a positive user experience, and responsive design testing to guarantee accessibility across various devices.
+
+**Database Testing:**
+
+Manual verification within the MongoDB database confirmed that the application's CRUD operations were accurately reflected in the database, ensuring data integrity and consistency.
+
+**Performance and Accessibility Testing:**
+
+Tools like Google's Lighthouse provided insights into the application's performance, accessibility, best practices, and search engine optimization, highlighting areas for improvement and ensuring compliance with modern web standards.
+
+
+**Methods Not Used and Potential Consequences**
+
+The decision to omit certain testing methods, such as automated testing, security testing, and load testing, was made considering the project's scope and resource availability. However, the absence of these testing methods could lead to potential challenges, such as missed bugs, security vulnerabilities, and performance issues under high traffic conditions.
+
+<br>
+
+
+### Code Validation
+
+- [W3C Markup Validator](https://validator.w3.org/)
+
+I used W3C Validator to test all HTML pages. Initially, the validator showed a few unclosed or stray tags and a nesting issue with a paragraph under <h5> tag on a landing page. The remaining errors are a result of using a Jinja template.
+
+
+| PAGE  | SCREENSHOTS  |
+|---|---|
+| Landing Page  | ![landing page validation](./docs/landing_page_validation.png)  |
+| Register  | ![registration page validation](./docs/registration_page_validation.png)   |
+| Sign In  | ![sign in page validation](./docs/sign_in_page_validation.png)   |
+| My List  | ![my list page validation 1](./docs/to_do_items_page_validation1.png) ![my list page validation 2](./docs/to_do_items_page_validation2.png) ![my list page validation 3](./docs/to_do_items_page_validation3.png) |
+| Add New Item  |![add new item page validation 1](./docs/add_new_item_page_validation1.png) ![add new item page validation 2](./docs/add_new_item_page_validation2.png) ![add new item page validation 3](./docs/add_new_item_page_validation3.png)  |
+| Edit Item  | ![edit item page validation 1](./docs/edit_item_page_validation1.png)![edit item page validation 2](./docs/edit_item_page_validation2.png)![edit item page validation 3](./docs/edit_item_page_validation3.png) ![edit item page validation 3](./docs/edit_item_page_validation3.png) ![edit item page validation 4](./docs/edit_item_page_validation4.png)|
+| Categories  | ![categories page validation 1](./docs/categories_page_validation1.png) ![categories page validation 2](./docs/categories_page_validation2.png)  |
+| Add Category  | ![add category page validation 1](./docs/add_category_page_validation1.png) ![add category page validation 2](./docs/add_category_page_validation2.png)  |
+| Edit Category  |![edit category page validation 1](./docs/edit_category_page_validation1.png)![edit category page validation 2](./docs/edit_category_page_validation2.png)   |
+| 404  | ![404 page validation 1](./docs/404_page_validation.png)  |
+| 500  |![500 page validation 1](./docs/500_page_validation.png)   |
+
+<br>
+
+### CSS
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+I used W3C CSS Validator for the CSS. Initial results showed errors around the 'progid' property. This one is a part of the code pasted from the gradient generator. After removing that property, the only error flagged by the validator is that the property 'font-display' does not exist. It is however a valid property, which either indicates that the validation tool is outdated or does not recognise this value in the particular context it's been used in.
+
+|  INITIAL RESULT | FINAL RESULT  |
+|---|---|
+|![css_validation_initial1.png](./docs/css_validation_initial1.png) ![css_validation_initial2.png](./docs/css_validation_initial2.png)  | ![css_validation_final.png](./docs/css_validation_final.png)  |
+
+<br>
+
+### Python and Jinja Syntax
+
+- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
+
+I have used the PEP8 CI Python Linter application to test my Python and Jinja syntax. The initial results showed a lot of white space and lines of code that were too long. After formatting the code, the validation still flagged some lines as too long. I decided to leave them in their original format as breaking them down could harm the clarity of the code.
+
+|  INITIAL RESULT | FINAL RESULT  |
+|---|---|
+|![python_validation_initial.png](./docs/python_validation_initial.png)  | ![python_validation_final.png](./docs/python_validation_final.png)  |
+
+<br>
+
+### Lighthouse
+
+|  PAGE | DESKTOP  | MOBILE  |
+|---|---|---|
+|  Landing Page | ![lighthouse landing desktop](./docs/landing_desktop.png)  | ![lighthouse landing mobile](./docs/landing_mobile.png)   |
+| Register  | ![lighthouse register desktop](./docs/register_desktop.png)   | ![lighthouse register mobile](./docs/register_mobile.png)   |
+| Sign In  | ![lighthouse signin desktop](./docs/sign_in_desktop.png)   | ![lighthouse signin mobile](./docs/sign_in_mobile.png)   |
+| My List  |![lighthouse mylist desktop](./docs/my_list_desktop.png)   | ![lighthouse mylist mobile](./docs/my_list_mobile.png)  |
+| Add New Item  | ![lighthouse add item desktop](./docs/add_item_desktop.png)  | ![lighthouse add item mobile](./docs/add_item_mobile.png)  |
+| Edit Item  | ![lighthouse edit item desktop](./docs/edit_item_desktop.png)  |  ![lighthouse edit item mobile](./docs/edit_item_mobile.png)  |
+| Categories  | ![lighthouse categories desktop](./docs/categories_desktop.png)  | ![lighthouse categories mobile](./docs/categories_mobile.png)  |
+| Add Category  |![lighthouse add category desktop](./docs/add_category_desktop.png) |  ![lighthouse add category mobile](./docs/add_category_mobile.png) |
+| Edit Category  |![lighthouse edit category desktop](./docs/edit_category_desktop.png)  | ![lighthouse edit category mobile](./docs/edit_category_mobile.png)  |
 
 
 ### User Stories
@@ -183,63 +273,3 @@ For each action taken in the application, corresponding changes should be observ
 
 <br>
 
-### Code Validation
-
-- [W3C Markup Validator](https://validator.w3.org/)
-
-I used W3C Validator to test all HTML pages. Initially, the validator showed a few unclosed or stray tags and a nesting issue with a paragraph under <h5> tag on a landing page. The remaining errors are a result of using a Jinja template.
-
-
-| PAGE  | SCREENSHOTS  |
-|---|---|
-| Landing Page  | ![landing page validation](./docs/landing_page_validation.png)  |
-| Register  | ![registration page validation](./docs/registration_page_validation.png)   |
-| Sign In  | ![sign in page validation](./docs/sign_in_page_validation.png)   |
-| My List  | ![my list page validation 1](./docs/to_do_items_page_validation1.png) ![my list page validation 2](./docs/to_do_items_page_validation2.png) ![my list page validation 3](./docs/to_do_items_page_validation3.png) |
-| Add New Item  |![add new item page validation 1](./docs/add_new_item_page_validation1.png) ![add new item page validation 2](./docs/add_new_item_page_validation2.png) ![add new item page validation 3](./docs/add_new_item_page_validation3.png)  |
-| Edit Item  | ![edit item page validation 1](./docs/edit_item_page_validation1.png)![edit item page validation 2](./docs/edit_item_page_validation2.png)![edit item page validation 3](./docs/edit_item_page_validation3.png) ![edit item page validation 3](./docs/edit_item_page_validation3.png) ![edit item page validation 4](./docs/edit_item_page_validation4.png)|
-| Categories  | ![categories page validation 1](./docs/categories_page_validation1.png) ![categories page validation 2](./docs/categories_page_validation2.png)  |
-| Add Category  | ![add category page validation 1](./docs/add_category_page_validation1.png) ![add category page validation 2](./docs/add_category_page_validation2.png)  |
-| Edit Category  |![edit category page validation 1](./docs/edit_category_page_validation1.png)![edit category page validation 2](./docs/edit_category_page_validation2.png)   |
-| 404  | ![404 page validation 1](./docs/404_page_validation.png)  |
-| 500  |![500 page validation 1](./docs/500_page_validation.png)   |
-
-<br>
-
-### CSS
-
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-
-I used W3C CSS Validator for the CSS. Initial results showed errors around the 'progid' property. This one is a part of the code pasted from the gradient generator. After removing that property, the only error flagged by the validator is that the property 'font-display' does not exist. It is however a valid property, which either indicates that the validation tool is outdated or does not recognise this value in the particular context it's been used in.
-
-|  INITIAL RESULT | FINAL RESULT  |
-|---|---|
-|![css_validation_initial1.png](./docs/css_validation_initial1.png) ![css_validation_initial2.png](./docs/css_validation_initial2.png)  | ![css_validation_final.png](./docs/css_validation_final.png)  |
-
-<br>
-
-### Python and Jinja Syntax
-
-- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
-
-I have used the PEP8 CI Python Linter application to test my Python and Jinja syntax. The initial results showed a lot of white space and lines of code that were too long. After formatting the code, the validation still flagged some lines as too long. I decided to leave them in their original format as breaking them down could harm the clarity of the code.
-
-|  INITIAL RESULT | FINAL RESULT  |
-|---|---|
-|![python_validation_initial.png](./docs/python_validation_initial.png)  | ![python_validation_final.png](./docs/python_validation_final.png)  |
-
-<br>
-
-### Lighthouse
-
-|  PAGE | DESKTOP  | MOBILE  |
-|---|---|---|
-|  Landing Page | ![lighthouse landing desktop](./docs/landing_desktop.png)  | ![lighthouse landing mobile](./docs/landing_mobile.png)   |
-| Register  | ![lighthouse register desktop](./docs/register_desktop.png)   | ![lighthouse register mobile](./docs/register_mobile.png)   |
-| Sign In  | ![lighthouse signin desktop](./docs/sign_in_desktop.png)   | ![lighthouse signin mobile](./docs/sign_in_mobile.png)   |
-| My List  |![lighthouse mylist desktop](./docs/my_list_desktop.png)   | ![lighthouse mylist mobile](./docs/my_list_mobile.png)  |
-| Add New Item  | ![lighthouse add item desktop](./docs/add_item_desktop.png)  | ![lighthouse add item mobile](./docs/add_item_mobile.png)  |
-| Edit Item  | ![lighthouse edit item desktop](./docs/edit_item_desktop.png)  |  ![lighthouse edit item mobile](./docs/edit_item_mobile.png)  |
-| Categories  | ![lighthouse categories desktop](./docs/categories_desktop.png)  | ![lighthouse categories mobile](./docs/categories_mobile.png)  |
-| Add Category  |![lighthouse add category desktop](./docs/add_category_desktop.png) |  ![lighthouse add category mobile](./docs/add_category_mobile.png) |
-| Edit Category  |![lighthouse edit category desktop](./docs/edit_category_desktop.png)  | ![lighthouse edit category mobile](./docs/edit_category_mobile.png)  |
