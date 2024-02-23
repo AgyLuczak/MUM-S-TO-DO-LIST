@@ -215,7 +215,7 @@ def toggle_cross_out(item_id):
 @app.route("/delete_to_do_item/<to_do_item_id>")
 def delete_to_do_item(to_do_item_id):
     mongo.db.to_do_items.delete_one({"_id": ObjectId(to_do_item_id)})
-    flash("Deleted!")
+    flash("Item Deleted!")
     return redirect(url_for("get_to_do_items"))
 
 
@@ -272,7 +272,7 @@ def add_category():
             "created_by": session["user"].lower(),
         }
         mongo.db.categories.insert_one(category)
-        flash("Added!")
+        flash("Category Added!")
         return redirect(url_for("get_categories"))
 
     return render_template("add_category.html")
