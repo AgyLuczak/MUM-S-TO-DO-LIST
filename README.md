@@ -125,8 +125,6 @@ and *Shantell Sans* for the rest of the body
 <br>
 
 
-
-
 ## **Skeleton Plane**
 
 </br>
