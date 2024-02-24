@@ -202,6 +202,12 @@ The image shows a mum portrayed as a superhero holding a to-do-list. It recogniz
 
 </br>
 
+- **Background image**
+
+ The image contains a series of icons that depict different activities or roles, such as taking care of a child, cooking, shopping, and even superhero motifs, which reflect the multi-faceted role of a mother. A lighter opacity has been added to this image to create a pleasant backdrop without distracting from the app's content.
+
+ ![background imagr](./docs/mum_icons_faded1.png)
+
 - **Registration Page**
 
 

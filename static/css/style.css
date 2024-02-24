@@ -13,6 +13,7 @@ body {
     font-weight: 600;
     font-display: swap;
     margin: 0;
+    z-index: 0;
 
 
 }
@@ -161,7 +162,7 @@ input.valid[type=password]:not(.browser-default):focus+label {
     left: 0;
     top: 100%;
     height: 100%;
-    z-index: 3;
+    z-index: 2;
     display: none;
 }
 
@@ -347,6 +348,7 @@ input.valid[type=text]:not(.browser-default) {
     background: linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
     background: -moz-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
     background: -webkit-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+    z-index: 1;
 }
 
 .search-section {

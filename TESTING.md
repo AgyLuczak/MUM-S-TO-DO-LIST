@@ -321,3 +321,17 @@ For each action taken in the application, corresponding changes should be observ
 
 <br>
 
+
+## BUGS
+
+### Solved Bugs
+
+| BUG |  SOLUTION |
+|---|---|
+|   |   |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
