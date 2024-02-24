@@ -20,7 +20,7 @@
         <!--display only items created by a logged-in user-->
         {% if session.user|lower == item.created_by|lower %}
         <div class="col s12 m8 offset-m2">
-            <div class="card horizontal pink lighten-1">
+            <div class="card horizontal pink darken-1">
                 <div class=" card-content white-text">
                     <span class="card-title activator {% if item.is_crossed_out %}crossed-out{% endif %}">
                         {{ item.to_do_item}} ({{item.category_name}})
