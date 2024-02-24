@@ -124,6 +124,15 @@ The website was responsive on all these devices.
 | Add Category  |![lighthouse add category desktop](./docs/add_category_desktop.png) |  ![lighthouse add category mobile](./docs/add_category_mobile.png) |
 | Edit Category  |![lighthouse edit category desktop](./docs/edit_category_desktop.png)  | ![lighthouse edit category mobile](./docs/edit_category_mobile.png)  |
 
+<br>
+
+### WAVE (Web Accesibility Evaluation Tool)
+
+|  INITIAL RESULT | FINAL RESULT  |
+|---|---|
+|![wave initial](./docs/wave_initial.png)  | ![wave final.png](./docs/wave_final.png)  |
+
+
 
 ## Manual Testing
 
