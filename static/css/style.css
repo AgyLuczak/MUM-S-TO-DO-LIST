@@ -295,10 +295,16 @@ input.valid[type=text]:not(.browser-default) {
 }
 
 .btn-small {
-
     margin: 5px;
     border-radius: 5px;
+    box-shadow: 0 0.4rem 0.4rem 0 rgb(88, 4, 91);
 }
+
+.action-btn:hover {
+
+    box-shadow: 0 0.4rem 0.4rem 0 #f3f0f4;
+}
+
 
 
 .crossed-out {
