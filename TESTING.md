@@ -5,6 +5,30 @@ Go back to the [README.md](README.md) file
 
 A key focus of our testing methodology was to cover various aspects of the application, including code validation, functionality, usability, responsiveness, database integrity, performance, and accessibility. This approach ensured that the application was tested from multiple angles.
 
+<br>
+
+## Testing section table of contents 
+
+- [Methods Used](#methods-used)
+- [Code Validation](#code-validation)
+    - [HTML](#HTML)
+    - [CSS](#CSS)
+    - [Python and Jinja Syntax](#python-and-jinja-syntax)
+    - [Java Script](#java-script)
+- [Responsiveness](#responsiveness)
+- [Lighthouse](#lighthouse)
+- [WAVE](#wave-web-accessibility-evaluation-tool)
+- [Manual Testing](#manual-testing)
+    - [User Stories](#user-stories)
+    - [Full Testing](#full-testing)
+    - [CRUD Testing Focus](#crud-testing-focus)
+    - [Datbase Testing](#database-testing)
+- [Known Bugs and Fixes](#known-bugs-and-fixes)
+- [Other issues noticed in full manual testing](#other-issues)
+
+<br>
+
+
 ### Methods Used
 
 **Code Validation:**

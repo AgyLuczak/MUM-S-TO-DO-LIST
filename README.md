@@ -731,6 +731,8 @@ You can fork this repository by using the following steps:
 
 - [ChatGPT4](https:https://chat.openai.com/) - used along Stackoverlow for solutions for various problems encountered while doing the project
 
+- Tim Nelson from Code Institute for his 'Task Manager' walktrough project which provided all the necessary steps in building this app.
+
 - My tutor Ashley Oliver and my mentor Rory Patrick Sheridan - various suggestions for improving the project
 
 - My classmate Adam White for a number of suggestions for solving some of the issues in the project
