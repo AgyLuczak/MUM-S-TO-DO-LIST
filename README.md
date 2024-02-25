@@ -662,3 +662,48 @@ You can fork this repository by using the following steps:
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account.
 
 
+## **Credits** ##
+
+</br>
+
+**Code**
+
+- [W3Schools](https://www.w3schools.com/) - general source of reference
+
+- [Python Documentation](https://docs.python.org//) - general source of reference
+
+- 'Python Crash Course' by Eric Matthes - general source of reference
+
+- [Stackoverflow](https://stackoverflow.com/) - suggestions for solutions for various problems while doing the project
+
+- [ChatGPT4](https:https://chat.openai.com/) - used along Stackoverlow for solutions for various problems encountered while doing the project
+
+- My tutor Ashley Oliver and my mentor Rory Patrick Sheridan - various suggestions for improving the project
+
+- My classmate Adam White for a number of suggestions for solving some of the issues in the project
+
+
+</br>
+ 
+**Content**
+
+[ShutterStock](https://shutterstock.com/) - Source of the background image
+
+[ChatGPT4](https://chat.openai.com/) - used to generate the hero image for the landing page and the color palette
+
+
+
+</br>
+
+ ## Acknowledgements
+
+ </br>
+
+I would like to say a massive thank you to:
+ 
+ - my course mentor Rory Patrick Sheridan and my tutor Ashley Oliver for their help and support during the project
+
+ - my classmates Adam White and Jacob Bulejcik for their valuable feedback 
+
+ - my husband Gniewomir for his incredible support since the beginning of the course.
+
