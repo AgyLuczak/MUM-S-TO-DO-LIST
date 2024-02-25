@@ -109,7 +109,7 @@ def get_to_do_items():
     query = {"created_by": username}
 
     to_do_items = list(mongo.db.to_do_items.find(query))
-
+#solution found on chatGPT 4
     if sort_category:
         to_do_items.sort(key=lambda x: x["category_name"].lower())
     elif sort_order == "important":
@@ -175,7 +175,7 @@ def edit_to_do_item(to_do_item_id):
             "due_date": request.form.get("due_date"),
             "created_by": session["user"].lower(),
         }
-
+# credit to Ad White
         mongo.db.to_do_items.update_one(
             {"_id": ObjectId(to_do_item_id)}, {"$set": submit}
         )
@@ -246,7 +246,7 @@ def get_categories():
     categories_query = {"$or": [{"created_by": username}, {"created_by": "admin"}]}
 
     categories = list(mongo.db.categories.find(categories_query))
-
+# solution found on ChatGPT 4
     if sort_order == "alpha":
         # Alphabetical sorting
         categories.sort(key=lambda x: x["category_name"].lower())

@@ -10,7 +10,7 @@ A key focus of our testing methodology was to cover various aspects of the appli
 **Code Validation:**
 
 HTML and CSS: Utilizing tools like the W3C Markup and CSS Validators ensured that the application's frontend code adhered to web standards, thus enhancing compatibility and performance across different web browsers.
-Python and Jinja Syntax: The PEP8 CI Python Linter was instrumental in enforcing coding standards for the backend, ensuring the codebase remained clean, readable, and maintainable.
+Python and Jinja Syntax: The PEP8 CI Python Linter was used to ensure coding standards for the backend were followed.
 
 **Manual Testing:**
 
@@ -36,7 +36,7 @@ The decision to omit certain testing methods, such as automated testing, securit
 
 - [W3C Markup Validator](https://validator.w3.org/)
 
-I used W3C Validator to test all HTML pages. Initially, the validator showed a few unclosed or stray tags and a nesting issue with a paragraph under <h5> tag on a landing page. The remaining errors are a result of using a Jinja template.
+I used W3C Validator to test all HTML pages. Initially, the validator showed a few unclosed or stray tags and a nesting issue with a paragraph under the `<h5>` tag on a landing page. The remaining errors are a result of using a Jinja template.
 
 
 | PAGE  | SCREENSHOTS  |
@@ -112,6 +112,8 @@ The website was responsive on all these devices.
 
 ### Lighthouse
 
+The initial results were showing lower results for accessibility (86)and SEO sections (84) This has been improved by adding aria labels and visually hidden class to all the buttons and meta description to the head element.
+
 |  PAGE | DESKTOP  | MOBILE  |
 |---|---|---|
 |  Landing Page | ![lighthouse landing desktop](./docs/landing_desktop.png)  | ![lighthouse landing mobile](./docs/landing_mobile.png)   |
@@ -124,9 +126,20 @@ The website was responsive on all these devices.
 | Add Category  |![lighthouse add category desktop](./docs/add_category_desktop.png) |  ![lighthouse add category mobile](./docs/add_category_mobile.png) |
 | Edit Category  |![lighthouse edit category desktop](./docs/edit_category_desktop.png)  | ![lighthouse edit category mobile](./docs/edit_category_mobile.png)  |
 
+The SEO results are still below 90. The remaining flagged issues are:
+
+- Links are not crawlable (showed one element in Materialize framework a.sidenav-trigger)
+- Web app manifest or service worker do not meet the installability requirements
+- Is not configured for a custom splash screenFailures: No manifest was fetched.
+- Does not set a theme color for the address bar.Failures: No manifest was fetched, No `<meta name="theme-color">` tag found.
+- Content is sized correctly for the viewport
+- Manifest doesn't have a maskable iconNo manifest was fetched
+
 <br>
 
-### WAVE (Web Accesibility Evaluation Tool)
+### WAVE (Web Accessibility Evaluation Tool)
+
+The initial results flagged up low contrast on cards. I made the colour of the cards slightly darker, increasing the contrast and thus improving accessibility
 
 |  INITIAL RESULT | FINAL RESULT  |
 |---|---|
@@ -270,8 +283,8 @@ The app has been tested on the following browsers:
 | `Footer` |
 |  |  |  |  |  |
 |  **Filter button**| When clicked the user should see a collapsible head with 'sort by' heading. Upon clicking on it the full collapsible should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically,  or 'created by me first'| Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The categories were sorted accordingly. | PASS  |
-|** '+' button **| When clicked the user will be redirected to the Category Page | Clicked the button | Redirected to the Add New Category Page. | PASS |
-|** List button** | When clicked the user will be redirected to the My List Page. | Clicked the button | Redirected to My List Page| PASS| 
+|**'+' button**| When clicked the user will be redirected to the Category Page | Clicked the button | Redirected to the Add New Category Page. | PASS |
+|**List button** | When clicked the user will be redirected to the My List Page. | Clicked the button | Redirected to My List Page| PASS| 
 | **Sign Out button**| When clicked the user will be signed out and redirected to Sign In Page. The flash message 'You've been signed out' should appear | Clicked the button | Redirected to the Categories Page | PASS |
 | `Add Category` |
 | **New Category input field**  | This is a required field. The new list item should have at least 3 characters. After putting the valid item name and pressing the save button the item will show on the list. The user will be redirected to My List Page and the flash message 'Added' should appear. |Added New Item to the list. Directed to the My List Page. A flash message appeared | Added New Item |PASS  |
@@ -288,10 +301,10 @@ The app has been tested on the following browsers:
 | **Edit Category - input not valid**| If the input is not at least 3 characters long, the user will be prompted by a tooltip to use more characters when trying to save the form |Used only 2 characters in a new item input| Tooltip said to lengthen the text to at least 3 characters when I was trying to save the changes |PASS |
 | **Edit Category- no input** | If the field is left blank, the user will be prompted by a tooltip to fill in the required field when trying to save the form |Left the field blank| Tooltip said to fill in the field when I was trying to save the changes |PASS  |
 | `Footer` |
-| The same features as in Add Category Page | follow the same steps for testing | Followed the same steps | All functionality worked | PASS |
+| **The same features as in Add Category Page** | follow the same steps for testing | Followed the same steps | All functionality worked | PASS |
 | `404 Page` |
 |   |   |   |   |   |
-| **Redirection link link**| <ol><li>Redirects the user to the My List Page(if signed in)</li><li> Redirects the user to Sign In Page (if the user is not signed in)</li></ol> | <ol><li> Clicked link when signed it </li><li> Clicked the link when signed out </li></ol>| <ol><li> Redirected to My List Page </li><li> Redirected to Sign In Page</li></ol> | Pass |
+| **Redirection link**| <ol><li>Redirects the user to the My List Page(if signed in)</li><li> Redirects the user to Sign In Page (if the user is not signed in)</li></ol> | <ol><li> Clicked link when signed it </li><li> Clicked the link when signed out </li></ol>| <ol><li> Redirected to My List Page </li><li> Redirected to Sign In Page</li></ol> | Pass |
 
 
 ### CRUD Testing Focus (For methods please see Full Testing section above)
@@ -331,16 +344,18 @@ For each action taken in the application, corresponding changes should be observ
 <br>
 
 
-## BUGS
+## Known Bugs and Fixes
 
 ### Solved Bugs
 
-| BUG |  SOLUTION |
+| BUG | SOLUTION |
 |---|---|
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
+| The error message "collection object is not callable" ![mongo update error](./docs/mongo_update_error.png). This error occurred when trying to call the update method on a collection. | Corrected the syntax to 'mongo.db.to_do_items.update_one' (credit to my friend Adam White for letting me know this could be an issue). |
+| The error message "collection object is not callable" ![mongo remove error](./docs/mongodb_remove_error.png). This error occurred when trying to call the remove method on a collection. | Corrected the syntax to 'mongo.db.to_do_items.delete_one'. |
+| Alphabetical sorting prioritized capital letters. In MongoDB, when you perform a sort operation on a collection, the sort order by default is based on the ASCII values of the strings. Since uppercase letters have lower ASCII values than lowercase letters, they will appear first if you sort in ascending order. | I used lambda functions to determine the sorting behavior for to-do list items fetched from a MongoDB database. Lambda functions were used here as a key argument to the sort() method, allowing dynamic sorting based on different criteria. When sorting alphabetically with sort_order == "alpha", the lambda function `lambda x: x["to_do_item"].lower()` is used to ensure that the sorting is case-insensitive (credit to ChatGPT 4 for providing this solution). |
+| On small screens under Select Category, select arrows were visible ![mongo select default](./docs/select_default.png) | `select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }` was used in CSS to remove the default browser styling from select dropdowns (solution found on ChatGPT 4). |
+| Long item names push the buttons of the card ![long item name](./docs/select_default.png) | Reduced the max length of an item name to 60 characters. This is a quick, temporary solution. I'd like to try other methods e.g. CSS text truncation. |
+
+| REMAINING BUGS | ATTEMPTED SOLUTIONS |
+|---|---|
+| Card reveal on My List items overlaps sorting collapsible ![card reveal overlap](./docs/card_reveal_overlap.png) | I tried changing z-index for the card reveal and adding z-index: 0 to the body. This hasn't worked. I will try to write a JS function that will close the card reveal before the sorting collapsible can be expanded. |
