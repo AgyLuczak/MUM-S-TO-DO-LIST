@@ -39,7 +39,7 @@ The decision to omit certain testing methods, such as automated testing, securit
 I used W3C Validator to test all HTML pages. Initially, the validator showed a few unclosed or stray tags and a nesting issue with a paragraph under the `<h5>` tag on a landing page. The remaining errors are a result of using a Jinja template.
 
 
-| PAGE  | SCREENSHOTS  |
+| **PAGE**  | **SCREENSHOTS**  |
 |---|---|
 | Landing Page  | ![landing page validation](./docs/landing_page_validation.png)  |
 | Register  | ![registration page validation](./docs/registration_page_validation.png)   |
@@ -61,7 +61,7 @@ I used W3C Validator to test all HTML pages. Initially, the validator showed a f
 
 I used W3C CSS Validator for the CSS. Initial results showed errors around the 'progid' property. This one is a part of the code pasted from the gradient generator. After removing that property, the only error flagged by the validator is that the property 'font-display' does not exist. It is however a valid property, which either indicates that the validation tool is outdated or does not recognise this value in the particular context it's been used in.
 
-|  INITIAL RESULT | FINAL RESULT  |
+|  **INITIAL RESULT** | **FINAL RESULT**  |
 |---|---|
 |![css_validation_initial1.png](./docs/css_validation_initial1.png) ![css_validation_initial2.png](./docs/css_validation_initial2.png)  | ![css_validation_final.png](./docs/css_validation_final.png)  |
 
@@ -73,7 +73,7 @@ I used W3C CSS Validator for the CSS. Initial results showed errors around the '
 
 I have used the PEP8 CI Python Linter application to test my Python and Jinja syntax. The initial results showed a lot of white space and lines of code that were too long. After formatting the code, the validation still flagged some lines as too long. I decided to leave them in their original format as breaking them down could harm the clarity of the code.
 
-|  INITIAL RESULT | FINAL RESULT  |
+|  **INITIAL RESULT** | **FINAL RESULT**  |
 |---|---|
 |![python_validation_initial.png](./docs/python_validation_initial.png)  | ![python_validation_final.png](./docs/python_validation_final.png)  |
 
@@ -114,7 +114,7 @@ The website was responsive on all these devices.
 
 The initial results were showing lower results for accessibility (86)and SEO sections (84) This has been improved by adding aria labels and visually hidden class to all the buttons and meta description to the head element.
 
-|  PAGE | DESKTOP  | MOBILE  |
+|**PAGE** | **DESKTOP**  | **MOBILE**  |
 |---|---|---|
 |  Landing Page | ![lighthouse landing desktop](./docs/landing_desktop.png)  | ![lighthouse landing mobile](./docs/landing_mobile.png)   |
 | Register  | ![lighthouse register desktop](./docs/register_desktop.png)   | ![lighthouse register mobile](./docs/register_mobile.png)   |
@@ -139,9 +139,9 @@ The SEO results are still below 90. The remaining flagged issues are:
 
 ### WAVE (Web Accessibility Evaluation Tool)
 
-The initial results flagged up low contrast on cards. I made the colour of the cards slightly darker, increasing the contrast and thus improving accessibility
+I used WAVE to test the website's accessibility. The initial results flagged up low contrast on cards. I made the colour of the cards slightly darker, increasing the contrast and thus improving accessibility
 
-|  INITIAL RESULT | FINAL RESULT  |
+|  **INITIAL RESULT** | **FINAL RESULT**  |
 |---|---|
 |![wave initial](./docs/wave_initial.png)  | ![wave final.png](./docs/wave_final.png)  |
 
@@ -153,12 +153,12 @@ The initial results flagged up low contrast on cards. I made the colour of the c
 
 <br>
  
-| USER STORY  |  TESTING |
+| **USER STORY**  |  **TESTING** |
 |---          |---       |
 | As a first-time visitor, I want to easily understand the purpose of the app. |  <ul><li> App name clearly states what it is - a to-do list for mums</li> <li> Landing Page - provides users with a clear understanding of what the app offers</li></ul>|
 |As a first-time visitor, I want to be able to register and sign in to my profile. | <ul><li> Users need to register first to start creating their list in their accounts. The Registration Page provides a simple registration form with clearly labeled input fields.</li><li>Sign-In Page allows registered users access their accounts. Users are provided with a simple form with clear input fields for their username and password. After signing in, they are directed to their list.|</li></ul>
 |  As a first-time and returning visitor, I want to stay signed in to avoid frequent log-ins , but with a clear and accessible sign-out option for when I need to exit my profile securely.  | <ul><li> The user's username is stored in the session for 7 days.</li><li>Users can easily find a sign-out option on each page either in the navbar or in the footer.|</li>
-|  As a first-time and returning visitor, I want to navigate the app easily the app. I can access all the pages easily and go back to my list quickly.            | <ul><li> The navigation bar is provided at the top of the page. Users can navigate the app easily on different devices. </li><li> The footer offers additional navigation options, allowing to access the required pages</li><li>Both the navigation bar and the footer have clear links to the My List Page allowing the user to access it quickly</li>|
+|  As a first-time and returning visitor, I want to navigate the app easily the app. I can access all the pages easily and return to my list quickly.            | <ul><li> The navigation bar is provided at the top of the page. Users can navigate the app easily on different devices. </li><li> The footer offers additional navigation options, allowing to access the required pages</li><li>Both the navigation bar and the footer have clear links to the My List Page allowing the user to access it quickly</li>|
 | As a first-time and returning visitor, I want to be able to add, edit and delete tasks and categories.            |<li>CRUD(Create, Read, Update, Delete) operations have been implemented in the app</li><li>Users can easily find the right action buttons to add, edit, and delete tasks and categories</li>|
 | As a first-time and returning visitor, I want to be able to add details and due dates to my tasks.            |<li>When users add a new list item, they can use a date picker to set a due date for their task</li>  |
 | As a first-time and returning visitor, I want to be able to prioritize tasks.            |<li> Users can mark a list item as important using a switch in the form for creating new tasks. This will then display a star icon next to the tasks marked as important</li><li> Users can use one of the sorting options to display the important tasks first to prioritize them</li> |
@@ -175,9 +175,9 @@ The initial results flagged up low contrast on cards. I made the colour of the c
 I have performed full manual testing on these devices:
 
 - DELL Inspiron 16 laptop
-- DELL 
-- Iphone 
-- Samsung Galaxy
+- DELL Optiplex 2
+- Iphone 11
+- Samsung Galaxy A52 S
 
 The app has been tested on the following browsers:
 
@@ -187,7 +187,7 @@ The app has been tested on the following browsers:
 - Mozilla Firefox 
 
 
-| FEAUTURE | EXPECTED OUTCOME | TESTING PERFORMED | RESULT | PASS/ FAIL|
+| **FEAUTURE** | **EXPECTED OUTCOME** | **TESTING PERFORMED** | **RESULT** | **PASS/ FAIL**|
 | --- | --- | --- | --- | --- |
 | `Navbar` |
 |  |  |  |  |  |
@@ -306,10 +306,11 @@ The app has been tested on the following browsers:
 |   |   |   |   |   |
 | **Redirection link**| <ol><li>Redirects the user to the My List Page(if signed in)</li><li> Redirects the user to Sign In Page (if the user is not signed in)</li></ol> | <ol><li> Clicked link when signed it </li><li> Clicked the link when signed out </li></ol>| <ol><li> Redirected to My List Page </li><li> Redirected to Sign In Page</li></ol> | Pass |
 
+<br>
 
 ### CRUD Testing Focus (For methods please see Full Testing section above)
 
-|CRUD   | ACTION  |  RESULT |
+|**CRUD**   | **ACTION**  |  **RESULT** |
 |---|---|---|
 | **CREATE** |<li>**Adding New To-Do Items**: Users can add new to-do items through a form. Each item can include details such as the item name, category, importance, due date, and additional details</li><li>**Adding New Categories**: Users have the ability to create categories</li> | PASS  |
 | **READ**  | <li>**Displaying To-Do Items**: The application lists all to-do items created by the logged-in user. Users can view their tasks, along with relevant details such as category, importance, and due date</li><li>**Viewing Categories**: Users can view all categories, including those created by them and default categories provided by the application |  PASS |
@@ -328,7 +329,7 @@ Pre-requisites
 
 For each action taken in the application, corresponding changes should be observable in the MongoDB database. This manual testing process ensures that the application's backend functionality works as intended.
 
-| TESTING SCENARIO | ACTION | STEPS TO VERIFY |RESULT|
+| **TESTING SCENARIO** | **ACTION** | **STEPS TO VERIFY** |**RESULT**|
 |---------------|--------|---------------|------|
 | **User Creation** | CreateD a new user account using the application's registration form. | 1. Accessed the MongoDB database (using MongoDB Atlas).<br>2. NavigateD to the `users` collection.<br>3. Looked for a new document that matched the user account details I created, ensuring that the username and a hashed password were present. |PASS|
 | **To-Do Item Creation** | Created a new to-do list item through the application. | 1. Went to the `to_do_items` collection in MongoDB.<br>2. Searched for a new document corresponding to the item I added, checking for details like the item's name and any flags such as `is_important`. |PASS|
@@ -348,7 +349,7 @@ For each action taken in the application, corresponding changes should be observ
 
 ### Solved Bugs
 
-| BUG | SOLUTION |
+| **BUG** | **SOLUTION** |
 |---|---|
 | The error message "collection object is not callable" ![mongo update error](./docs/mongo_update_error.png). This error occurred when trying to call the update method on a collection. | Corrected the syntax to 'mongo.db.to_do_items.update_one' (credit to my friend Adam White for letting me know this could be an issue). |
 | The error message "collection object is not callable" ![mongo remove error](./docs/mongodb_remove_error.png). This error occurred when trying to call the remove method on a collection. | Corrected the syntax to 'mongo.db.to_do_items.delete_one'. |
@@ -356,6 +357,22 @@ For each action taken in the application, corresponding changes should be observ
 | On small screens under Select Category, select arrows were visible ![mongo select default](./docs/select_default.png) | `select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }` was used in CSS to remove the default browser styling from select dropdowns (solution found on ChatGPT 4). |
 | Long item names push the buttons of the card ![long item name](./docs/select_default.png) | Reduced the max length of an item name to 60 characters. This is a quick, temporary solution. I'd like to try other methods e.g. CSS text truncation. |
 
-| REMAINING BUGS | ATTEMPTED SOLUTIONS |
+| **REMAINING BUGS** | **ATTEMPTED SOLUTIONS** |
 |---|---|
 | Card reveal on My List items overlaps sorting collapsible ![card reveal overlap](./docs/card_reveal_overlap.png) | I tried changing z-index for the card reveal and adding z-index: 0 to the body. This hasn't worked. I will try to write a JS function that will close the card reveal before the sorting collapsible can be expanded. |
+
+<br>
+
+
+### Other issues noticed in full manual testing
+
+These issues do not affect the functionality of the app but would improve user experience.
+
+| **ISSUE**  |  **COMMENT** |
+|---|---|
+| No feedback given to the user if there are no changes made while editing to-do items or categories  |If the user doesn't make any changes and presses the save button the flash message 'Updated' appears. Changing the message to 'You haven't made any changes' would provide more accurate feedback to the users   |
+| Users can enter the same to-do items and categories more than once  | Providing  feedback messages 'This item is already on your list' and 'This category already exists' would prevent unnecessary repetition  |
+| No confirmation dialogs for the admin addressing the consequence of deletion a category for all users  | Admin should be informed that deleting a category will remove it from other users' accounts |
+| No bulk delete action for categories  | This should be added to make removal of unwanted categories quicker  |
+
+Go back to the [README.md](README.md) file
