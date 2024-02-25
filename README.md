@@ -3,13 +3,59 @@
 
 # **MUM'S TO-DO-LIST - 3rd milestone project**
 
+<br>
+
+## Table of contents
+
+- [Introduction](#overview)
+- [UX](#ux)
+  - [Strategy Plane](#strategy-plane)
+  - [Scope Plane](#scope-plane)
+  - [Structure Plane](#structure-plane)
+  - [Surface Plane](#surface-plane)
+  - [Skeleton Plane](#skeleton-plane)
+  - [Features](#features)
+      - [Navigation Bar](#navigation-bar)
+      - [Footer](#footer)
+      - [Favicon](#favicon)
+      - [Background image](#background-image)
+      - [Landing Page](#landing-page)
+      - [Registration Page](#registration-page)
+      - [Sign In Page](#sign-in-page)
+      - [CRUD funcionality](#crud-functionality)
+      - [My List Page](#my-list-page)
+      - [Add New Item Page](#add-new-item-page)
+      - [Edit Item Page](#edit-item-page)
+      - [Categories Page](#categories-page)
+      - [Add Category Page](#add-category-page)
+      - [Edit Category Page](#edit-category-page)
+      - [Search Box](#search-box)
+      - [Flash Messages](#flash-messages)
+      - [Confirmation dialogs](#add-category-page)
+      - [Admin account](#admin-account)
+      - [Sign-Out Funcionality](#sign-out-functionality)
+      - [404 and 500 Pages](#404-and-500-pages)
+  - [Features to be incorporated in the future](#feautures-to-be-incorporated-in-the-future)
+- [Defensive Mechanism](#defensive-mechanism)
+- [Tools & technologies used](#tools-and-technologies-used)
+- [Database Design](#data-and-design)
+- [Testing](#testing)
+- [Deployment](#deployment)
+  - [MongoDB](#MongoDB)
+  - [Heroku](#heroku)
+  - [Local Deployment](#local-deployment) 
+- [Credits](#credits)
+  - [Code](#code)
+  - [Content](#content)
+- [Acknowledgements](#acknowledgements)
+
+
 
 ## **Introduction**
 
 <br>
 
-Welcome to my third milestone project: Mum's To-Do List, This is a comprehensive Flask application for managing to-do items and categories aimed at busy mums. The application uses MongoDB as its database and includes a variety of features such as user authentication, adding, editing, and deleting to-do items and categories, as well as sorting and searching functionalities.
-
+Welcome to my third milestone project: Mum's To-Do List, an application for managing to-do items and categories aimed at busy mums. It  is a user-friendly and efficient organisation tool developed using Flask, a Python web framework, and MongoDB for data storage. It features user authentication, enabling personalized task lists, and supports comprehensive task management capabilities, including adding, editing, prioritizing, and deleting tasks. The app offers dynamic sorting and searching, category management, and employs JavaScript for interactive user interface elements, enhancing the overall user experience. The To-Do List application also incorporates Materialize CSS, a modern responsive front-end framework based on Material Design principles, which significantly enhances the visual aesthetics and usability of the app, ensuring a smooth and engaging user experience across different devices and screen sizes.
 
 [Visit the website here](https://mums-to-do-list-64ef2a4f0d01.herokuapp.com/)
 
@@ -181,12 +227,24 @@ Each option is a link that modifies the display of the to-do list according to t
 
 Additional icons provide quick access to common tasks: adding new to-do items, managing categories, and signing out. Each action is represented by a distinct icon and is accompanied by visually hidden text for accessibility, ensuring users can navigate the app efficiently.
 
+<br>
+
 
 - **Favicon**
 
 ![favicon](./static/images/favicon-32x32.png)
 
 The favicon features a stylized check mark centered within a vibrant pink circle. I chose the check mark as it fits in the purpose of the app. The colour choice aligns with the app's branding.
+
+<br>
+
+- **Background image**
+
+ The image contains a series of icons that depict different activities or roles, such as taking care of a child, cooking, shopping, and even superhero motifs, which reflect the multi-faceted role of a mother. A lighter opacity has been added to this image to create a pleasant backdrop without distracting from the app's content.
+
+ ![background imagr](./docs/mum_icons_faded1.png)
+
+ <br>
 
 
 - **Landing Page**
@@ -198,15 +256,10 @@ The image shows a mum portrayed as a superhero holding a to-do-list. It recogniz
 
 ![welcome-small](./docs/landing_page_sm.png)
 
- 'Get Started' button encourage users to sign up and try the app.
+ 'Get Started' button encourages users to sign up and try the app.
 
 </br>
 
-- **Background image**
-
- The image contains a series of icons that depict different activities or roles, such as taking care of a child, cooking, shopping, and even superhero motifs, which reflect the multi-faceted role of a mother. A lighter opacity has been added to this image to create a pleasant backdrop without distracting from the app's content.
-
- ![background imagr](./docs/mum_icons_faded1.png)
 
 - **Registration Page**
 
