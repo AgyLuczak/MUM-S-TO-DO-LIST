@@ -614,7 +614,7 @@ I used a non-relational MongoDB database. The name of the database is **mums_to_
 
 # Testing
 
-Please go to [TESTING.md](TESTING.md) file to see the tesing section.
+Please go to [TESTING.md](TESTING.md) file to see the testing section.
 
 
 <br>
