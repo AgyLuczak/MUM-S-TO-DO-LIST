@@ -1,3 +1,4 @@
+// Initializing various Materialize components when the document is ready
 $(document).ready(function () {
     $(".sidenav").sidenav({ edge: "right" });
     $('select').formSelect();
@@ -13,11 +14,13 @@ $(document).ready(function () {
     });
 });
 
+
+//Footer collapsible
 $(document).ready(function () {
     $('#filter-icon').click(function () {
         $('#showCollapsible').toggle();
     });
-
+    // Sorting
     $('#alpha-order-items').click(function (event) {
         event.preventDefault();
         window.location.href = '/get_to_do_items?sort=alpha';
@@ -45,8 +48,7 @@ $(document).ready(function () {
 });
 
 
-
-
+//credit to Tim Nelson (Code Institute)
 $(document).ready(function () {
     validateMaterializeSelect();
 });
@@ -80,9 +82,7 @@ function validateMaterializeSelect() {
     });
 }
 
-
-
-
+//Confirmation dialogs for deleting items or categories
 
 function confirmDeleteItem() {
     return confirm('Are you sure you want to delete this item?');
@@ -96,7 +96,7 @@ function confirmDeleteCategory() {
     return confirm('Are you sure you want to delete this category?');
 }
 
-
+// Visibility of the search container
 function toggleSearch() {
     const searchContainer = document.getElementById("search-container");
     searchContainer.classList.toggle("show");

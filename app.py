@@ -125,7 +125,7 @@ def get_to_do_items():
     )
 
 
-# search
+# search (credit to Tim Nelson from Code Institute)
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")

@@ -1,6 +1,7 @@
+/* Imorting Google Fonts for use throughout the website*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oxygen:wght@400;700&family=Shantell+Sans:wght@700&family=Signika:wght@300;400;500;600;700&display=swap');
 
-
+/* Styling for the body element*/
 body {
     overflow-x: hidden;
     display: flex;
@@ -18,6 +19,7 @@ body {
 
 }
 
+/* Styling for visually hidden elements*/
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -30,17 +32,20 @@ body {
     border: 0;
 }
 
+/* Ensuring the main content takes up minimum full viewport height*/
 .main-content {
     min-height: 100vh;
     padding-bottom: 100px;
 
 }
 
+/*column styling for responsiveness and alignmnent*/
 .col s12 m6 {
     flex-direction: column;
     align-items: center;
 }
 
+/*Styling for the logo image*/
 .logo img {
     max-height: 50vh;
     border-radius: 60%;
@@ -48,14 +53,18 @@ body {
     height: auto;
 }
 
+/*Large welcome message display settings */
 .welcome-message-large {
     display: block;
 }
 
+/* Small welcome message display settings */
 .welcome-message-small {
     display: none;
 }
 
+
+/* Application name styling*/
 .app-name {
     font-family: "Dancing Script", sans-serif;
     font-weight: 600;
@@ -63,6 +72,8 @@ body {
 
 }
 
+
+/* Styling for the brand logo inside the navigation*/
 nav .brand-logo {
     font-family: "Dancing Script", sans-serif;
     font-weight: 700;
@@ -70,6 +81,7 @@ nav .brand-logo {
     padding-left: 20px;
 }
 
+/* Menu item hover effect*/
 .menu-item:hover {
 
     background-color: #c784a9;
@@ -81,11 +93,13 @@ nav .brand-logo {
 
 }
 
+/* Active menu item styling*/
 .menu-item.active {
     background-color: #ab47bc;
     border-radius: 10px;
 }
 
+/* Side navigation styling with gradient background*/
 .sidenav {
     background: hsla(311, 74%, 87%, 1);
     background: linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
@@ -95,11 +109,13 @@ nav .brand-logo {
 
 }
 
+/* Styling for valid password input fields*/
 input.valid[type=password]:not(.browser-default) {
     border-bottom: 1px solid purple;
     box-shadow: 0 1px 0 0 purple;
 }
 
+/* Label colour change on input focus*/
 input.valid[type=password]:not(.browser-default):focus {
     border-bottom: 1px solid crimson;
     box-shadow: 0 1px 0 0 crimson;
@@ -110,6 +126,7 @@ input.valid[type=password]:not(.browser-default):focus+label {
 
 }
 
+/* Query input styling*/
 .query-input {
     border-radius: 15px;
     width: 80%;
@@ -123,6 +140,7 @@ input.valid[type=password]:not(.browser-default):focus+label {
 
 }
 
+/* Heading styling*/
 .heading-section {
     padding-top: 30px;
 }
@@ -140,6 +158,8 @@ input.valid[type=password]:not(.browser-default):focus+label {
 
 }
 
+
+/* Card styling*/
 .card {
     -webkit-box-shadow: 10px 15px 12px -3px #691E76;
     box-shadow: 10px 15px 12px -3px #691E76;
@@ -175,7 +195,7 @@ input.valid[type=password]:not(.browser-default):focus+label {
 }
 
 
-
+/* Add to-do container styling*/
 .container-add-todo {
     max-width: 70%;
     margin: 0 auto;
@@ -185,6 +205,7 @@ input.valid[type=password]:not(.browser-default):focus+label {
     background: -webkit-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
 }
 
+/* Prefix styling*/
 .prefix {
     color: purple;
 }
@@ -193,11 +214,13 @@ input.valid[type=password]:not(.browser-default):focus+label {
     color: rgb(220, 20, 110) !important;
 }
 
+/*Dropdown content styling*/
 .dropdown-content li>span {
 
     color: rgb(220, 20, 110);
 }
 
+/*validate input styling*/
 input[type="text"].validate,
 textarea.validate {
     border-bottom: 1px solid purple;
@@ -230,7 +253,7 @@ input.valid[type=text]:not(.browser-default) {
     box-shadow: 0 1px 0 0 crimson;
 }
 
-
+/* datepicker styling*/
 .datepicker-date-display {
     background-color: purple;
 }
@@ -249,24 +272,24 @@ input.valid[type=text]:not(.browser-default) {
     color: rgb(220, 20, 110);
 }
 
-
+/* Switch styling when checked*/
 .switch label input[type=checkbox]:checked+.lever:after {
     background-color: rgb(220, 20, 110);
 }
 
-
+/* Lever background colour change when switch is checked*/
 .switch label input[type=checkbox]:checked+.lever {
     background-color: #c784a9;
 }
 
 
-
+/* Flash messages styling*/
 .flashes h4 {
     line-height: 2;
 
 }
 
-
+/* Dropdown and buttons font-family*/
 
 .select-dropdown {
     font-family: "Shantell Sans";
@@ -282,6 +305,7 @@ input.valid[type=text]:not(.browser-default) {
     border-radius: 15px;
 }
 
+/* Buttons hover effects*/
 .buttons:hover,
 .btn-small:hover,
 #search-btn:hover {
@@ -306,26 +330,28 @@ input.valid[type=text]:not(.browser-default) {
 }
 
 
-
+/* Crossed-out styling for completed tasks*/
 .crossed-out {
     text-decoration: line-through;
     opacity: 0.6;
 }
 
 
-
+/* Footer Styling*/
 .page-footer {
     position: fixed;
     bottom: 0px;
     width: 100%;
 }
 
+/* Footer icons*/
 .footer-icons {
     display: flex;
     justify-content: space-evenly;
     position: relative;
 }
 
+/* Collapsible styling*/
 .collapsible {
     z-index: 1000;
 
@@ -357,6 +383,8 @@ input.valid[type=text]:not(.browser-default) {
     z-index: 1;
 }
 
+
+/* Search box styling*/
 .search-section {
     padding-top: 10px;
     padding-right: 10px;
@@ -380,6 +408,7 @@ input.valid[type=text]:not(.browser-default) {
     font-weight: bold;
 }
 
+/* Media queries*/
 @media only screen and (min-width: 992px) {
 
     nav .brand-logo {
@@ -470,6 +499,7 @@ input.valid[type=text]:not(.browser-default) {
         flex-direction: column;
     }
 
+    /*solution fond on Chat GPT4*/
     select {
         -webkit-appearance: none;
         -moz-appearance: none;
