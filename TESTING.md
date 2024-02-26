@@ -24,7 +24,7 @@ A key focus of our testing methodology was to cover various aspects of the appli
     - [CRUD Testing Focus](#crud-testing-focus)
     - [Datbase Testing](#database-testing)
 - [Known Bugs and Fixes](#known-bugs-and-fixes)
-- [Other issues noticed in full manual testing](#other-issues)
+- [Other issues noticed in full manual testing](#other-issues-notice-in-full-manual-testing)
 
 <br>
 
@@ -56,7 +56,9 @@ The decision to omit certain testing methods, such as automated testing, securit
 <br>
 
 
-### Code Validation
+## Code Validation
+
+### HTML
 
 - [W3C Markup Validator](https://validator.w3.org/)
 
@@ -113,7 +115,7 @@ I have used the JS Hint validator for the Java Script syntax. The results showed
 
 <br>
 
-### RESPONSIVENESS
+### Responsiveness
 
 **I used Chrome Developer tools to simulate the following devices:**
 - iphone SE
@@ -136,7 +138,7 @@ The website was responsive on all these devices.
 
 ### Lighthouse
 
-The initial results were showing lower results for accessibility (86)and SEO sections (84) This has been improved by adding aria labels and visually hidden class to all the buttons and meta description to the head element.
+The initial results were showing lower results for accessibility (86) and SEO sections (84). This has been improved by adding aria labels and visually hidden class to all the buttons and meta description to the head element.
 
 |**PAGE** | **DESKTOP**  | **MOBILE**  |
 |---|---|---|
@@ -223,9 +225,9 @@ The app has been tested on the following browsers:
 | **Sign Out Link** (Logged in users only) | When clicked the user is signed out and is redirected to Sign In Page. On top of the Page the user sees a flash message 'You have been signed out' | Clicked the link | Got signed out and redirected to the Sign In Page. 'You've been signed out' message appeared| PASS |
 | `Sign in Page` |
 |  |  |  |  |  |
-| **Username input** | The username should be between 3-15 characters  | Entered username less than 3 characters long | tooltip lets the user know they have not matched the requested format | PASS | |
+| **Username input** | The username should be between 3-15 characters  | Entered username less than 3 characters long | Tooltip lets the user know they have not matched the requested format | PASS | |
 | **Username input - empty** | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required | PASS |
-| **Password input** | The password should be between 3-15 characters  | Entered password less than 3 characters long | tooltip lets the user know they have not matched the requested format | PASS | |
+| **Password input** | The password should be between 3-15 characters  | Entered password less than 3 characters long | Tooltip lets the user know they have not matched the requested format | PASS | |
 | **Password input empty**| This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required |  PASS |
 | **Sign In button** | Saves the user to session and redirects to the My List Page with a user's name in the heading of a list.  | Submitted form | Redirected to the My List Page and my name shows in the list's heading | PASS |
 | **Incorrect username or password used** | A flash message should display saying username/password incorrect - this is defensive programming - not letting user know which input is incorrect | Incorrect username/password entered |A message flashed to let the user know they have entered an incorrect username/password | PASS |
@@ -233,7 +235,7 @@ The app has been tested on the following browsers:
 | **Register Link** | When clicked the user will be redirected to the Register Page. | Clicked the link | Redirected to the Register Page. | PASS |
 | `Register Page` |
 |  |  |  |  |  |
-| **Username input** | The username should be between 3-15 characters  | Entered username less than 3 characters long | tooltip lets the user know they have not matched the requested format | PASS |
+| **Username input** | The username should be between 3-15 characters  | Entered username less than 3 characters long | Tooltip lets the user know they have not matched the requested format | PASS |
 | **Username input - empty** | The username is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | PASS |
 | **Username input** | If username already exists, message should flash to user | Entered an existing username | Message flashed to say username already exists | PASS|
 | **Password input** | This field should be between 3-15 characters long | Entered password less than 3 characters long | Tooltip tells the user to match the requested format | PASS |
@@ -255,7 +257,7 @@ The app has been tested on the following browsers:
 | **Delete all checked items button**-no items checked| If the user clicks the delete all checked buttons without having marked any items, first a confirmation dialog will appear asking the user if they are sure they want to delete all the checked items. If the user clicks 'OK' a flash message 'You haven't checked any items' should appear | Clicked the button without having marked any times| Confirmation dialog appeared, clicked ok, flash message: 'You haven't checked any items' appeared | PASS |
 | `Footer` |
 |  |  |  |  |  |
-|  **Filter button**| When clicked the user should see a collapsible head with 'sort by' header. Upon clicking on it, the full collapsible should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically, by category or importance | Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The items were sorted accordingly. |PASS  |
+|  **Filter button**| When clicked the user should see a collapsible with 'sort by' header. Upon clicking on it, the full collapsible should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically, by category or importance | Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The items were sorted accordingly. |PASS  |
 | **'+' button** | When clicked the user will be redirected to the Add New Item Page. | Clicked the button | Redirected to the Add New Item Page. | PASS |
 | **Folder button**| When clicked the user will be redirected to the Categories Page | Clicked the button | Redirected to the Categories Page | PASS |
 | **Sign Out button**| When clicked the user will be signed out and redirected to Sign In Page. The flash message 'You've been signed out' should appear | Clicked the button | Redirected to the Sign In Page. 'You've been signed out' message appeared | PASS |
@@ -267,7 +269,7 @@ The app has been tested on the following browsers:
 | **New List Item Input Field** - input not valid | If the input is not at least 3 characters long, the user will be prompted by a tooltip to use more characters when trying to save the form |Used only 2 characters in a new item input| Tooltip said to lengthen the text to at least 3 characters when I was trying to save the changes |PASS |
 | **New List Item Input Field** - no input | If the field is left blank, the user will be prompted by a tooltip to fill in the required field when trying to save the form |Left the field blank| Tooltip said to fill in the field when I was trying to save the changes |PASS  |
 |**Details input field** (optional) | This field is optional. If the user adds details when filling out the form, they will be added to the card reveal on My List Page. |Filled the details field| Details can be seen when the to-do item card is revealed|PASS |
-| **Details input field** - invalid input | This field is optional.If the user adds details when filling out thoptional they will be added to the card optional My List Page.|Used only 2 characters in a new item input| Tooltip said to fill in the field when I was trying to save the changes |PASS |
+| **Details input field** - invalid input | This field is optional. If the user adds details when filling out the form they will be added to the card reveal on My List Page.|Used only 2 characters in a new item input| Tooltip said to fill in the field when I was trying to save the changes |PASS |
 | **Details input field** - no input | This field is optional so the user should be able to save the changes without filling it|Left the field blank| Added New Item without details|PASS  |
 | **Date picker** (optional) | Once user selects a due date and saves the changes, the due date will appear on a list item card reveal. When the list item is clicked the date should be seen|Picked up the date and saved changes| Due date can be seen when clicked on the list item|PASS |
 | **Date picker** - date not selected | This field is optional so the user should be able to save the changes without filling it|Didn't select the date| Added New Item without due date|PASS  |
@@ -275,14 +277,14 @@ The app has been tested on the following browsers:
 |**Cancel and Save buttons**| If the user clicks the cancel button, they will be redirected to My List Page without making any changes. After pressing the save button, the new item will be added to the list.|<ol><li> Clicked cancel button</li><li>Clicked save after filling in the form</li></ol> |<ol><li> Redirected to My List Page with no changes.</li><li> new item added to the list.</li></ol>|PASS  |
 | `Footer` |
 |  |  |  |  |  |
-|  **Filter button**| When clicked the user should see a 'sort by' collapsible head. Upon clicking on it the full collapsible should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically, by category or importance | Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The items were sorted accordingly. | PASS |
+|  **Filter button**| When clicked the user should see a 'sort by' collapsible header. Upon clicking on it the full collapsible should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will see their items sorted alphabetically, by category or importance | Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. The items were sorted accordingly. | PASS |
 | **List button** | When clicked the user will be redirected to the My List Page. | Clicked the button | Redirected to My List Page| PASS |
 | **Folder button**| When clicked the user will be redirected to the Categories Page | Clicked the button | Redirected to the Categories Page | PASS |
 | **Sign Out button**| When clicked the user will be signed out and redirected to Sign In Page. The flash message 'You've been signed out' should appear | Clicked the button | Redirected to the Categories Page | PASS |
 | `Edit Item Page` |
 |  |  |  |  |  |
 | **Select Category**  | Select a category from a dropdown. This should be pre-populated with categories provided and categories created by the user. This is a required field.  |Clicked on the dropdown. The dropdown was populated with categories    | Selected category  |PASS  |
-| **Select Category** - no category selected  | The form requires a category. When trying to save changes the user should be prompted with a tooltip to select a category.|Didn't select any category.|| Prompted by the tooltip to select a category when trying to save changes. |PASS  |
+| **Select Category** - no category selected  | The form requires a category. When trying to save changes the user should be prompted with a tooltip to select a category.|Didn't select any category.| Prompted by the tooltip to select a category when trying to save changes. |PASS  |
 | **Edit List Item Input Field**  | This is a required field. The new list item should have at least 3 characters. After putting the valid item name and pressing the save button the item will show on the list. The user will be redirected to My List Page and the flash message 'Updated' should appear. |Added New Item to the list. Directed to the My List Page. The right flash message appeared | Added New Item |PASS |
 | **Edit List Item input field** - input not valid | If the input is not at least 3 characters long, the user will be prompted by a tooltip to use more characters when trying to save the form |Used only 2 characters in a new item input| Tooltip said to lengthen the text to at least 3 characters when I was trying to save the changes |PASS  |
 |**Edit Item input field** - no input | If the field is left blank, the user will be prompted by a tooltip to fill in the required field when trying to save the form |Left the field blank| Tooltip said to fill in the field when I was trying to save the changes |PASS|
@@ -293,14 +295,14 @@ The app has been tested on the following browsers:
 | **Date picker** (optional) | Once user selects a due date and saves the changes, the due date will appear on a list item card reveal. When the list item is clicked the date should be seen|Picked up the date and saved changes| Due date can be seen when clicked on the list item|PASS  |
 | **Date picker** - date not selected | This field is optional so the user should be able to save the changes without filling it|Didn't select the date| Added New Item without due date|PASS |
 | **Important switch** | When the user clicks on the switch next to "Is Important" a list item will get a star icon next to it| Clicked on the switch. |The added item was starred. |PASS  |
-|**Cancel and Save buttons**| If the user clicks the cancel button, they will be redirected to My List Page without making any changes. After pressing the save button, the item will be updated to the list.| Clicked cancel button | redirected to My List Page with no changes. Clicked save after filling in the form - new changes added to the list.|PASS  |
+|**Cancel and Save buttons**| If the user clicks the cancel button, they will be redirected to My List Page without making any changes. After pressing the save button, the item will be updated to the list.| Clicked cancel button | Redirected to My List Page with no changes. Clicked save after filling in the form - new changes added to the list.|PASS  |
 | `Footer` |
-| The same features as in Add Item Page | follow the same steps for testing | Followed the same steps | All functionality worked | PASS |
+| The same features as in Add Item Page | Follow the same steps for testing | Followed the same steps | All functionality worked | PASS |
 | `Categories` |
 |   |   |   |   |  |
-| **Add '+' button** in the heading | When the user clicks this button they should be taken to the Add Category Page| Clicked button | Redirected to the Category Page | PASS |
+| **Add '+' button** in the heading | When the user clicks this button they should be taken to the Add Category Page| Clicked button | Redirected to the Add Category Page | PASS |
 | **Categories cards** | When the user goes or is redirected to Categories page, they should see at least 4 categories that are provided and any categories they have created.| Clicked the Categories Page in the navbar | Saw 4 provided categories and the ones I've created | PASS |
-| **Edit button on the category card** (only available for categories created by an individual user)| When the user clicks the edit button they should be directed to the Edit Category Page | Clicked the edit button | Redirected to Categories Page | PASS |
+| **Edit button on the category card** (only available for categories created by an individual user)| When the user clicks the edit button they should be directed to the Edit Category Page | Clicked the edit button | Redirected to Edit Category Page | PASS |
 | **Edit button on the category card** - ADMIN ACCOUNT| The admin should see edit buttons on all categories cards. When the admin clicks the edit button they should be directed to the Edit Category Page | Edit buttons were available on all category cards. Clicked the edit button | Redirected to Edit Category Page | PASS |
 | **Delete button on the category card** (only available for categories created by an individual user)| When the user clicks the delete button a confirmation dialog should appear asking the user if they want to delete the category with options to confirm and cancel. If confirmed the item should be removed from the list and a flash message:'Category Successfully Deleted' should appear | Clicked the delete button | The confirmation dialog appeared. After clicking ok to confirm, the category was removed from the list and the right flash message appeared | PASS |
 | **Delete button on the category card** - ADMIN ACCOUNT| The admin should see edit buttons on all category cards|When the admin clicks the delete button a confirmation dialog should appear asking the user if they want to delete the category with options to confirm and cancel. If confirmed the category should be removed from the list and a flash message:'Category Successfully Deleted' should appear. The deleted category should no longer be available to the rest of the users | Clicked the delete button | The confirmation dialog appeared. After clicking ok to confirm, the category was removed from the list and the right flash message appeared. The deleted catgory longer displayed to the users | PASS |
@@ -316,7 +318,7 @@ The app has been tested on the following browsers:
 | **New Category**- no input | If the field is left blank, the user will be prompted by a tooltip to fill in the required field when trying to save the form |Left the field blank| Tooltip said to fill in the field when I was trying to save the changes |PASS  |
 | `Footer` |
 |  |  |  |  |  |
-|  **Filter button**| When clicked the user should see a collapsible head with a 'sort by' heading. Upon clicking on it the full collapsible should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will be redirected to My Categories Page and see their items sorted alphabetically,  or 'created by me first'| Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them.Redirected to My Categories Page. The categories were sorted accordingly. | PASS  |
+|  **Filter button**| When clicked the user should see a collapsible head with a 'sort by' heading. Upon clicking on it the full collapsible should display with all sorting options on it. They should be all clickable and depending on which one is clicked the user will be redirected to My Categories Page and see their items sorted alphabetically,  or 'created by me first'| Clicked the button. Clicked the button again to see all sorting options. Tried clicking them one by one. | Saw the sorting options and was able to click on them. Redirected to My Categories Page. The categories were sorted accordingly. | PASS  |
 | **List button** | When clicked the user will be redirected to the My List Page. | Clicked the button | Redirected to My List Page| PASS|
 | **Folder button**| When clicked the user will be redirected to the Categories Page | Clicked the button | Redirected to the Categories Page | PASS |
 | **Sign Out button**| When clicked the user will be signed out and redirected to the Sign In Page. The flash message 'You've been signed out' should appear | Clicked the button | Redirected to the Categories Page | PASS |
@@ -328,7 +330,7 @@ The app has been tested on the following browsers:
 | **The same features as in Add Category Page** | follow the same steps for testing | Followed the same steps | All functionality worked | PASS |
 | `404 Page` |
 |   |   |   |   |   |
-| **Redirection link**| <ol><li>Redirects the user to the My List Page(if signed in)</li><li> Redirects the user to Sign In Page (if the user is not signed in)</li></ol> | <ol><li> Clicked link when signed it </li><li> Clicked the link when signed out </li></ol>| <ol><li> Redirected to My List Page </li><li> Redirected to Sign In Page</li></ol> | Pass |
+| **Redirection link**| <ol><li>Redirects the user to the My List Page(if signed in)</li><li> Redirects the user to Sign In Page (if the user is not signed in)</li></ol> | <ol><li> Clicked link when signed it </li><li> Clicked the link when signed out </li></ol>| <ol><li> Redirected to My List Page </li><li> Redirected to Sign In Page</li></ol> | PASS |
 
 <br>
 
@@ -375,11 +377,11 @@ For each action taken in the application, corresponding changes should be observ
 
 | **BUG** | **SOLUTION** |
 |---|---|
-| The error message "collection object is not callable" ![mongo update error](./docs/mongo_update_error.png). This error occurred when trying to call the update method on a collection. | Corrected the syntax to 'mongo.db.to_do_items.update_one' (credit to my friend Adam White for letting me know this could be an issue). |
-| The error message "collection object is not callable" ![mongo remove error](./docs/mongodb_remove_error.png). This error occurred when trying to call the remove method on a collection. | Corrected the syntax to 'mongo.db.to_do_items.delete_one'. |
+| The error message "collection object is not callable" ![mongo update error](./docs/mongo_update_error.png) This error occurred when trying to call the update method on a collection. | Corrected the syntax to 'mongo.db.to_do_items.update_one' (credit to my friend Adam White for letting me know this could be an issue). |
+| The error message "collection object is not callable" ![mongo remove error](./docs/mongodb_remove_error.png) This error occurred when trying to call the remove method on a collection. | Corrected the syntax to 'mongo.db.to_do_items.delete_one'. |
 | Alphabetical sorting prioritized capital letters. In MongoDB, when you perform a sort operation on a collection, the sort order by default is based on the ASCII values of the strings. Since uppercase letters have lower ASCII values than lowercase letters, they will appear first if you sort in ascending order. | I used lambda functions to determine the sorting behavior for to-do list items fetched from a MongoDB database. Lambda functions were used here as a key argument to the sort() method, allowing dynamic sorting based on different criteria. When sorting alphabetically with sort_order == "alpha", the lambda function `lambda x: x["to_do_item"].lower()` is used to ensure that the sorting is case-insensitive (credit to ChatGPT 4 for providing this solution). |
-| On small screens under Select Category, select arrows were visible ![mongo select default](./docs/select_default.png) | `select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }` was used in CSS to remove the default browser styling from select dropdowns (solution found on ChatGPT 4). |
-| Long item names push the buttons of the card ![long item name](./docs/select_default.png) | Reduced the max length of an item name to 60 characters. This is a quick, temporary solution. I'd like to try other methods e.g. CSS text truncation. |
+| On small screens under Select Category, select arrows were visible (thanks Adam White for spotting this) ![mongo select default](./docs/select_default.png) | `select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }` was used in CSS to remove the default browser styling from select dropdowns (solution found on ChatGPT 4). |
+| Long item names push the buttons of the card ![long item name](./docs/long_item_name.png) | Reduced the max length of an item name to 60 characters. This is a quick, temporary solution. I'd like to try other methods e.g. CSS text truncation. |
 
 | **REMAINING BUGS** | **ATTEMPTED SOLUTIONS** |
 |---|---|
@@ -398,5 +400,7 @@ These issues do not affect the functionality of the app but would improve user e
 | Users can enter the same to-do items and categories more than once  | Providing  feedback messages 'This item is already on your list' and 'This category already exists' would prevent unnecessary repetition  |
 | No confirmation dialogs for the admin addressing the consequence of deletion a category for all users  | Admin should be informed that deleting a category will remove it from other users' accounts |
 | No bulk delete action for categories  | This should be added to make removal of unwanted categories quicker  |
+
+<br>
 
 Go back to the [README.md](README.md) file

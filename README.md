@@ -73,11 +73,11 @@ Welcome to my third milestone project: Mum's To-Do List, an application for mana
 **The business goals for the website:**
 
 1. To offer an easy and intuitive way for users to manage their daily tasks in a more organised and efficient manner.
-2. To enhance user productivity by allowing users categorise to-do items, sort items and categories and set priorities.
-3. Offer personalization and flexibility by allowing the users set their own categories.
-4. Provide feedback to the users in a form of flash messages making the app more user friendly.
-5. Encourage regural use by ensuring the app is easy and convenient to use.
-6. Provide seamless cross-device experience by ensuring the website is responive and accessible on different devices.
+2. To enhance user productivity by allowing users to categorise to-do items, sort items, and categories, and set priorities.
+3. Offer personalization and flexibility by allowing the users to create their own categories.
+4. Provide feedback to the users in the form of flash messages making the app more user-friendly.
+5. Encourage regular use by ensuring the app is easy and convenient to use.
+6. Provide seamless cross-device experience by ensuring the website is responsive and accessible on different devices.
 
 <br>
 
@@ -87,7 +87,7 @@ Welcome to my third milestone project: Mum's To-Do List, an application for mana
 2. As a first-time visitor, I want to be able to register and sign in into my own profile.
 3. As a first-time and returning visitor, I want to stay signed-in to avoid frequent log-ins , but with a clear and accessible sign-out option for when I need to securely exit my profile.
 4. As a first-time and returning visitor, I want to be able to easily navigate the app. I can access all the pages easily and go back to the my list quickly. 
-5. As a first-time and returning visitor, I want to be able to add,edit and delete tasks and categories.
+5. As a first-time and returning visitor, I want to be able to add, edit and delete tasks and categories.
 6. As a first-time and returning visitor, I want to be able to add details and due date to my tasks.
 7. As a first-time and returning visitor, I want to be able to be able to prioritise tasks.
 8. As a first-time and returning visitor, I want to be able to cross-out list items that are done and remove them from the list.
@@ -105,19 +105,19 @@ Welcome to my third milestone project: Mum's To-Do List, an application for mana
 
 In order to achieve the strategy goals, the following features are included on the website:
 
-- A  landing page with a welcome message at the top of the Home Page stating clearly stating the purpose of the app.
-- A register and sign in page. Once users are signed it they are directed to their to-do list.
-- A user stays signed it for 7 days to avoid frequent log-ins. There is a sign-out option which is easily accessible on each page.
+- A  landing page with a welcome message clearly stating the purpose of the app.
+- A register and sign-in page. Once users are signed it they are directed to their to-do list.
+- A user stays signed in for 7 days to avoid frequent log-ins. There is a sign-out option which is easily accessible on each page.
 - Navbar and footer links to navigate easily between the pages. 
 - Adding, editing, and deleting options for to-do items and categories. Items on the list can be crossed out when done.
 - Option to add details and the due date for each task
-- An option to mark list items as important to allow prioritarization
+- An option to mark list items as important to allow prioritization
 - Sorting options both for to-do items and categories.
-- Materialise.css classes and media queries were used to ensure responiveness on different devices
-- Flash messages informing the user items and categories were successfully added, edited or deleted. Also users see a message when an item is crossed out as done.
+- Materialise.css classes and media queries were used to ensure responsiveness on different devices
+- Flash messages informing the user items and categories were successfully added, edited, or deleted. Also users see a message when an item is marked as done.
 - 404 and 500 pages with an option to go back to the list if there is an unexpected error.
 - Search Box for searching items and categories.
-- Administrator account with where categories can be added or deleted.
+- Administrator account where categories can be added or deleted.
 
 <br>
 
@@ -138,7 +138,7 @@ The website consists of nine pages:
 
 
 The navbar recurring on each page allows users to easily move between the pages. Once signed in the user has access to the links in the footer to additionally help navigate the site. 
-I used a  favicon with a check icon in the address bar for every page to make it clear to users that they are still on the same website.  I used the same background image and consisten use of colours for different sections on each page to create a certain design pattern for the website. The Landing Page contains a short welcome message, a hero image and button links to Sign In Page. If a user is not registered yet, they will see a link to the registration page. After signing in, users are directed to My List Page where they can start adding items to their list. Categories Page diplays all categories. Users cannot change the existing categories (this is restricted for the administrator), but they can add new ones and delete the ones they created. I also added a **404** and **500 Error Pages** that direct users to the Home Page in case there is a problem with a link.
+I used a favicon with a check icon in the address bar for every page to make it clear to users that they are still on the same website.  I used the same background image and consistent use of colours for different sections on each page to create a certain design pattern for the website. The Landing Page contains a short welcome message ge, a hero image, and button links to the Sign-In Page. If a user is not registered yet, they will see a link to the registration page. After signing in, users are directed to My List Page where they can start adding items to their list. Categories Page diplays all categories. Users cannot change the existing categories (this is restricted for the administrator), but they can add new ones and delete the ones they created. I also added a **404** and **500 Error Pages** that direct users to the Home Page in case there is a problem with a link.
 
 ## **Surface Plane**
 
@@ -149,7 +149,7 @@ I used a  favicon with a check icon in the address bar for every page to make it
 ![colours](./docs/color_palette.png)
 
 
-The selection of colors for Mum's to-do app was made with the intention of creating a visually appealing and user-friendly for busy mothers.  I chose Purple Lighten-1 (#7E57C2) and Pink Lighten-1 (#F48FB1)  to infuse a sense of warmth, positivity, and femininity into the app's design. The addition of Pink Darken-3 (#C2185B) provides a subtle contrast and was used as a background colour for the navbar. Grey Lighten-4 (#F5F5F5) offers a clean and neutral backdrop, enhancing readability and minimizing visual distractions.  Purple (#800080) and Crimson (#DC143C) were used in forms for focus in and focus out. The background is a repeatedimage representing a figure of a mum as a superhero who multitasks on an everyday basis. This is set against a white backdrop to ensure enough contrast and clarity. 
+The selection of colors for Mum's to-do app was made with the intention of creating a visually appealing and user-friendly tool for busy mothers.  I chose Purple Lighten-1 (#7E57C2) and Pink Lighten-1 (#F48FB1)  to infuse a sense of warmth, positivity, and femininity into the app's design. The addition of Pink Darken-3 (#C2185B) provides a subtle contrast and was used as a background colour for the navbar. Grey Lighten-4 (#F5F5F5) offers a clean and neutral backdrop, enhancing readability and minimizing visual distractions.  Purple (#800080) and Crimson (#DC143C) were used in forms for focus in and focus out. The background is a repeated image representing a figure of a mum as a superhero whose superpower is multitasking. This is set against a white backdrop to ensure enough contrast and clarity. 
 
 
 **Typography**
@@ -177,7 +177,7 @@ and *Shantell Sans* for the rest of the body
 
 [Wireframes](./docs/Mums_to_do_list_wireframes.pdf)
 
-The website looks slightly different from what I initially had in mind when creating the wireframes. The landing page now has an image of a mum as a superhero. 'My List' items have an additional check button which can be used to cross out a item that has been done. Additionally, there is a 'delete all checked items' button which allows the users delete all items that have been crossed out. I used icons for all the buttons rather that words like 'save' or 'cancel' as shown in the wireframes. Categories section now includes 'edit' and 'delete' buttons only for categories created by a logged-in users. The four basic categories that are displayed to every user can only be managed by the adoministrator.
+The website looks slightly different from what I initially had in mind when creating the wireframes. The landing page now has an image of a mum as a superhero. 'My List' items have an additional check button which can be used to cross out a item that has been done. Additionally, there is a 'delete all checked items' button which allows the users delete all items that have been crossed out. I used icons for all the buttons rather that words like 'save' or 'cancel' as shown in the wireframes. Categories section now includes 'edit' and 'delete' buttons only for categories created by a logged-in users. The four basic categories that are displayed to every user can only be managed by the administrator.
 
 </br>
 
@@ -218,8 +218,7 @@ A button is provided to trigger a collapsible element, allowing users to filter 
 
 - Collapsible Sort Options:
 
-Upon clicking the filter button, users are presented with a collapsible list that offers sorting options ( e.g. alphabetically, or by importance). This allows for a customized viewing experience. (For more details on searching functionality read this section...)
-Each option is a link that modifies the display of the to-do list according to the selected sort method.
+Upon clicking the filter button, users are presented with a collapsible list that offers sorting options ( e.g. alphabetically, or by importance). This allows for a customized viewing experience. Each option is a link that modifies the display of the to-do list according to the selected sort method.
 
 ![footer_functionality](./docs/footer_functionality.png)
 
@@ -249,8 +248,7 @@ The favicon features a stylized check mark centered within a vibrant pink circle
 
 - **Landing Page**
 
-The landing page serves as the first point of interaction for users, aimed at providing them with a clear understanding of what the app offers and how it can benefit them in their daily lives. The page starts with a welcoming and personalized heading, "Hi there, Super Mum!", immediately resonating with the target audience. Under the heading the page contains a card with a hero iage and a welcome message,
-The image shows a mum portrayed as a superhero holding a to-do-list. It recognizes and celebrates the multifaceted roles and strengths of mothers. There are two versions of the welcome message – one for large screens and another for smaller displays.
+The landing page serves as the first point of interaction for users, aimed at providing them with a clear understanding of what the app offers and how it can benefit them in their daily lives. The page starts with a welcoming and personalized heading, "Hi there, Super Mum!", immediately resonating with the target audience. Under the heading the page contains a card with a hero image and a welcome message. The image shows a mum portrayed as a superhero holding a to-do-list. There are two versions of the welcome message – one for large screens and another for smaller displays.
 
 ![welcome-large](./docs/landing_page_lg.png)
 
@@ -277,7 +275,7 @@ The form includes client-side validation, ensuring that users fill out the form 
 
 The form data is submitted using a POST method to the server, ensuring that user credentials are securely transmitted.
 
-For users who already have an account, the page provides a direct link to the sign-in page. This thoughtful addition enhances user experience by facilitating easy navigation.
+For users who already have an account, the page provides a direct link to the sign-in page. This addition enhances user experience by facilitating easy navigation.
 
 </br>
 
@@ -309,12 +307,12 @@ The application offers comprehensive CRUD (Create, Read, Update, Delete) functio
 
 The My List page serves as the primary interface for users to interact with their tasks. It is designed to offer a personalized and intuitive user experience where users can view, manage, and organize their to-do list efficiently.
 
-The page greets users with a custom message, "{{ username }}'s list", creating a personalized space. A floating action button, styled distinctly, is provided for users to quickly add new tasks to their list.
+The page greets users with a custom heading, "{{ username }}'s list", creating a personalized space. A floating action button, styled distinctly, is provided for users to quickly add new tasks to their list.
 
 ![my item btn](./docs/add_item_btn.png)
 
 
-Users can interact with their to-do items, which are displayed in an attractive card layout. Each card provides a visual summary of a task, including its name, associated category, and importance status marked by a star icon.
+Users can interact with their to-do items, which are displayed in a card layout. Each card provides a visual summary of a task, including its name, associated category, and importance status marked by a star icon.
 
 ![my list page](./docs/my_list_page.png)
 
@@ -331,7 +329,7 @@ Tasks can be marked as completed, edited, or deleted directly from the card, off
 ![checked item](./docs/checked_item.png)
 
 
-Users can perform bulk actions, such as deleting all completed tasks, with a single click. This feature simplifies list management and improves the user experience.
+Users can perform a bulk action: deleting all completed tasks, with a single click. This feature simplifies list management and improves the user experience.
 
 ![delete all items](./docs/delete_all_checked.png)
 
@@ -339,7 +337,7 @@ When all to-do items are deleted, users get a friendly, motivational message
 
 ![done_and_dusted](./docs/done_and_dusted.png)
 
-The footer contains an interactive button to  sort tasks, enabling users to customize how they view their list. Sorting options include alphabetical, by category, or by importance, allowing users to prioritize their tasks as needed.
+The footer contains an interactive button to sort tasks, enabling users to customize how they view their list. Sorting options include alphabetical, by category, or by importance, allowing users to prioritize their tasks as needed.
 
 ![sorting items](./docs/sorting_items.png)
 
@@ -393,7 +391,7 @@ This feature allows users to view, add, edit, and delete categories, providing a
 
  ![categories](./docs/categories_page.png)
 
-There are four categories provided in the app, but users can add their own. They can also edit and delete categories they created themselves. Editing and deletion capabilities are conditionally rendered based on the user's session information, ensuring that only authorized users can modify or remove categories. Editing and deleting the original categories is resrticted to the admin account.
+There are four categories provided in the app, but users can add their own. They can also edit and delete categories they created themselves. Editing and deletion capabilities are conditionally rendered based on the user's session information, ensuring that only authorized users can modify or remove categories. Editing and deleting the original categories is restricted to the admin account.
 
 ![own categories](./docs/categories_own.png)
 
@@ -454,7 +452,7 @@ Flash messages are a crucial user feedback mechanism incorporated into the appli
 
 - **Confirmation dialogs**
 
-JavaScript confirmation dialogs have been implemented to prevent accidental deletions. Before deleting any items or categories, users see a confirmation prompt asking them if they are sure they want to perform that action
+JavaScript confirmation dialogs have been implemented to prevent accidental deletions. Before deleting any items or categories, users see a confirmation prompt asking them if they are sure they want to perform that action.
 
 ![ confirmation dialog](./docs/confirmation_dialog.png)
 
@@ -513,7 +511,11 @@ Allow users to archive items instead of deleting them to help them keep a record
 Provide users with analytics and progress tracking features to monitor their productivity over time. This could include statistics on completed tasks, time spent on tasks, and trends in productivity, offering insights into how users can improve their time management.
 
 8. **Expanded admin role**
-Right now the administrator role is limited to managing the predefined categories. I want to extend it to tasks that users can select or be guided by. I also would like the administrator to be able to access the database and cancel deletion of any items or categories if requested by the user.
+Right now the administrator role is limited to managing the predefined categories. I want to extend it to tasks that users can select or be guided by. I also would like the administrator to be able to access the database and cancel the deletion of any items or categories if requested by the user.
+
+8. **Expanded Categories Page**
+Make categories cards clickable and display all to-do-items that go under a particular category.
+
 
 <br>
 
@@ -531,8 +533,8 @@ Passwords are not stored in plain text in the database. The app uses Werkzeug's 
 The app manages user sessions, allowing for persistent user sessions across web pages. It uses Flask's session object to store the username of the logged-in user.
 Permanent Sessions with Expiry: By setting session.permanent = True and configuring PERMANENT_SESSION_LIFETIME, sessions are made permanent but with a controlled lifetime, enhancing both usability and security by automatically logging users out after a set period.
 
-- **Input Validation and Sanitization**
-Although not explicitly shown in the code snippets, the use of forms (e.g., request.form.get("username").lower()) implies that there's a degree of input validation, ensuring that data entered by users conforms to expected formats. Proper input validation and sanitization are crucial for preventing injection attacks and ensuring data integrity.
+- **Input Validation**
+Input validation ensures that data entered by users conforms to expected formats. 
 
 - **Authorization Checks**
 The application performs checks to ensure that users are logged in before allowing access to certain pages or actions, such as adding or editing to-do items and categories. This is achieved through checks like if 'user' in session: before executing actions, ensuring that only authenticated users can perform sensitive operations.
@@ -567,11 +569,12 @@ The application performs checks to ensure that users are logged in before allowi
 * [Balsamiq](https://balsamiq.com/wireframes) used to design the wireframes
 * [Chat GPT4](https://https://chat.openai.com/) used to generate the image for the landing page and the colour palette. Also used along StackOverflow to look for possible causes of issues I came across while doing the project
 * [Readme.so](https://readme.so) - Used to edit the readme file.
-* [Tables generator](https://www.tablesgenerator.com/) - Used to create a table in readme file.
+* [Tables generator](https://www.tablesgenerator.com/) - Used to create a table in a readme file.
 * [Befunky Photo Editor](https://befunky.com) - Used to resize and crop the images.
-* [Style generator](https://html-css-js.com/) - Used for colour gradient, text-shadow and box-shadow.
+* [Style generator](https://html-css-js.com/) - Used for colour gradient, text-shadow, and box-shadow.
 * [Favicon generator](https://www.favicon-generator.org/) - Used to generate the website's favicon.
 
+<br>
 
 ## **Database Design**
 
