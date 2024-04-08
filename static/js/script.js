@@ -8,6 +8,7 @@ $(document).ready(function () {
         format: "dd mmmm, yyyy",
         yearRange: 3,
         showClearBtn: true,
+        minDate: new Date(), //  restricts past dates
         i18n: {
             done: "Select"
         }
